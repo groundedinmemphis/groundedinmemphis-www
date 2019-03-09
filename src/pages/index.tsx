@@ -3,6 +3,7 @@ import Helmet from 'react-helmet';
 import { Intro } from 'components/intro/Intro';
 import { Highlight } from 'components/intro/Highlight';
 import { BlockText } from 'components/block-text/BlockText';
+import { Email } from 'components/email/email';
 
 export default () => (
   <>
@@ -16,6 +17,8 @@ export default () => (
       <Highlight>root resolver</Highlight>,{' '}
       <Highlight>code splitting</Highlight> and a lot of love.
     </Intro>
+
+    <Email />
 
     <BlockText
       heading="Who we are"
