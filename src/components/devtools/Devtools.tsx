@@ -9,7 +9,10 @@ import { GsapTools } from './GsapTools';
 const LOCAL_STORAGE_KEY_VISIBLE = '_uenoDevtoolsVisible';
 
 export const Devtools = () => {
-  const [isVisible, setVisible] = useLocalStorage(LOCAL_STORAGE_KEY_VISIBLE, false);
+  const [isVisible, setVisible] = useLocalStorage(
+    LOCAL_STORAGE_KEY_VISIBLE,
+    false
+  );
   const keys = useKeyDown();
 
   React.useEffect(() => {

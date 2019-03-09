@@ -14,10 +14,20 @@ interface IGridOverlayProps {
   button: boolean;
 }
 
-export const GridOverlay = ({ columns, baseline, button }: IGridOverlayProps) => {
+export const GridOverlay = ({
+  columns,
+  baseline,
+  button,
+}: IGridOverlayProps) => {
   const gridOverlayRef = React.useRef<HTMLDivElement>(null);
-  const [isHorizontalVisible, setHorizontal] = useLocalStorage(LOCAL_STORAGE_KEY_HORIZONTAL, false);
-  const [isVerticalVisible, setVertical] = useLocalStorage(LOCAL_STORAGE_KEY_VERTICAL, false);
+  const [isHorizontalVisible, setHorizontal] = useLocalStorage(
+    LOCAL_STORAGE_KEY_HORIZONTAL,
+    false
+  );
+  const [isVerticalVisible, setVertical] = useLocalStorage(
+    LOCAL_STORAGE_KEY_VERTICAL,
+    false
+  );
   const keys = useKeyDown();
 
   const onToggleHorizontal = () => {
@@ -30,9 +40,18 @@ export const GridOverlay = ({ columns, baseline, button }: IGridOverlayProps) =>
 
   React.useEffect(() => {
     if (gridOverlayRef.current) {
-      gridOverlayRef.current.style.setProperty('--grid-column-count', String(columns));
-      gridOverlayRef.current.style.setProperty('--grid-baseline', `${baseline}px`);
-      gridOverlayRef.current.style.setProperty('--grid-baseline-calc', String(baseline));
+      gridOverlayRef.current.style.setProperty(
+        '--grid-column-count',
+        String(columns)
+      );
+      gridOverlayRef.current.style.setProperty(
+        '--grid-baseline',
+        `${baseline}px`
+      );
+      gridOverlayRef.current.style.setProperty(
+        '--grid-baseline-calc',
+        String(baseline)
+      );
     }
   }, [columns, baseline]);
 
@@ -49,22 +68,35 @@ export const GridOverlay = ({ columns, baseline, button }: IGridOverlayProps) =>
   return (
     <div
       ref={gridOverlayRef}
-      className={s(s.grid, { [s.gridIsHorizontalIsVisible]: isHorizontalVisible, isVerticalVisible })}
+      className={s(s.grid, {
+        [s.gridIsHorizontalIsVisible]: isHorizontalVisible,
+        isVerticalVisible,
+      })}
     >
       <div className={s.grid__container}>
         <div className={s.grid__row} data-columns={columns}>
-          {Array(columns).fill(0).map((_, i) => (
-            <div key={`grid_column_${i}`} className={s.grid__column}>
-              <div className={s.grid__visualize} />
-            </div>
-          ))}
+          {Array(columns)
+            .fill(0)
+            .map((_, i) => (
+              <div key={`grid_column_${i}`} className={s.grid__column}>
+                <div className={s.grid__visualize} />
+              </div>
+            ))}
         </div>
       </div>
 
       {button ? (
         <>
-          <button className={s(s.grid__button, { vertical: isVerticalVisible })} onClick={onToggleVertical}>
-            <svg className={s.grid__button__svg} width="14px" height="14px" viewBox="0 0 14 14">
+          <button
+            className={s(s.grid__button, { vertical: isVerticalVisible })}
+            onClick={onToggleVertical}
+          >
+            <svg
+              className={s.grid__button__svg}
+              width="14px"
+              height="14px"
+              viewBox="0 0 14 14"
+            >
               <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                 <rect x="0" y="0" width="2" height="14" />
                 <rect x="4" y="0" width="2" height="14" />
@@ -74,8 +106,16 @@ export const GridOverlay = ({ columns, baseline, button }: IGridOverlayProps) =>
             </svg>
           </button>
 
-          <button className={s(s.grid__button, { horizontal: isHorizontalVisible })} onClick={onToggleHorizontal}>
-            <svg className={s.grid__button__svg} width="14px" height="14px" viewBox="0 0 14 14">
+          <button
+            className={s(s.grid__button, { horizontal: isHorizontalVisible })}
+            onClick={onToggleHorizontal}
+          >
+            <svg
+              className={s.grid__button__svg}
+              width="14px"
+              height="14px"
+              viewBox="0 0 14 14"
+            >
               <g
                 stroke="none"
                 strokeWidth="1"

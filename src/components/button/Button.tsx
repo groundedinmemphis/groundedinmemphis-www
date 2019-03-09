@@ -12,21 +12,22 @@ interface IButtonProps {
   [key: string]: any;
 }
 
-export const Button = ({ to, children, className, disabled, ...rest }: IButtonProps) => {
+export const Button = ({
+  to,
+  children,
+  className,
+  disabled,
+  ...rest
+}: IButtonProps) => {
   const passProps = { ...rest };
-  const isLink = (typeof to !== 'undefined');
+  const isLink = typeof to !== 'undefined';
   const isExternal = isLink && /^((https?:)?\/\/|[0-9a-zA-Z]+:)/.test(to || '');
 
   passProps.className = s(s.button, className, { disabled });
 
   if (isExternal) {
     return (
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href={to}
-        {...passProps}
-      >
+      <a target="_blank" rel="noopener noreferrer" href={to} {...passProps}>
         {children}
       </a>
     );
@@ -34,10 +35,7 @@ export const Button = ({ to, children, className, disabled, ...rest }: IButtonPr
 
   if (isLink) {
     return (
-      <Link
-        to={to || '#'}
-        {...passProps}
-      >
+      <Link to={to || '#'} {...passProps}>
         {children}
       </Link>
     );

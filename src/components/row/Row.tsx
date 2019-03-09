@@ -7,7 +7,5 @@ interface IRowProps {
 }
 
 export const Row = ({ children }: IRowProps) => (
-  <div className={s.row}>
-    {children}
-  </div>
+  <div className={s.row}>{children}</div>
 );

@@ -13,7 +13,10 @@ interface IGsapToolsProps {
 const LOCAL_STORAGE_GSAPTOOLS = '_uenoDevtoolsGsapTools';
 
 export const GsapTools = ({ button }: IGsapToolsProps) => {
-  const [isVisible, setVisible] = useLocalStorage(LOCAL_STORAGE_GSAPTOOLS, false);
+  const [isVisible, setVisible] = useLocalStorage(
+    LOCAL_STORAGE_GSAPTOOLS,
+    false
+  );
   const keys = useKeyDown();
 
   const onToggleGsapTools = () => {
@@ -29,16 +32,15 @@ export const GsapTools = ({ button }: IGsapToolsProps) => {
   return (
     <>
       {button && (
-        <button className={s(s.button, { visible: isVisible })} onClick={onToggleGsapTools}>
+        <button
+          className={s(s.button, { visible: isVisible })}
+          onClick={onToggleGsapTools}
+        >
           GSAP
         </button>
       )}
 
-      <GsapDevTools
-        onClick={onToggleGsapTools}
-        isVisible={isVisible}
-        isFixed
-      />
+      <GsapDevTools onClick={onToggleGsapTools} isVisible={isVisible} isFixed />
     </>
   );
 };
