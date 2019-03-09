@@ -2,7 +2,6 @@ import React from 'react';
 import { useKeyDown } from 'hooks/use-keydown';
 import { useLocalStorage } from 'hooks/use-localstorage';
 import { GridOverlay } from './GridOverlay';
-import { GsapTools } from './GsapTools';
 
 const LOCAL_STORAGE_KEY_VISIBLE = '_uenoDevtoolsVisible';
 

@@ -11,6 +11,12 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
+      resolve: 'gatsby-source-prismic',
+      options: {
+        repositoryName: 'groundedinmemphis',
+      },
+    },
+    {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'ueno-gatsby-starter',

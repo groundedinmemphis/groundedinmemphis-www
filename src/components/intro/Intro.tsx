@@ -12,7 +12,7 @@ export const Intro = (props: IIntroProps) => {
   const { children } = props;
   return (
     <Container>
-      <div className={s.intro} data-foo="hello">
+      <div className={s.intro}>
         <Row>
           <div className={s.intro__col}>
             <p className={s.intro__text}>{children}</p>
