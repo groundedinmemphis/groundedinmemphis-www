@@ -1,8 +1,6 @@
-import * as React from 'react';
-
+import React from 'react';
 import { useKeyDown } from 'hooks/use-keydown';
 import { useLocalStorage } from 'hooks/use-localstorage';
-
 import s from './GridOverlay.scss';
 
 const LOCAL_STORAGE_KEY_HORIZONTAL = '_uenoDevtoolsHorizontalGrid';

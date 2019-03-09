@@ -1,8 +1,6 @@
-import * as React from 'react';
-
+import React from 'react';
 import { Container } from 'components/container/Container';
 import { Row } from 'components/row/Row';
-
 import s from './BlockText.scss';
 
 interface IBlockTextProps {

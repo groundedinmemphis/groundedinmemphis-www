@@ -1,7 +1,5 @@
-import * as React from 'react';
-
-import { Link as InternalLink } from 'components/link/Link';
-
+import React from 'react';
+import { Link as InternalLink } from 'gatsby';
 import s from './Link.scss';
 
 interface ILinkProps {

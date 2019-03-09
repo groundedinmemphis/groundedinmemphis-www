@@ -1,8 +1,6 @@
-import * as React from 'react';
-
+import React from 'react';
 import { useKeyDown } from 'hooks/use-keydown';
 import { useLocalStorage } from 'hooks/use-localstorage';
-
 import { GridOverlay } from './GridOverlay';
 import { GsapTools } from './GsapTools';
 
@@ -24,7 +22,6 @@ export const Devtools = () => {
   return (
     <>
       <GridOverlay button={isVisible} columns={12} />
-      <GsapTools button={isVisible} />
     </>
   );
 };

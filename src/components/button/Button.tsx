@@ -1,7 +1,5 @@
-import * as React from 'react';
-
-import { Link } from 'components/link/Link';
-
+import React from 'react';
+import { Link } from 'gatsby';
 import s from './Button.scss';
 
 interface IButtonProps {

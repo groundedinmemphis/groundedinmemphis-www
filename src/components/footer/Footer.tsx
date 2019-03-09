@@ -1,7 +1,5 @@
-import * as React from 'react';
-
+import React from 'react';
 import { Container } from 'components/container/Container';
-
 import s from './Footer.scss';
 
 interface ISocial {

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 
 /**
  * Custom hooks that return the keys that are pressed on the keyboard

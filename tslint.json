@@ -1,3 +1,8 @@
 {
-  "extends": ["@ueno/tslint-config/react", "tslint-config-prettier"]
+  "extends": ["@ueno/tslint-config/react", "tslint-config-prettier"],
+  "rules": {
+    "origin-ordered-imports": false,
+    "no-default-export": false,
+    "no-var-requires": false
+  }
 }
