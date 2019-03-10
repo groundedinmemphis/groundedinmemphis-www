@@ -8,6 +8,7 @@ import { Container } from 'components/container/Container';
 import { BlockText } from 'components/block-text/BlockText';
 import { ItemList } from 'components/item-list/ItemList';
 import { PageIntro } from 'components/intro/PageIntro';
+import { Link } from 'gatsby';
 
 import SprayImageFoot from 'assets/images/spray-foot.png';
 import SprayImageSingleStroke from 'assets/images/spray-single.png';

@@ -5,14 +5,41 @@ import RainImage from 'assets/images/rain.png';
 import BigLogo from 'assets/svg/logo-big.svg';
 import OpeningText from 'assets/svg/opening-text.svg';
 import { Container } from 'components/container/Container';
+import RichText from 'components/rich-text/RichText';
 import React from 'react';
 import Helmet from 'react-helmet';
 import s from './homepage.scss';
 import SprayImageFoot from 'assets/images/spray-foot.png';
-
+import { graphql, Link } from 'gatsby';
 import { TimelineLite } from 'gsap';
 
-const Homepage = () => {
+export const query = graphql`
+  query {
+    prismicHomepage {
+      data {
+        mission_long {
+          html
+          text
+        }
+        mission_short {
+          html
+          text
+        }
+        story_long {
+          html
+          text
+        }
+        story_short {
+          html
+          text
+        }
+      }
+    }
+  }
+`;
+
+const Homepage = ({ data }: any) => {
+  const bodyText = data.prismicHomepage.data;
   React.useEffect(() => {
     const svg = document.getElementById('big_g');
     if (svg) {
@@ -27,7 +54,7 @@ const Homepage = () => {
 
   return (
     <>
-      <Helmet title="Home" />
+      <Helmet title="Inspiring a city to walk together" />
       <div className={s.opening__image}>
         <div className={s.opening__image__big__logo}>
           <BigLogo />
@@ -46,50 +73,34 @@ const Homepage = () => {
             <div className={s.two__column__text}>
               <div className={s.two__column__text__big}>
                 <p>Our Story</p>
-                <p>
-                  From the streets of Memphis, we are a collective of artists,
-                  musicians, dancers, filmmakers, and students inspiring our
-                  community though collaborative expression.
-                </p>
+                <p>{bodyText.story_short.text}</p>
               </div>
               <div className={s.two__column__text__small}>
-                <p>
-                  Grounded works in neighborhoods, with juvenile detention
-                  facilities and schools, and builds teams of student
-                  collaborators to creatively address youth violence in Memphis.
-                </p>
+                <p>{bodyText.story_long.text}</p>
               </div>
             </div>
             <div className={s.button__row}>
-              <a href="">Meet the Team</a>
+              <Link to="/meet-the-team">Meet the Team</Link>
             </div>
           </div>
         </Container>
         <div className={s.image__grid}>
-          <img src={RainImage} alt="" />
-          <img src={JumpImage} alt="" />
-          <img src={LookImage} alt="" />
+          <img src={RainImage} alt="Rainy" />
+          <img src={JumpImage} alt="Jumpy" />
+          <img src={LookImage} alt="Looky" />
         </div>
         <div className={s.body__content}>
           <div className={s.two__column__text}>
             <div className={s.two__column__text__big}>
               <p>Our Mission</p>
-              <p>
-                From the streets of Memphis, we are a collective of artists,
-                musicians, dancers, filmmakers, and students inspiring our
-                community though collaborative expression.
-              </p>
+              <p>{bodyText.mission_short.text}</p>
             </div>
             <div className={s.two__column__text__small}>
-              <p>
-                Grounded works in neighborhoods, with juvenile detention
-                facilities and schools, and builds teams of student
-                collaborators to creatively address youth violence in Memphis.
-              </p>
+              <p>{bodyText.mission_long.text}</p>
             </div>
           </div>
           <div className={s.button__row}>
-            <a href="">Meet the Team</a>
+            <Link to="/meet-the-team">Meet the Team</Link>
           </div>
         </div>
         <div className={s.spray__foot}>

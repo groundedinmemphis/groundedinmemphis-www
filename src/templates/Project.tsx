@@ -5,8 +5,8 @@ import { graphql } from 'gatsby';
 import s from './Project.scss';
 
 export const query = graphql`
-  query Projecta($id: String) {
-    prismicProject(prismicId: { eq: $id }) {
+  query Projecta($prismicId: String) {
+    prismicProject(prismicId: { eq: $prismicId }) {
       id
       data {
         title {
@@ -22,20 +22,32 @@ export const query = graphql`
           embed_url
         }
         year
+        contributors {
+          text
+        }
       }
     }
   }
 `;
 
 export default ({ data }: any) => {
-  const { title, categories, description, year } = data.prismicProject.data;
+  const {
+    title,
+    categories,
+    description,
+    contributors,
+    year,
+    youtube_link,
+  } = data.prismicProject.data;
+  const [, youtubeId] = youtube_link.embed_url.match(/v\=(.*)$/);
 
   return (
     <>
-      <Helmet title={`Project - ${title.text} `} />
+      <Helmet title={title.text} />
       <div className={s.project_video}>
+        <div className={s.project_video_top} />
         <iframe
-          src="https://www.youtube.com/embed/uxEghzZAEl4?modestbranding=1"
+          src={`//www.youtube.com/embed/${youtubeId}?rel=0&amp;controls=0&amp;showinfo=0&amp;modestbranding=1&amp;autoplay=1&amp;widgetid=1`}
           className={s.iframe}
         />
       </div>
@@ -55,7 +67,7 @@ export default ({ data }: any) => {
             <div className={s.project_timestamp}>
               <span className={s.project_year}>Contributors</span>
               <span className={s.project_year} style={{ color: '#757575' }}>
-                {year}
+                {contributors.text}
               </span>
             </div>
           </div>
