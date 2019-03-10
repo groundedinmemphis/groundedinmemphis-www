@@ -38,6 +38,7 @@ export const Footer = ({ social }: IFooterProps) => {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
         'form-name': f.getAttribute('name'),
+        ...form,
       }),
     })
       .then(() => setSent(true))
