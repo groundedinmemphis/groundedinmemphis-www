@@ -5,8 +5,8 @@ import { graphql } from 'gatsby';
 import s from './Project.scss';
 
 export const query = graphql`
-  query Projecta($id: String) {
-    prismicProject(prismicId: { eq: $id }) {
+  query Projecta($prismicId: String) {
+    prismicProject(prismicId: { eq: $prismicId }) {
       id
       data {
         title {
