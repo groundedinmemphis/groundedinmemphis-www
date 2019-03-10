@@ -10,7 +10,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import s from './homepage.scss';
 import SprayImageFoot from 'assets/images/spray-foot.png';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import { TimelineLite } from 'gsap';
 
 export const query = graphql`
@@ -38,10 +38,8 @@ export const query = graphql`
   }
 `;
 
-const Homepage = ({ data }) => {
+const Homepage = ({ data }: any) => {
   const bodyText = data.prismicHomepage.data;
-  console.log(bodyText);
-
   React.useEffect(() => {
     const svg = document.getElementById('big_g');
     if (svg) {
@@ -82,14 +80,14 @@ const Homepage = ({ data }) => {
               </div>
             </div>
             <div className={s.button__row}>
-              <a href="">Meet the Team</a>
+              <Link to="/meet-the-team">Meet the Team</Link>
             </div>
           </div>
         </Container>
         <div className={s.image__grid}>
-          <img src={RainImage} alt="" />
-          <img src={JumpImage} alt="" />
-          <img src={LookImage} alt="" />
+          <img src={RainImage} alt="Rainy" />
+          <img src={JumpImage} alt="Jumpy" />
+          <img src={LookImage} alt="Looky" />
         </div>
         <div className={s.body__content}>
           <div className={s.two__column__text}>
@@ -102,7 +100,7 @@ const Homepage = ({ data }) => {
             </div>
           </div>
           <div className={s.button__row}>
-            <a href="">Meet the Team</a>
+            <Link to="/meet-the-team">Meet the Team</Link>
           </div>
         </div>
         <div className={s.spray__foot}>
