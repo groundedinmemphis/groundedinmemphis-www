@@ -18,26 +18,37 @@
 
     &__Name {
 
+        font-family: 'Montserrat';
+        font-weight: 600;
         @include responsive-font(30px, 40px);
 
-        color: rgba(0,0,0,1);
-        font-weight: 700;
+        line-height: 1.4em;
+
+        color: #232323;
     }
 
     &__Position {
 
+        
         @include responsive-font(18px, 22px);
 
+        line-height: 1.8em;
+
         color: rgba(0,0,0,1);
+
     }
 
     &__Desc {
 
-        height: 200px;
+        height: 240px;
 
+        font-family: 'Montserrat';
+        font-weight: 500;
         @include responsive-font(18px, 22px);
 
-        color: rgba(0,0,0,0.6);
+        line-height: 1.63em;
+
+        color: #757575;
 
         white-space: nowrap;
         overflow: hidden;
