@@ -68,7 +68,7 @@ export default ({ data }: any) => {
           des="Grounded makes space in communities for expression in service of mindfulness. We are a collaboration between activists, artists, community leaders, and anyone looking for their voice and communities to express themselves."
         />
 
-        <div className={s.OurTeam}>
+        <div className={s.Team}>
           {chunk(data.allPrismicTeamMember.edges, 2).map((arr, index) => {
             const className =
               index % 2 === 0 ? s.Team__Row__right : s.Team__Row__left;

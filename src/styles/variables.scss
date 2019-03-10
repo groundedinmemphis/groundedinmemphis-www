@@ -14,7 +14,7 @@ $page-limit: $page-width + ($container-gutter-desktop * 2);
 // Fonts
 $font-family: 'Montserrat', sans-serif;
 $font-heading: 'Anton', sans-serif;
-$font-mono: 'Space Mono', sans-serif;
+$font-mono: 'Space Mono', monospace;
 $font-size: 16px;
 $font-size-min: 13px;
 $line-height: 1.5;
@@ -83,3 +83,8 @@ $scale: (
   (800px, 0.95),
   (690px, 0.925),
 );
+
+
+// Curve
+$easeOutMild: .215,.61,.355,1;
+$easeSMild: .59,.08,0,.92;

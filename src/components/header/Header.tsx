@@ -5,7 +5,7 @@ import s from './Header.scss';
 import { Link as HeaderLink } from 'components/header/Link';
 
 interface IHeaderProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   theme: 'dark' | 'light';
 }
 

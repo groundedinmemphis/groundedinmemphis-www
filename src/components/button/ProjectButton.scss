@@ -1,6 +1,26 @@
 @import '~styles/config';
 
+.project_link_icon {
+  position: relative;
+  display: inline-block;
+  transform: translateX(0);
+  transition: all 0.3s ease-in-out;
+}
+
 .project_link {
+  position: relative;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  @include responsive-font(15px, 18px);
+  line-height: 32px;
   text-decoration: none;
   color: #000;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover .project_link_icon {
+    transform: translateX(10px);
+  }
 }

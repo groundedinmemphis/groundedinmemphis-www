@@ -3,21 +3,21 @@
 
 .section_title {
 
-  // width: 49%;
-  // width: 100%;
-  min-width: 300px;
-
-  // padding: 50px 0;
-
-  padding: 0 10% 0 25.4%;
-  margin: 140px 0 110px 0;
+  padding: 0;
+  margin: 100px 0 80px 0;
 
   // background: red;
+
+  @media (min-width: $min-1024) {
+      
+    padding: 0 10% 0 25.4%;
+    margin: 140px 0 110px 0;
+  }
 }
 
 .title {
 
-  margin: 0 0 60px;
+  margin: 0 0 40px;
 
   font-family: $font-heading;
   font-weight: normal;
@@ -30,7 +30,10 @@
 
   color: #000;
 
-
+  @media (min-width: $min-1024) {
+      
+    margin: 0 0 60px;
+  }
 }
 
 .des {
@@ -42,5 +45,4 @@
   line-height: 1.6em;
 
   color: #000;
-  
 }
