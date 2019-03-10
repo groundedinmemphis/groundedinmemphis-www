@@ -10,7 +10,7 @@ import { Container } from 'components/container/Container';
 // import { chunk } from 'lodash';
 // import { PageIntro } from 'components/intro/PageIntro';
 import { BlockText } from 'components/block-text/BlockText';
-import { ItemList } from 'components/item-list/itemList';
+import { ItemList } from 'components/item-list/ItemList';
 import { PageIntro } from 'components/intro/PageIntro';
 
 export default () => {
