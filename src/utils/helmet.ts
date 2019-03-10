@@ -1,6 +1,5 @@
 import favicon from 'assets/images/favicon.png';
 import share from 'assets/images/share.jpg';
-import share from 'assets/images/look.png';
 
 const title = 'Grounded';
 const description = 'Inspiring a city to walk together';
