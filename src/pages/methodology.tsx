@@ -38,7 +38,10 @@ export default () => {
               We are creating mindful and healing content to spark mindfulness
               and self-activation around the most pressing issues faced by
               children, families, underserved communities, and those affected by{' '}
-              <a href="#">Adverse Childhood Experiences</a>.
+              <a href="https://centerforyouthwellness.org/" target="_blank">
+                Adverse Childhood Experiences
+              </a>
+              .
             </p>
 
             <p>
@@ -93,8 +96,11 @@ export default () => {
           description={
             <>
               <p>
-                According to the <a href="#">Center for Youth Wellness</a>, the
-                effects of ACEs include increased chances of developing:{' '}
+                According to the{' '}
+                <a href="https://centerforyouthwellness.org/" target="_blank">
+                  Center for Youth Wellness
+                </a>
+                , the effects of ACEs include increased chances of developing:{' '}
               </p>
             </>
           }
