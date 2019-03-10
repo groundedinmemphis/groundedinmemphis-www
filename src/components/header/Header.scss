@@ -1,7 +1,13 @@
 @import '~styles/config';
 
+.header__light{
+  display:block;
+}
+
 .header {
   display: block;
+  position:relative;
+  z-index:1000;
   font-family: 'Montserrat';
   &__container {
     @include container;
@@ -18,7 +24,7 @@
 
     &Svg {
       display: block;
-      margin-right: 30px;
+      margin-right: 50px;
       height: 16px;
       width: 240px;
       margin-top:-18px;
