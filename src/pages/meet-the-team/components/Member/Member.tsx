@@ -4,7 +4,21 @@ import s from './Member.scss';
 // import { ProjectButton } from 'components/button/ProjectButton';
 
 export default (props: any) => {
+  const ref = React.useRef(null);
   const [isOpen, setIsOpen] = React.useState(false);
+
+  const onClick = (e: any) => {
+    if (isOpen && e.target !== ref.current) {
+      setIsOpen(false);
+    }
+  };
+
+  React.useEffect(() => {
+    window.addEventListener('click', onClick);
+    return () => {
+      window.removeEventListener('click', onClick);
+    };
+  });
 
   const handleClick = () => {
     setIsOpen(!isOpen);
@@ -31,7 +45,10 @@ export default (props: any) => {
         Read More &#x0002B;
       </button>
 
-      <div className={isOpen ? s.Member__Detail : s.Member__Detail__hide}>
+      <div
+        ref={ref}
+        className={isOpen ? s.Member__Detail : s.Member__Detail__hide}
+      >
         <p className={s.Member__Desc}>{props.description}</p>
         <button className={s.Member__Button} onClick={handleClick}>
           Read Less &#x02212;
