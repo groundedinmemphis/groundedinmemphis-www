@@ -6,8 +6,6 @@
 
 .Aces {
 
-    padding: 80px 0;
-
     display: flex;
     flex-flow: row wrap;
 
@@ -19,16 +17,17 @@
 
         width: 50%;
 
-        margin: 100px 0 20px;
+        margin: 120px 0 80px;
 
         font-family: $font-family;
         font-weight: 600;
         @include responsive-font(46, 52);
         
-
         line-height: 1.27;
 
         text-align: center;
+
+        color: #000;
 
         // background: red;
     }
@@ -38,7 +37,7 @@
 
         width: 50%;
 
-        margin: 0 auto;
+        margin: 0 auto 80px;
 
         display: flex;
         flex-flow: row wrap;
@@ -72,7 +71,7 @@
 
 .Theory {
 
-    padding: 80px 0;
+    // padding: 80px 0;
 
     display: flex;
     flex-flow: row wrap;
@@ -81,20 +80,21 @@
 
     &__Title {
 
+
         width: 50%;
 
-        margin: 100px 0 20px;
+        margin: 120px 0 40px;
 
         font-family: $font-family;
         font-weight: 600;
         @include responsive-font(46, 52);
         
-
         line-height: 1.27;
 
         text-align: center;
-        
 
+        color: #000;
+        
         // background: red;
     }
 
