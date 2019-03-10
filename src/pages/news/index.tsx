@@ -2,6 +2,7 @@ import React from 'react';
 import s from './news.scss';
 import { graphql } from 'gatsby';
 import NewsItem from './components/news-item/NewsItem';
+import { PageIntro } from 'components/intro/PageIntro';
 
 interface INewsEdge {
   node: {
@@ -66,14 +67,15 @@ export const query = graphql`
 const News = ({ data }: INewsProps) => {
   return (
     <div className={s.news}>
-      <h1 className={s.news__heading}>News</h1>
-      {data.allPrismicNews.edges.map(({ node }) => (
-        <NewsItem
-          key={node.id}
-          date={node.first_publication_date}
-          {...node.data}
-        />
-      ))}
+      <PageIntro title={`News and\nupdates`}>
+        {data.allPrismicNews.edges.map(({ node }) => (
+          <NewsItem
+            key={node.id}
+            date={node.first_publication_date}
+            {...node.data}
+          />
+        ))}
+      </PageIntro>
     </div>
   );
 };
