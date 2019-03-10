@@ -2,6 +2,8 @@
 
 $video-height: (9 / 16) * 100vw;
 
+$video-offset: 400px;
+
 .project_video {
   position: absolute;
   top: 0;
@@ -9,7 +11,7 @@ $video-height: (9 / 16) * 100vw;
   height: $video-height;
   background: #7f7f7f;
 
-  height: calc(#{$video-height} - 200px);
+  height: calc(#{$video-height} - 20px);
   overflow: hidden;
 
   &_top {
@@ -25,13 +27,13 @@ $video-height: (9 / 16) * 100vw;
 
 .iframe {
   width: 100%;
-  height: calc(#{$video-height} + 200px);
+  height: calc(#{$video-height} + #{$video-offset});
   position: relative;
-  top: -150px;
+  top: -($video-offset / 2) - 10px;
 }
 
 .project_info_wrapper {
-  margin-top: calc(#{$video-height} - 200px);
+  margin-top: calc(#{$video-height});
   display: flex;
   justify-content: space-around;
 }
