@@ -1,0 +1,60 @@
+@import '~styles/config';
+
+// $btn-height: 40px;
+// $btn-border-width: 2px;
+
+
+.OurTeam {
+
+
+    &__Title {
+
+        @include responsive-font(100px, 120px);
+
+        line-height: 0.8em;
+
+        color: rgba(0,0,0,1);
+    }
+
+    &__Intro {
+
+        @include responsive-font(28px, 32px);
+
+        line-height: 1.625em;
+
+        color: rgba(0,0,0,1);
+        
+    }
+}
+
+
+.Team {
+
+
+
+    &__Row {
+
+
+
+        &__left {
+
+            width: 100%;
+
+            display: flex;
+            flex-flow: row nowrap;
+
+            justify-content: flex-start;
+        }
+
+        &__right {
+
+            width: 100%;
+
+            display: flex;
+            flex-flow: row nowrap;
+
+            justify-content: flex-end;
+        }
+
+    }
+}
