@@ -2,7 +2,7 @@
 
 .header {
   display: block;
-
+  font-family: 'Montserrat';
   &__container {
     @include container;
   }
@@ -19,16 +19,16 @@
       display: block;
 
       height: 16px;
-      width: auto;
+      width: 240px;
+      margin-top:-15px;
 
       @media (min-width: $min-768) {
-        height: 18px;
+        height: auto;
       }
     }
   }
 
   &__navigation {
     display: flex;
-    margin-left: auto;
   }
 }
