@@ -1,41 +1,118 @@
 @import '~styles/config';
 
+.image__grid{
+  height: 80vw;
+  position:relative;
+  margin-bottom:100px;
+  img {
+    display: block;
+    position: absolute;
+    max-width: 50%;
+    right: 13%;
+    &:first-of-type{
+      max-width: 43%;
+      transform: translate(0,40%);
+      right: auto;
+    }
+    &:last-of-type{
+      max-width: 50%;
+      bottom:0px;
+      right:0px;
+    }
+  }
+
+}
+.body__content {
+  position:relative;
+  .two__column__text{
+    display:flex;
+    p {
+      font-family: 'Montserrat';
+      color: #000000;
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 38px;
+      max-width:450px;
+      &:first-of-type{
+        font-size:40px;
+        margin-right: 50px;
+        font-weight: 600;
+        line-height:56px;
+        max-width: 700px;
+      }
+    }
+  }
+  .button__row {
+    margin: 50px auto;
+    a {
+      background: #2F80ED;
+      display: block;
+      max-width: 200px;
+      text-align: center;
+      color: white;
+      text-decoration: none;
+      font-size:18px;
+      letter-spacing:.02em;
+      font-family:"Montserrat";
+      font-weight:600;
+      padding: 25px 20px;
+    }
+  }
+
+  .spray__footer{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    transform: translate(50%, 50%);
+    max-width: 600px;
+  }
+}
+
 
 .opening__image {
   background-image:url('assets/images/spider-blur.png');
   width: 100%;
-  height: 900px;
+  max-height: 680px;
+  height: 100vh;
   background-size:cover;
-  position: absolute;
-  top:0px;
-  left: 0px;
   z-index: 0;
+  margin-bottom: 100px;
+  position: relative;
+  &__spray {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    transform: translate(50%, 50%);
+    max-width: 600px;
+    img {
+      display:block;
+    }
+  }
   &__big__logo {
     width:340px;
     height:auto;
     svg {
       width: 100%;
       height: auto;
+      path {
+        fill: #F5F4F0;
+      }
     }
   }
   &__text {
     display: block;
     position: absolute;
-    top: 300px;
+    top: 350px;
     left: 400px;
     width: calc(100% - 400px);
     svg {
       width: 100%;
-      path {
-        fill:none;
-        stroke:white;
-        stroke-width:1.5px;
-        &:last-of-type {
-          fill:white;
-          stroke:none;
-          stroke-width:0px;
-        }
+      height: auto;
+      max-width: 700px;
+      text {
+        font-size: 90px;
       }
+
     }
   }
 }

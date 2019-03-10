@@ -23,15 +23,7 @@ export default ({ children }: IAppLayoutProps) => {
     <div className={s.layout}>
       <Helmet {...helmet} />
 
-      <Header theme={theme}>
-        <HeaderLink name="About" to="/about" />
-        <HeaderLink name="Projects" to="/projects" />
-        <HeaderLink name="Methodology" to="/methodology" />
-        <HeaderLink name="Purpose" to="/purpose" />
-        <HeaderLink name="Meet the Team" to="/meet-the-team" />
-        <HeaderLink name="Partner with Us" to="/partner" />
-        <HeaderLink name="Donate" to="/donate" />
-      </Header>
+      <Header theme={theme} />
 
       {children}
 
