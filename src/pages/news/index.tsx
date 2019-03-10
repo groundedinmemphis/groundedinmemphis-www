@@ -67,7 +67,15 @@ export const query = graphql`
 const News = ({ data }: INewsProps) => {
   return (
     <div className={s.news}>
-      <PageIntro title={`News and\nupdates`}>
+      <PageIntro
+        title={
+          <>
+            News and
+            <br />
+            updates
+          </>
+        }
+      >
         {data.allPrismicNews.edges.map(({ node }) => (
           <NewsItem
             key={node.id}

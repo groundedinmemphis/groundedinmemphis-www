@@ -5,7 +5,7 @@ import RainImage from 'assets/images/rain.png';
 import BigLogo from 'assets/svg/logo-big.svg';
 import OpeningText from 'assets/svg/opening-text.svg';
 import { Container } from 'components/container/Container';
-import RichText from 'components/rich-text/RichText';
+import Img from 'gatsby-image';
 import React from 'react';
 import Helmet from 'react-helmet';
 import s from './homepage.scss';
@@ -15,6 +15,14 @@ import { TimelineLite } from 'gsap';
 
 export const query = graphql`
   query {
+    mainImage: file(relativePath: { eq: "main.png" }) {
+      id
+      childImageSharp {
+        fluid(maxWidth: 1400) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     prismicHomepage {
       data {
         mission_long {
@@ -56,15 +64,20 @@ const Homepage = ({ data }: any) => {
     <>
       <Helmet title="Inspiring a city to walk together" />
       <div className={s.opening__image}>
-        <div className={s.opening__image__big__logo}>
-          <BigLogo />
+        <div className={s.opening__image__background}>
+          <Img {...data.mainImage.childImageSharp} />
         </div>
+        <div className={s.opening__image__content}>
+          <div className={s.opening__image__big__logo}>
+            <BigLogo />
+          </div>
 
-        <div className={s.opening__image__text} id="big_g">
-          <OpeningText />
-        </div>
-        <div className={s.opening__image__spray}>
-          <img src={SprayImageTop} alt="spray" />
+          <div className={s.opening__image__text} id="big_g">
+            <OpeningText />
+          </div>
+          <div className={s.opening__image__spray}>
+            <img src={SprayImageTop} alt="spray" />
+          </div>
         </div>
       </div>
       <div className={s.content}>

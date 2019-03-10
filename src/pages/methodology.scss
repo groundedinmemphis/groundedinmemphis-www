@@ -15,27 +15,49 @@
 
     &__Title {
 
-        width: 50%;
+        width: 100%;
 
+        padding: 0 30px;
         margin: 120px 0 80px;
 
         font-family: $font-family;
         font-weight: 600;
         @include responsive-font(46, 52);
         
-        line-height: 1.27;
+        line-height: 1em;
 
-        text-align: center;
+        text-align: left;
 
         color: #000;
 
         // background: red;
+
+
+        @media (min-width: $min-640) {
+
+            width: 100%;
+
+            padding: 0 calc(10% + 50px);
+
+            text-align: left;
+        }
+
+        @media (min-width: $min-1024) {
+
+            width: 50%;
+            
+            padding: 0;
+
+            text-align: center;
+
+            line-height: 1.27em;
+        }
     }
 
 
     &__Categories {
 
-        width: 50%;
+        width: 100%;
 
         margin: 0 auto 80px;
 
@@ -44,25 +66,53 @@
 
         // background: red;
 
+
+
+        @media (min-width: $min-640) {
+
+            padding: 0 10%;
+            width: 100%;
+        }
+
+
+        @media (min-width: $min-1024) {
+
+            padding: 0;
+            width: 50%;
+        }
+
+
         &__Entry {
 
-            width: 33.33%;
+            display: flex;
+            flex-flow: row wrap;
 
-            // background: yellow;
+            width: 100%;
 
+            // background: green;
 
-            // &__Graphic {
+            @media (min-width: $min-1024) {
 
+                flex-flow: column wrap;
 
-            // }
+                width: 33.33%;
+            }
+
 
             &__Title {
+
+                margin: 0 0 0 20px;
 
                 font-family: $font-family;
                 font-weight: 400;
                 @include responsive-font(18px, 22px);
                 
                 line-height: 1.72em;
+
+                @media (min-width: $min-1024) {
+
+                    margin: 0;
+                }
             }
         }
     }
@@ -80,28 +130,49 @@
 
     &__Title {
 
+        width: 100%;
 
-        width: 50%;
-
-        margin: 120px 0 40px;
+        padding: 0 30px;
+        margin: 120px 0 80px;
 
         font-family: $font-family;
         font-weight: 600;
         @include responsive-font(46, 52);
         
-        line-height: 1.27;
+        line-height: 1em;
 
-        text-align: center;
+        text-align: left;
 
         color: #000;
-        
+
         // background: red;
+
+
+        @media (min-width: $min-640) {
+
+            width: 100%;
+
+            padding: 0 calc(10% + 50px);
+
+            text-align: left;
+        }
+
+        @media (min-width: $min-1024) {
+
+            width: 50%;
+            
+            padding: 0;
+
+            text-align: center;
+
+            line-height: 1.27em;
+        }
     }
 
     
     &__Entry {
 
-        width: 66.25%;
+        width: calc(100% - 60px);
 
         display: flex;
         flex-flow: row wrap;
@@ -121,25 +192,45 @@
         }
 
 
+        @media (min-width: $min-640) {
+
+            width: 66.25%;
+        }
+
+
         &__Name {
 
-            width: 50%;
+            width: 100%;
+
+            margin: 0 0 30px;
 
             font-family: $font-family;
             font-weight: 600;
 
             @include responsive-font(26, 32);
 
-            line-height: 1.5em;
+            line-height: 1.2em;
 
             // background: red;
+
+            @media (min-width: $min-640) {
+
+                width: 50%;
+
+                line-height: 1.5em;
+            }
         }
 
         &__Desc {
 
-            width: 50%;
+            width: 100%;
 
             // background: yellow;
+
+            @media (min-width: $min-640) {
+
+                width: 50%;
+            }
 
             p {
 
@@ -148,7 +239,7 @@
                 font-family: $font-family;
                 font-weight: 400;
 
-                @include responsive-font(26, 18);
+                @include responsive-font(16, 18);
 
                 line-height: 1.77em;
 

@@ -1,0 +1,40 @@
+@import '~styles/config';
+
+
+.Purpose {
+
+    z-index: 100;
+    position: relative;
+}
+
+.Spray {
+
+    &__Top {
+
+        z-index: 0;
+
+        position: absolute;
+
+        top: 0;
+        left: 0;
+
+        transform: translate3d(-35%, 10%, 0);
+
+        pointer-events: none;
+    }
+
+
+    &__Bottom {
+
+        z-index: 0;
+
+        position: absolute;
+
+        bottom: 0;
+        right: 0;
+
+        transform: translate3d(60%, -90%, 0);
+
+        pointer-events: none;
+    }
+}
