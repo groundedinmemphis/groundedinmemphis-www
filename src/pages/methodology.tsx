@@ -6,7 +6,7 @@ import { PageIntro } from 'components/intro/PageIntro';
 import { BlockText } from 'components/block-text/BlockText';
 
 import s from './methodology.scss';
-import { ItemList } from 'components/item-list/itemList';
+import { ItemList } from 'components/item-list/ItemList';
 
 import IconAbuse from 'assets/svg/icon-abuse.svg';
 import IconNeglect from 'assets/svg/icon-neglect.svg';
