@@ -1,0 +1,70 @@
+@import '~styles/config';
+
+$video-height: 46.8vw;
+
+.project_video {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: $video-height;
+  background: #7f7f7f;
+}
+
+.iframe {
+  width: 100%;
+  height: $video-height;
+}
+
+.project_info_wrapper {
+  margin-top: 42vw;
+  display: flex;
+  justify-content: space-around;
+}
+
+.project_name {
+  width: 30%;
+}
+.project_info {
+  width: 45%;
+}
+
+.project_name {
+  font-family: $font-heading;
+  font-weight: normal;
+  @include responsive-font(60px, 70px);
+
+  letter-spacing: -0.02em;
+  line-height: 1.2em;
+
+  text-transform: uppercase;
+
+  color: #000;
+}
+
+.project_tags {
+  color: #757575;
+  font-family: $font-mono;
+  font-size: 18px;
+}
+
+.project_des {
+  font-family: $font-family;
+  @include responsive-font(25px, 30px);
+  line-height: 48px;
+  margin-top: 20px;
+}
+
+.project_details {
+  padding: 30px 0 120px 0;
+}
+
+.project_timestamp {
+  float: left;
+  margin-right: 100px;
+}
+
+.project_year {
+  display: block;
+  font-family: $font-mono;
+  font-size: 18px;
+}

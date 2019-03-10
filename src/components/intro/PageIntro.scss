@@ -1,20 +1,12 @@
 @import '~styles/config';
 
 .section_title {
-  <<<<<<<HEAD
-  // width: 49%;
-  // width: 100%;
   min-width: 300px;
 
   // padding: 50px 0;
 
   padding: 0 10% 0 25.4%;
-  margin: 140px 0 110px 0;
-  =======padding: 0;
   margin: 100px 0 80px 0;
-  >>>>>>> refs/remotes/origin/master
-
-  // background: red;
 
   @media (min-width: $min-1024) {
     padding: 0 10% 0 25.4%;
