@@ -26,7 +26,7 @@
 }
 
 .project_des {
-  @include responsive-font(10px, 15px);
-  line-height: 20px;
-  margin-top: 20px;
+  @include responsive-font(15px, 18px);
+  line-height: 25px;
+  margin: 20px 0;
 }

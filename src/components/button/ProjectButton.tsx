@@ -1,5 +1,5 @@
 import React from 'react';
-// import s from './ProjectButton.scss';
+import s from './ProjectButton.scss';
 
 interface IButtonProps {
   url?: string;
@@ -11,7 +11,7 @@ interface IButtonProps {
 export const ProjectButton = (props: IButtonProps) => {
   return (
     <>
-      <a href={props.url}>
+      <a href={props.url} className={s.project_link}>
         {props.name} {props.icon}
       </a>
     </>
