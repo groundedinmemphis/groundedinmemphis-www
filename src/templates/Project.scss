@@ -1,6 +1,6 @@
 @import '~styles/config';
 
-$video-height: 46.8vw;
+$video-height: (9 / 16) * 100vw;
 
 .project_video {
   position: absolute;
@@ -8,15 +8,30 @@ $video-height: 46.8vw;
   width: 100%;
   height: $video-height;
   background: #7f7f7f;
+
+  height: calc(#{$video-height} - 200px);
+  overflow: hidden;
+
+  &_top {
+    height: 150px;
+    background-image: linear-gradient(180deg, rgba(0,0,0,0.5) 0%,  rgba(0,0,0,0) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+  }
 }
 
 .iframe {
   width: 100%;
-  height: $video-height;
+  height: calc(#{$video-height} + 200px);
+  position: relative;
+  top: -150px;
 }
 
 .project_info_wrapper {
-  margin-top: 42vw;
+  margin-top: calc(#{$video-height} - 200px);
   display: flex;
   justify-content: space-around;
 }

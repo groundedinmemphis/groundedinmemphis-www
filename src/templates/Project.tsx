@@ -29,14 +29,22 @@ export const query = graphql`
 `;
 
 export default ({ data }: any) => {
-  const { title, categories, description, year } = data.prismicProject.data;
+  const {
+    title,
+    categories,
+    description,
+    year,
+    youtube_link,
+  } = data.prismicProject.data;
+  const [, youtubeId] = youtube_link.embed_url.match(/v\=(.*)$/);
 
   return (
     <>
       <Helmet title={`Project - ${title.text} `} />
       <div className={s.project_video}>
+        <div className={s.project_video_top} />
         <iframe
-          src="//www.youtube.com/embed/c_Mox74w3BI?rel=0&controls=0&showInfo=0"
+          src={`//www.youtube.com/embed/${youtubeId}?rel=0&amp;controls=0&amp;showinfo=0&amp;modestbranding=1&amp;autoplay=1&amp;widgetid=1`}
           className={s.iframe}
         />
       </div>
