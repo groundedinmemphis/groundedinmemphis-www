@@ -14,8 +14,14 @@
 
   transition: 200ms opacity ease-in-out;
 
-  &:hover {
+  padding-top: 3px;
+  padding-bottom: 4px;
 
+  margin-bottom: -3px;
+  border-bottom: 3px solid transparent;
+
+  &:hover {
+    border-bottom-color: currentColor;
   }
 
   &:first-of-type {
