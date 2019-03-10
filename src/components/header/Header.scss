@@ -2,7 +2,9 @@
 
 .header {
   display: block;
-  font-family: 'Montserrat';
+  // font-family: 'Montserrat';
+  font-family: $font-family;
+  
   &__container {
     @include container;
   }

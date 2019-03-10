@@ -22,16 +22,16 @@ export default (props: any) => {
 
       <h2 className={s.Member__Position}>{props.position}</h2>
 
-      <p className={s.Member__Desc}>{props.description}</p>
+      <p className={s.Member__Quote}>{props.quote}</p>
 
-      <button className={s.Member__ReadMore} onClick={handleClick}>
-        Read More
+      <button className={s.Member__Button} onClick={handleClick}>
+        Read More &#x0002B;
       </button>
 
       <div className={isOpen ? s.Member__Detail : s.Member__Detail__hide}>
-        <p className={s.Member__DescFull}>{props.description}</p>
-        <button className={s.Member__ReadLess} onClick={handleClick}>
-          Read Less
+        <p className={s.Member__Desc}>{props.description}</p>
+        <button className={s.Member__Button} onClick={handleClick}>
+          Read Less &#x02212;
         </button>
       </div>
     </div>

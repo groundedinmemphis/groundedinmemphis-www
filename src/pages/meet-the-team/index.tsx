@@ -25,6 +25,10 @@ export const query = graphql`
               html
               text
             }
+            quote {
+              html
+              text
+            }
             photo {
               alt
               copyright
@@ -77,6 +81,7 @@ export default ({ data }: any) => {
                       key={node.id}
                       name={node.data.name.text}
                       position={node.data.position.text}
+                      quote={node.data.quote.text}
                       imgUrl={node.data.photo.url}
                       description={node.data.description.text}
                     />

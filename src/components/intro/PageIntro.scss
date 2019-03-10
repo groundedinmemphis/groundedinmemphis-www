@@ -1,17 +1,46 @@
 @import '~styles/config';
 
+
 .section_title {
-  width: 70%;
+
+  // width: 49%;
+  // width: 100%;
   min-width: 300px;
-  margin: 0 auto;
-  padding: 50px 0;
+
+  // padding: 50px 0;
+
+  padding: 0 10% 0 25.4%;
+  margin: 140px 0 110px 0;
+
+  // background: red;
 }
 
 .title {
-  @include responsive-font(30px, 50px);
+
+  margin: 0 0 60px;
+
+  font-family: $font-heading;
+  font-weight: normal;
+  @include responsive-font(60px, 70px);
+
+  letter-spacing: -0.02em;
+  line-height: 1.2em;
+
+  text-transform: uppercase;
+
+  color: #000;
+
+
 }
 
 .des {
-  @include responsive-font(15px, 20px);
-  line-height: 30px;
+
+  font-family: $font-family;
+  font-weight: 300;
+  @include responsive-font(22px, 30px);
+
+  line-height: 1.6em;
+
+  color: #000;
+  
 }
