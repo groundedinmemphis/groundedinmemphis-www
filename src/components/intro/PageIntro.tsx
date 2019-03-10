@@ -1,19 +1,18 @@
 import React from 'react';
-import { Container } from 'components/container/Container';
 import s from './PageIntro.scss';
 
 interface IIntroProps {
+  children?: React.ReactNode;
   title?: string;
   des?: string;
 }
 
 export const PageIntro = (props: IIntroProps) => {
   return (
-    // <Container>
     <div className={s.section_title}>
-      <h1 className={s.title}>{props.title}</h1>
-      <p className={s.des}>{props.des}</p>
+      {props.title && <h1 className={s.title}>{props.title}</h1>}
+      {props.des && <p className={s.des}>{props.des}</p>}
+      {props.children}
     </div>
-    // </Container>
   );
 };

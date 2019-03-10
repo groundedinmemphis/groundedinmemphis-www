@@ -1,29 +1,67 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
-import { Container } from 'components/container/Container';
+
+import s from './Project.scss';
 
 export const query = graphql`
-  query Project($id: String) {
+  query Projecta($id: String) {
     prismicProject(prismicId: { eq: $id }) {
       id
+
       data {
         title {
           text
         }
+        description {
+          text
+        }
+        categories {
+          text
+        }
+        youtube_link {
+          embed_url
+        }
+        year
       }
     }
   }
 `;
 
 export default ({ data }: any) => {
-  const { title } = data.prismicProject.data;
+  const { title, categories, description, year } = data.prismicProject.data;
+
   return (
     <>
       <Helmet title={`Project - ${title.text} `} />
-      <Container>
-        <h1>{title.text}</h1>
-      </Container>
+      <div className={s.project_video}>
+        <iframe
+          src="//www.youtube.com/embed/c_Mox74w3BI?rel=0&controls=0&showInfo=0"
+          className={s.iframe}
+        />
+      </div>
+      <div className={s.project_info_wrapper}>
+        <div className={s.project_name}>{title.text}</div>
+        <div className={s.project_info}>
+          <span className={s.project_tags}>{categories.text}</span>
+          <p className={s.project_des}>{description.text}</p>
+
+          <div className={s.project_details}>
+            <div className={s.project_timestamp}>
+              <span className={s.project_year}>Year</span>
+              <span className={s.project_year} style={{ color: '#757575' }}>
+                {year}
+              </span>
+            </div>
+            <div className={s.project_timestamp}>
+              <span className={s.project_year}>Contributors</span>
+              <span className={s.project_year} style={{ color: '#757575' }}>
+                {year}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

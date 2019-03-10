@@ -103,6 +103,7 @@
 
     width:340px;
     height:auto;
+
     svg {
       width: 100%;
       height: auto;
@@ -126,13 +127,20 @@
       max-width: 700px;
       text {
         font-size: 90px;
+        stroke-dasharray: 880px;
+        stroke-dashoffset: 880px;
+        &:last-child {
+          opacity: 0;
+        }
       }
+
     }
     @media screen and (max-width: 1400px) {
       left: auto;
       width: 100%;
       top: 50%;
       transform: translate(0,-50%);
+
     }
   }
 }

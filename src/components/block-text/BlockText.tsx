@@ -11,12 +11,12 @@ interface IBlockTextProps {
 export const BlockText = ({ heading, description }: IBlockTextProps) => (
   <Container>
     <div className={s.block}>
-      <Row>
-        <div className={s.block__col}>
-          <h3 className={s.block__heading}>{heading}</h3>
-          <p className={s.block__description}>{description}</p>
-        </div>
-      </Row>
+      {/* <Row> */}
+      <div className={s.block__col}>
+        <h3 className={s.block__heading}>{heading}</h3>
+        <div className={s.block__description}>{description}</div>
+      </div>
+      {/* </Row> */}
     </div>
   </Container>
 );

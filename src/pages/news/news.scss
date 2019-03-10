@@ -1,0 +1,17 @@
+@import '~styles/config';
+
+.news {
+  @include container;
+}
+
+.news__heading {
+  font-family: $font-heading;
+  line-height: 80px;
+  font-size: 70px;
+  letter-spacing: -0.933333px;
+  text-transform: uppercase;
+
+  color: #232323;
+
+  margin-bottom: 100px;
+}

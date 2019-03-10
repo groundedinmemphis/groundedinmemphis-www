@@ -1,0 +1,119 @@
+/* stylelint-disable selector-max-type */
+
+@import '~styles/config';
+
+.richText {
+  color: inherit;
+
+  p {
+    @include copy;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  p + h1,
+  p + h2,
+  p + h3,
+  p + h4,
+  p + h5,
+  p + h6 {
+    margin-top: 2.2em;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #000;
+  }
+
+  h2 {
+    @include subheading;
+  }
+
+  h3 {
+    @include subheading;
+  }
+
+  &:first-child h2:first-child {
+    @include subheading;
+  }
+
+  ul,
+  ol {
+    margin: 2.6em 0;
+  }
+
+  ul {
+    padding-left: 1.2em;
+  }
+
+  li {
+    padding-left: 0.75em;
+    margin: 0 0 0.25em;
+  }
+
+  a {
+    text-decoration: none;
+    color: $color-primary;
+
+    border-bottom: 1px solid transparent;
+
+
+    &:hover {
+      border-bottom: 1px solid $color-primary;
+    }
+  }
+
+  strong,
+  b {
+    font-weight: 500;
+    color: #000;
+  }
+
+
+  // specifics modifiers
+  &.slice {
+    @include responsive-font(18,22);
+
+    p {
+      color: #000;
+    }
+
+    h2 {
+      @include responsive-font(22,24);
+    }
+
+    ul {
+      list-style-image: none;
+      list-style-type: disc;
+    }
+  }
+
+  &.small {
+    p {
+      @include copy(16, 18);
+      margin-bottom: 50px;
+    }
+
+    h2 {
+      @include subheading(16, 18);
+      margin-bottom: 10px;
+    }
+
+    &:first-child h2:first-child { // stylelint-disable
+      @include subheading(16, 18);
+      margin-bottom: 10px;
+    }
+  }
+
+  img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
