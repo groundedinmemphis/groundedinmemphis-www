@@ -48,7 +48,7 @@ export const Footer = ({ social }: IFooterProps) => {
 
   return (
     <>
-      <div className={s.footer__contact__wrapper}>
+      <div className={s.footer__contact__wrapper} id="footer">
         <Container>
           <div className={s.footer__contact}>
             <div className={s.contact__text}>

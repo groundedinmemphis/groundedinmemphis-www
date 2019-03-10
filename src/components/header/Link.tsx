@@ -6,9 +6,10 @@ interface ILinkProps {
   name: string;
   to: string;
   icon?: React.ReactNode;
+  onClick?(e: any): any;
 }
 
-export const Link = ({ name, to, icon }: ILinkProps) => {
+export const Link = ({ name, to, icon, onClick }: ILinkProps) => {
   const isLink = typeof to !== 'undefined';
   const isExternal = isLink && /^((https?:)?\/\/|[0-9a-zA-Z]+:)/.test(to || '');
 
@@ -28,7 +29,7 @@ export const Link = ({ name, to, icon }: ILinkProps) => {
   }
 
   return (
-    <InternalLink className={s.link} to={to}>
+    <InternalLink className={s.link} to={to} onClick={onClick}>
       {content()}
     </InternalLink>
   );
