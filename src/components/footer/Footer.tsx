@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container } from 'components/container/Container';
-import { Email } from 'components/email/Email';
+import { Email } from 'components/email/email';
 import GroundedLogo from 'assets/svg/grounded-workmark.svg';
 import { Link } from 'gatsby';
 
@@ -45,7 +45,7 @@ export const Footer = ({ logo, social }: IFooterProps) => (
               </p>
               <p class={s.input__field}>
                 <label>
-                  <textarea name="message" placeholder="Message" rows="15" />
+                  <textarea name="message" placeholder="Message" rows="10" />
                 </label>
               </p>
               <p className={s.submit}>
@@ -76,7 +76,7 @@ export const Footer = ({ logo, social }: IFooterProps) => (
           </ul>
         </div>
 
-        <email />
+        <Email />
       </Container>
     </div>
   </>
