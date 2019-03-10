@@ -15,12 +15,13 @@
   }
 
   &__logo {
+
     &Svg {
       display: block;
-
+      margin-right: 30px;
       height: 16px;
       width: 240px;
-      margin-top:-15px;
+      margin-top:-18px;
 
       @media (min-width: $min-768) {
         height: auto;
@@ -30,5 +31,14 @@
 
   &__navigation {
     display: flex;
+    a {
+      &:last-of-type{
+        width:160px;
+        border: 1px solid black;
+        text-align: center;
+        display: block;
+        padding: 20px 30px;
+      }
+    }
   }
 }
