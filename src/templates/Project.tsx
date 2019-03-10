@@ -8,7 +8,6 @@ export const query = graphql`
   query Projecta($id: String) {
     prismicProject(prismicId: { eq: $id }) {
       id
-
       data {
         title {
           text
@@ -36,7 +35,7 @@ export default ({ data }: any) => {
       <Helmet title={`Project - ${title.text} `} />
       <div className={s.project_video}>
         <iframe
-          src="//www.youtube.com/embed/c_Mox74w3BI?rel=0&controls=0&showInfo=0"
+          src="https://www.youtube.com/embed/uxEghzZAEl4?modestbranding=1"
           className={s.iframe}
         />
       </div>

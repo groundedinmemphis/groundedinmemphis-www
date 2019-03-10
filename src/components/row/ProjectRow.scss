@@ -44,3 +44,17 @@
   font-family: $font-mono;
   font-size: 18px;
 }
+
+@media screen and (max-width: $min-tablet + 1px) {
+  .project_row {
+    display: flex;
+    flex-direction: column !important;
+    // margin-bottom: 100px;
+  }
+
+  .project_cover,
+  .project_info {
+    width: 100% !important;
+    height: 100vw !important;
+  }
+}

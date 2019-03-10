@@ -35,10 +35,18 @@
 
 .des {
   font-family: $font-family;
-  font-weight: 400;
+  font-weight: normal;
   @include responsive-font(22px, 30px);
 
   line-height: 1.6em;
 
   color: #000;
+
+  $min-tablet: $min-720;
+}
+
+@media screen and (max-width: $min-tablet + 1px) {
+  .des {
+    @include responsive-font(16px, 24px);
+  }
 }
