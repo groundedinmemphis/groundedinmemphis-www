@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container } from 'components/container/Container';
-import { Email } from 'components/email/Email';
+import { Email } from 'components/email/email';
 import GroundedLogo from 'assets/svg/grounded-workmark.svg';
 import { Link } from 'gatsby';
 
@@ -15,8 +15,6 @@ interface IFooterProps {
   logo: React.ReactNode;
   social: ISocial[];
 }
-
-console.log({ s });
 
 export const Footer = ({ logo, social }: IFooterProps) => (
   <div className={s.footer}>

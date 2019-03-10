@@ -54,6 +54,42 @@
   }
 }
 
+
+// change below to reflect your project
+@mixin heading($min-size: 46, $max-size: 52) {
+  @include responsive-font($min-size, $max-size);
+
+  $size: 0.1 + (0.175 * $max-size / 66);
+
+  margin-bottom: (30/$max-size) * 1em;
+
+  font-family: $font-family-heading;
+  letter-spacing: -$size * 0.1em;
+  font-weight: 400;
+  line-height: (74/66);
+
+  color: #000;
+}
+
+@mixin subheading($min-size: 36, $max-size: 40) {
+  @include responsive-font($min-size, $max-size);
+
+  margin-bottom: (30/$max-size) * 1em;
+
+  font-weight: 600;
+  color: #000;
+  letter-spacing: -0.0125em;
+  line-height: 1;
+}
+
+@mixin copy($min-size: 18, $max-size: 20) {
+  @include responsive-font($min-size,$max-size);
+
+  color: #000;
+  line-height: (30/18);
+  font-weight: 400;
+}
+
 // Alias for responsive-font mixin
 @mixin rf($args...) {
   @include responsive-font($args...);
