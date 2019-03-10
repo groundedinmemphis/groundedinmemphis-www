@@ -23,7 +23,9 @@ export default (props: any) => {
         {props.name} {props.index}
       </h1>
 
-      <h2 className={s.Member__Position}>{props.position}</h2>
+      {props.position && (
+        <h2 className={s.Member__Position}>{props.position}</h2>
+      )}
 
       <p className={s.Member__Quote}>{props.quote}</p>
 
