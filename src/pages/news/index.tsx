@@ -6,11 +6,13 @@ import NewsItem from './components/news-item/NewsItem';
 interface INewsEdge {
   node: {
     id: string;
+    first_publication_date: string;
     data: {
       title: any;
       image: any;
       url: any;
       summary: any;
+      tag: string;
     };
   };
 }
@@ -37,6 +39,7 @@ export const query = graphql`
                 text
               }
             }
+            tag
             image {
               alt
               copyright
@@ -65,7 +68,11 @@ const News = ({ data }: INewsProps) => {
     <div className={s.news}>
       <h1 className={s.news__heading}>News</h1>
       {data.allPrismicNews.edges.map(({ node }) => (
-        <NewsItem key={node.id} {...node.data} />
+        <NewsItem
+          key={node.id}
+          date={node.first_publication_date}
+          {...node.data}
+        />
       ))}
     </div>
   );

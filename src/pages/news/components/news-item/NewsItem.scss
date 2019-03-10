@@ -7,6 +7,17 @@
 .date {
   font-family: $font-mono;
   margin-bottom: 10px;
+  margin-left: 3px;
+}
+
+.image {
+  margin: 0 -120px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  > img {
+    max-width: 100%;
+  }
 }
 
 .link {

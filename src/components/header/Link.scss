@@ -4,7 +4,7 @@
   display: flex;
   font-size: 18px;
   font-weight: 700;
-  margin-left: 40px;
+  margin-left: 30px;
   letter-spacing: -.5px;
   align-self: center;
 
@@ -13,6 +13,10 @@
   color: #000;
 
   transition: 200ms opacity ease-in-out;
+
+  &:hover {
+
+  }
 
   &:first-of-type {
     margin-left: 0;

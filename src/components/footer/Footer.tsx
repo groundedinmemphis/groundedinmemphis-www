@@ -57,13 +57,13 @@ export const Footer = ({ social }: IFooterProps) => {
             </div>
             <div className={s.contact__form}>
               {sent ? (
-                <>
-                  <h3>Thank you</h3>
+                <div className={s.contact__text}>
+                  <p>Thank you</p>
                   <p>
                     We have received your message and will be in contact as soon
                     as possible
                   </p>
-                </>
+                </div>
               ) : (
                 <form
                   action="/thankyou"

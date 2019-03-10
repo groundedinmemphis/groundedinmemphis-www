@@ -3,6 +3,7 @@
 .footer__contact__wrapper {
   padding: 100px 0px;
   background: #2D9CDB;
+
   .footer__contact {
     display:flex;
 
@@ -25,8 +26,11 @@
         }
       }
     }
+
     .contact__form{
-      width: 786px;
+      max-width: 786px;
+      width: 100%;
+
       .input__field {
         input{
           background: none;
@@ -102,6 +106,16 @@
 
       }
     }
+  }
+}
+
+
+@media screen and (max-width: $min-tablet + 1px) {
+  .footer__contact {
+    flex-direction: column;
+  }
+  .footer__contact__form {
+    width: 100%;
   }
 }
 
