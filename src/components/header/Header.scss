@@ -8,12 +8,14 @@
   display: block;
   position:relative;
   z-index:1000;
-  font-family: 'Montserrat';
+
+  font-family: $font-family;
   &__light {
     position: absolute;
     width:100%;
     a {
       color: white;
+
     }
   }
   &__light &__navigation .header__right a {

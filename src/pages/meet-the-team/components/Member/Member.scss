@@ -1,5 +1,13 @@
 @import '~styles/config';
 
+
+/* Cruves */
+$easeOutMild: .215,.61,.355,1;
+$easeSMild: .59,.08,0,.92;
+
+/* Spacing */
+$info-padding: 5.5%;
+
 .Member {
 
     position: relative;
@@ -7,80 +15,71 @@
     overflow: hidden;
 
 
-    &__Portrait {
+    &__Photo {
 
-        &__Photo {
+        margin: 0 0 30px;
 
-            width: 100%;
-            height: auto;
-        }
+        width: 100%;
+        height: auto;
+
     }
 
     &__Name {
 
-        font-family: 'Montserrat';
+        padding: 0 $info-padding;
+        margin: 0 0 10px;
+
+        // font-family: 'Montserrat';
+        font-family: $font-family;
         font-weight: 600;
         @include responsive-font(30px, 40px);
 
-        line-height: 1.4em;
+        line-height: 1.2em;
 
         color: #232323;
+
+        // background: blue;
     }
 
     &__Position {
 
-        
+        padding: 0 $info-padding;
+        margin: 0 0 50px;
+
+        // font-family: 'Space Mono';
+        font-family: $font-mono;
+        font-weight: regular;
         @include responsive-font(18px, 22px);
 
-        line-height: 1.8em;
+        line-height: 1.2em;
 
         color: rgba(0,0,0,1);
 
+        // background: red;
+
     }
 
-    &__Desc {
+    &__Quote {
+
+        padding: 0 $info-padding;
 
         height: 240px;
 
-        font-family: 'Montserrat';
-        font-weight: 500;
-        @include responsive-font(18px, 22px);
+        // font-family: 'Montserrat';
+        font-family: $font-family;
+        font-weight: 300;
+        @include responsive-font(14px, 18px);
 
-        line-height: 1.63em;
+        line-height: 1.77em;
 
         color: #757575;
 
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        
     }
 
-
-    &__ReadMore {
-
-        position: absolute;
-
-        left: 0;
-        bottom: 0;
-
-        padding: 0 0 20px 20px;
-
-        @include responsive-font(16px, 20px);
-
-        color: rgba(0,0,0,0.6);
-
-        background: none;
-
-        &:hover {
-
-            cursor: pointer;
-        }
-
-        &:focus {
-
-            outline: none;
-        }
-    }
 
 
     &__Detail {
@@ -95,12 +94,13 @@
 
             top: 0; left: 0; right: 0; bottom: 0;
 
-            padding: 30px;
+            padding: $info-padding;
 
             background: #CFD4D8;
 
             transition:
-                transform 330ms ease-in-out;
+                transform 660ms cubic-bezier($easeOutMild);
+                
 
         }
 
@@ -112,31 +112,44 @@
     }
 
 
-    &__DescFull {
+    &__Desc {
 
-        @include responsive-font(18px, 22px);
+        // font-family: 'Montserrat';
+        font-family: $font-family;
+        font-weight: 300;
+        @include responsive-font(14px, 18px);
 
-        color: rgba(0,0,0,0.6);
+        line-height: 1.77em;
+
+        color: #000;
     }
 
-    &__ReadLess {
+
+
+
+
+    &__Button {
 
         position: absolute;
 
         left: 0;
         bottom: 0;
 
-        padding: 0 0 20px 20px;
+        padding: 0 0 $info-padding $info-padding;
 
-        @include responsive-font(16px, 20px);
+        @include responsive-font(14px, 18px);
 
         color: rgba(0,0,0,0.6);
 
         background: none;
 
+        transition: opacity 330ms cubic-bezier($easeOutMild);
+
         &:hover {
 
             cursor: pointer;
+
+            opacity: 0.6;
         }
 
         &:focus {
