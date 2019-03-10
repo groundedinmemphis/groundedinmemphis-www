@@ -4,11 +4,11 @@ import Helmet from 'react-helmet';
 import { Container } from 'components/container/Container';
 import s from './OurTeam.scss';
 
-import placeholderImage from 'assets/images/grounded-member-portrait.png';
 import { graphql } from 'gatsby';
 import Member from './components/Member/Member';
 
 import { chunk } from 'lodash';
+import { PageIntro } from 'components/intro/PageIntro';
 
 export const query = graphql`
   query {
@@ -38,23 +38,31 @@ export const query = graphql`
         }
       }
     }
+    prismicOurStory {
+      data {
+        title {
+          html
+          text
+        }
+        description {
+          html
+          text
+        }
+      }
+    }
   }
 `;
 
 export default ({ data }: any) => {
   return (
     <>
-      <Helmet title="Our Story" />
+      <Helmet title="Meet the Team" />
 
       <Container>
-        <h1 className={s.OurTeam__Title}>Our Team</h1>
-
-        <p className={s.OurTeam__Intro}>
-          Our founders and team of creative collaborators are on a mission to
-          bring positive changes to Memphis through art, dance, music, film,
-          mindful meditation, and educational programs focused on Adverse
-          Childhood Experiences (ACE) awareness.
-        </p>
+        <PageIntro
+          title="Our Team"
+          des="Grounded makes space in communities for expression in service of mindfulness. We are a collaboration between activists, artists, community leaders, and anyone looking for their voice and communities to express themselves."
+        />
 
         <div className={s.OurTeam}>
           {chunk(data.allPrismicTeamMember.edges, 2).map((arr, index) => {
@@ -64,11 +72,8 @@ export default ({ data }: any) => {
             return (
               <div key={index} className={className}>
                 {arr.map(({ node }: any) => {
-                  // console.log(arr);
-
                   return (
                     <Member
-                      // index={index}
                       key={node.id}
                       name={node.data.name.text}
                       position={node.data.position.text}
@@ -80,24 +85,6 @@ export default ({ data }: any) => {
               </div>
             );
           })}
-
-          {/* 
-                    {data.allPrismicTeamMember.edges.map(({ node }: any, index: number) => {
-
-                        console.log(arr);
-
-                        return (
-                            
-                            <Member
-                                index={index}
-                                key={node.id}
-                                name={node.data.name.text}
-                                position={node.data.position.text}
-                                imgUrl={node.data.photo.url}
-                                description={node.data.description.text}
-                            />
-                        )
-                    })} */}
         </div>
       </Container>
     </>
