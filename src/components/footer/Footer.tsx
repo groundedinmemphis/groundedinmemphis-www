@@ -126,20 +126,20 @@ export const Footer = ({ social }: IFooterProps) => {
               <Link to="/" className={s.footer__logo}>
                 <GroundedLogo className={s.footer__logoSvg} />
               </Link>
+              <ul className={s.footer__list}>
+                {social.map(item => (
+                  <li key={item.to} className={s.footer__item}>
+                    <a href={item.to} target="_blank" rel="noopener noreferrer">
+                      {item.icon}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
-
-            <ul className={s.footer__list}>
-              {social.map(item => (
-                <li key={item.to} className={s.footer__item}>
-                  <a href={item.to} target="_blank" rel="noopener noreferrer">
-                    {item.icon}
-                  </a>
-                </li>
-              ))}
-            </ul>
+            <div className={s.footer__email}>
+              <Email />
+            </div>
           </div>
-
-          <Email />
         </Container>
       </div>
     </>
