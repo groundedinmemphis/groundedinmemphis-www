@@ -1,5 +1,5 @@
 import React from 'react';
-import s from './Email.scss';
+import s from './email.scss';
 
 export const Email = () => (
   <>
