@@ -8,7 +8,9 @@ import { BlockText } from 'components/block-text/BlockText';
 import s from './methodology.scss';
 import { ItemList } from 'components/item-list/itemList';
 
-import TestIcon from 'assets/svg/test-icon.svg';
+import IconAbuse from 'assets/svg/icon-abuse.svg';
+import IconNeglect from 'assets/svg/icon-neglect.svg';
+import IconHd from 'assets/svg/icon-hd.svg';
 
 export default () => {
   return (
@@ -69,17 +71,17 @@ export default () => {
         <Container>
           <div className={s.Aces__Categories}>
             <div className={s.Aces__Categories__Entry}>
-              <TestIcon />
+              <IconAbuse />
               <p className={s.Aces__Categories__Entry__Title}>Abuse</p>
             </div>
 
             <div className={s.Aces__Categories__Entry}>
-              <TestIcon />
+              <IconNeglect />
               <p className={s.Aces__Categories__Entry__Title}>Neglect</p>
             </div>
 
             <div className={s.Aces__Categories__Entry}>
-              <TestIcon />
+              <IconHd />
               <p className={s.Aces__Categories__Entry__Title}>
                 Household Dysfunction
               </p>
@@ -100,17 +102,16 @@ export default () => {
 
         <Container>
           <ItemList>
-            <li>Educators &amp; school districts</li>
-            <li>Scientists</li>
-            <li>Juvenile detention facilities</li>
-            <li>Mental health professionals</li>
-            <li>Producers</li>
-            <li>City leaders</li>
-            <li>Judges</li>
-            <li>Law enforcement </li>
-            <li>Philanthropists</li>
-            <li>Our communities</li>
-            <li>Scientists</li>
+            <li>Obesity</li>
+            <li>Cancer</li>
+            <li>Diabetes</li>
+            <li>Stroke</li>
+            <li>Depression</li>
+            <li>COPD</li>
+            <li>STDs</li>
+            <li>Broken bones</li>
+            <li>Heart disease</li>
+            <li>Suicidal behavior</li>
           </ItemList>
         </Container>
 
@@ -168,19 +169,35 @@ export default () => {
 
         <div className={s.Theory__Entry}>
           <div className={s.Theory__Entry__Name}>
-            Elevating <br />
-            consciousness
+            Building <br />
+            community
           </div>
           <div className={s.Theory__Entry__Desc}>
             <p>
-              Helping students acknowledge their inner voice and emotions is the
-              first step to changing actions and perspective.
+              When students pay attention to their passions and have an elevated
+              awareness of themselves, they can work collaboratively and act as
+              positive influences for each other.
             </p>
 
             <p>
-              By listening to their interests and passions, we help students
-              affected by ACEs to develop a new awareness in themselves, their
-              decisions, and communities.
+              We create a feeling of community and use it to develop unity,
+              trust, and emotional openness that breeds a culture of
+              self-expression.
+            </p>
+          </div>
+        </div>
+
+        <div className={s.Theory__Entry}>
+          <div className={s.Theory__Entry__Name}>
+            Impacting <br />
+            culture
+          </div>
+          <div className={s.Theory__Entry__Desc}>
+            <p>
+              Self awareness and a sense of community work to change the actions
+              and relationships in the students' communities. As students change
+              through mindfulness and self-expression, there are pronounced
+              shifts in the culture around them and their day-to-day lives.
             </p>
           </div>
         </div>
