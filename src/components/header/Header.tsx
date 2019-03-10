@@ -12,15 +12,20 @@ import 'gsap/ScrollToPlugin';
 
 interface IHeaderProps {
   children?: React.ReactNode;
+  location: any;
   theme?: 'dark' | 'light' | 'video';
 }
 
 export const Header = (props: IHeaderProps) => {
-  const { theme } = props;
+  const { theme, location } = props;
   const [isOpen, setIsOpen] = React.useState(false);
   const header__light = theme === 'light'; // tslint:disable-line
   const header__video = theme === 'video'; // tslint:disable-line
   const header__navigation__open = isOpen; // tslint:disable-line
+
+  React.useEffect(() => {
+    setIsOpen(false);
+  }, [location.pathname]);
 
   const handleClick = () => {
     setIsOpen(!isOpen);
@@ -29,6 +34,7 @@ export const Header = (props: IHeaderProps) => {
   const handlePartnerClick = (e: any) => {
     e.preventDefault();
     TweenLite.to(window, 1, { scrollTo: '#footer' });
+    setIsOpen(false);
     return false;
   };
 

@@ -1,4 +1,5 @@
 import favicon from 'assets/images/favicon.png';
+import share from 'assets/images/share.jpg';
 import share from 'assets/images/look.png';
 
 const title = 'Grounded';
@@ -21,8 +22,8 @@ export const helmet = {
 
     { property: 'og:title', content: title },
     { property: 'og:image', content: share },
-    { property: 'og:image:width', content: '880px' },
-    { property: 'og:image:height', content: '440px' },
+    { property: 'og:image:width', content: '1200px' },
+    { property: 'og:image:height', content: '600px' },
     { property: 'og:image:alt', content: description },
 
     { name: 'twitter:title', content: title },
