@@ -39,7 +39,7 @@ export default ({ data }: any) => {
 
   return (
     <>
-      <Helmet title={`Project - ${title.text} `} />
+      <Helmet title={title.text} />
       <div className={s.project_video}>
         <div className={s.project_video_top} />
         <iframe
