@@ -20,7 +20,7 @@ console.log({ s });
 
 export const Footer = ({ logo, social }: IFooterProps) => (
   <>
-    <div className={s.footer__contact__wrapper}>
+    <div id="partner" className={s.footer__contact__wrapper}>
       <Container>
         <div className={s.footer__contact}>
           <div className={s.contact__text}>
@@ -63,20 +63,20 @@ export const Footer = ({ logo, social }: IFooterProps) => (
             <Link to="/" className={s.footer__logo}>
               <GroundedLogo className={s.footer__logoSvg} />
             </Link>
+            <ul className={s.footer__list}>
+              {social.map(item => (
+                <li key={item.to} className={s.footer__item}>
+                  <a href={item.to} target="_blank" rel="noopener noreferrer">
+                    {item.icon}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
-
-          <ul className={s.footer__list}>
-            {social.map(item => (
-              <li key={item.to} className={s.footer__item}>
-                <a href={item.to} target="_blank" rel="noopener noreferrer">
-                  {item.icon}
-                </a>
-              </li>
-            ))}
-          </ul>
+          <div className={s.footer__email}>
+            <Email />
+          </div>
         </div>
-
-        <Email />
       </Container>
     </div>
   </>

@@ -1,0 +1,64 @@
+@import '~styles/config';
+
+.input__wrapper{
+  display:flex;
+  margin-top: 30px;
+  border-bottom: 2px solid #FFFFFF;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  .input__field {
+    background:none;
+    width:1px;
+    flex-grow: 1;
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 32px;
+    font-size: 18px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 32px;
+    font-size: 18px;
+    color: #ffffff;
+    &::placeholder{
+      color:black;
+      font-family: $font-family;
+      font-style: normal;
+      font-weight: normal;
+      line-height: 32px;
+      font-size: 18px;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      line-height: 32px;
+      font-size: 18px;
+      color: rgba(255,255,255,.5);
+    }
+  }
+
+
+
+}
+
+.submit {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+  background:none;
+  text-transform: capitalize;
+  cursor:pointer;
+}
+.email__label{
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 32px;
+  font-size: 18px;
+  color: #FFFFFF;
+}
