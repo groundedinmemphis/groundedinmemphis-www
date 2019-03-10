@@ -1,6 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 
+
 import { Container } from 'components/container/Container';
 // import s from './purpose.scss';
 
@@ -13,16 +14,12 @@ import { BlockText } from 'components/block-text/BlockText';
 import { ItemList } from 'components/item-list/itemList';
 import { PageIntro } from 'components/intro/PageIntro';
 
-// export const query = graphql`
-//   query {
-//   }
-// `;
 
-// export default ({ data }: any) => {
 export default () => {
   return (
     <>
       <Helmet title="Purpose" />
+
 
       <Container>
         <PageIntro
@@ -104,6 +101,7 @@ export default () => {
           <li>Scientists</li>
         </ItemList>
       </Container>
+
     </>
   );
 };

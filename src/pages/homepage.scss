@@ -45,7 +45,7 @@
   .button__row {
     margin: 50px auto;
     a {
-      background: #2F80ED;
+      background: #2D9CDB;
       display: block;
       max-width: 200px;
       text-align: center;
@@ -56,6 +56,7 @@
       font-family:"Montserrat";
       font-weight:600;
       padding: 25px 20px;
+      border-radius: 3px;
     }
   }
 
@@ -91,6 +92,7 @@
   &__big__logo {
     width:340px;
     height:auto;
+
     svg {
       width: 100%;
       height: auto;
@@ -111,8 +113,12 @@
       max-width: 700px;
       text {
         font-size: 90px;
+        stroke-dasharray: 880px;
+        stroke-dashoffset: 880px;
+        &:last-child {
+          opacity: 0;
+        }
       }
-
     }
   }
 }
