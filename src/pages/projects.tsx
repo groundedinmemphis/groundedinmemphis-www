@@ -10,10 +10,12 @@ import s from './projects.scss';
 export default () => (
   <>
     <Helmet title="Projects" />
-    <PageIntro
-      title="Projects"
-      des="Grounded makes space in communities for expression in service of mindfulness. We are a collaboration between activists, artists, community leaders, and anyone looking for their voice and communities to express themselves."
-    />
+    <Container>
+      <PageIntro
+        title="Projects"
+        des="Grounded makes space in communities for expression in service of mindfulness. We are a collaboration between activists, artists, community leaders, and anyone looking for their voice and communities to express themselves."
+      />
+    </Container>
     <section
       className={s.hero_image}
       style={{
