@@ -3,8 +3,8 @@ import s from './PageIntro.scss';
 
 interface IIntroProps {
   children?: React.ReactNode;
-  title?: string;
-  des?: string;
+  title?: React.ReactNode;
+  des?: React.ReactNode;
 }
 
 export const PageIntro = (props: IIntroProps) => {
