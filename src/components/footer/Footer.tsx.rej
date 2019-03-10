@@ -1,0 +1,6 @@
+diff a/src/components/footer/Footer.tsx b/src/components/footer/Footer.tsx	(rejected hunks)
+@@ -41 +47,3 @@ export const Footer = ({ logo, social }: IFooterProps) => (
+-                <label><textarea name="message" placeholder="Message" rows="15"></textarea></label>
++                <label>
++                  <textarea name="message" placeholder="Message" rows="15" />
++                </label>
