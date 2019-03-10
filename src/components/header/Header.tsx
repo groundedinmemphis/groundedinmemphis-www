@@ -6,7 +6,7 @@ import { Link as HeaderLink } from 'components/header/Link';
 
 interface IHeaderProps {
   children?: React.ReactNode;
-  theme: 'dark' | 'light';
+  theme?: 'dark' | 'light';
 }
 
 export const Header = (props: IHeaderProps) => {
