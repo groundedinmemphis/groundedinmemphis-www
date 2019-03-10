@@ -34,7 +34,10 @@ exports.createPages = ({ graphql, actions }) => {
         actions.createPage({
           path: `project/${node.uid}`,
           component: path.resolve('./src/templates/Project.tsx'),
-          context: node,
+          context: {
+            ...node,
+            theme: 'video',
+          },
         });
       });
       resolve();

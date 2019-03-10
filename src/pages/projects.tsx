@@ -79,28 +79,6 @@ export default ({ data }: any) => {
           />
         );
       })}
-
-      {/* <ProjectRow
-        img_url="https://images.unsplash.com/photo-1519164497992-65f6b58a2981?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60"
-        title="Be What a Bullet Can’t Be"
-        year="2019"
-        des="Lorem ipsum nisi id ipsum blandit volutpat. Vestibulum delamoren scelerisque nisledensi ac convallis facilisis nulla de lorem ipsum. Blandit volutpat sed quis del ligula."
-        flip={false}
-      />
-      <ProjectRow
-        img_url="https://images.unsplash.com/photo-1519164497992-65f6b58a2981?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60"
-        title="As I Am"
-        year="2012"
-        des="Nisi id ipsum blandit volutpat sed quis del ligula. Vestibulum dela scelerisque nisledensi ac convallis facilisis nulla dela lorem ipsum. Blandit volutpat sed quis del ligula."
-        flip={true}
-      />
-      <ProjectRow
-        img_url="https://images.unsplash.com/photo-1519164497992-65f6b58a2981?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60"
-        title="April"
-        year="2012"
-        des="Lorem ipsum nisi id ipsum blandit volutpat. Vestibulum delamoren scelerisque nisledensi ac convallis facilisis nulla de lorem ipsum. Blandit volutpat sed quis del ligula."
-        flip={false}
-      /> */}
     </>
   );
 };

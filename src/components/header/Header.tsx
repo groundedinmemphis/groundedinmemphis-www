@@ -12,13 +12,14 @@ import 'gsap/ScrollToPlugin';
 
 interface IHeaderProps {
   children?: React.ReactNode;
-  theme?: 'dark' | 'light';
+  theme?: 'dark' | 'light' | 'video';
 }
 
 export const Header = (props: IHeaderProps) => {
   const { theme } = props;
   const [isOpen, setIsOpen] = React.useState(false);
   const header__light = theme === 'light'; // tslint:disable-line
+  const header__video = theme === 'video'; // tslint:disable-line
   const header__navigation__open = isOpen; // tslint:disable-line
 
   const handleClick = () => {
@@ -32,7 +33,7 @@ export const Header = (props: IHeaderProps) => {
   };
 
   return (
-    <header className={s('header', { header__light })}>
+    <header className={s('header', { header__light, header__video })}>
       <div className={s.header__container}>
         <div className={s.header__content}>
           <div className={s.header__mobile}>

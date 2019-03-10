@@ -4,6 +4,7 @@
   height: 80vw;
   position:relative;
   margin-bottom:100px;
+  z-index:100;
   img {
     display: block;
     position: absolute;
@@ -22,25 +23,88 @@
   }
 
 }
-.body__content {
+
+.content {
   position:relative;
+  overflow: hidden;
+}
+
+.spray__top{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  margin: 0 auto;
+  max-width: 100%;
+  z-index: 0;
+  pointer-events:none;
+  img {
+    transform: rotate(90deg)
+  }
+}
+
+.spray__foot{
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  margin: 0 auto;
+  max-width: 100%;
+  z-index: 0;
+  transform: translate(0,20%);
+  pointer-events:none;
+}
+.body__content {
+  @include container;
+  position:relative;
+  overflow: hidden;
+  z-index:100;
+
+  .two__column__text__wrapper{
+    p {
+      font-family: Space Mono;
+      font-style: normal;
+      font-weight: normal;
+      line-height: 30px;
+      font-size: 18px;
+      color: #232323;
+    }
+  }
+
   .two__column__text{
     display:flex;
+    position:relative;
+    z-index:100;
     p {
-      font-family: 'Montserrat';
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      line-height: 32px;
+      font-size: 18px;
       color: #000000;
-      font-size: 22px;
-      font-weight: 500;
-      line-height: 38px;
+      opacity: 0.8;
       max-width:450px;
       &:first-of-type{
-        font-size:40px;
-        margin-right: 50px;
+        font-family: Montserrat;
+        font-style: normal;
         font-weight: 600;
-        line-height:56px;
-        max-width: 700px;
+        line-height: 48px;
+        font-size: 32px;
+        color: #000000;
       }
     }
+    @media screen and (max-width: $min-desktop) {
+      flex-wrap: wrap;
+      p {
+        width: 100%;
+        min-width:100%;
+        &:first-of-type{
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+
   }
   .button__row {
     margin: 50px auto;
@@ -58,14 +122,6 @@
       padding: 25px 20px;
       border-radius: 3px;
     }
-  }
-
-  .spray__footer{
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-    transform: translate(50%, 50%);
-    max-width: 600px;
   }
 }
 
