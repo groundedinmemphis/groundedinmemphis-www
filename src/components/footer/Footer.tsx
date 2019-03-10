@@ -31,6 +31,7 @@ export const Footer = ({ social }: IFooterProps) => {
   };
 
   const handleSubmit = (e: any) => {
+    e.preventDefault();
     const f = e.currentTarget;
     fetch('/', {
       method: 'POST',
@@ -41,6 +42,7 @@ export const Footer = ({ social }: IFooterProps) => {
     })
       .then(() => setSent(true))
       .catch(error => alert(error));
+    return false;
   };
 
   return (
