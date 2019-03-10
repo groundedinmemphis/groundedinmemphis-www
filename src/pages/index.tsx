@@ -26,7 +26,6 @@ const Homepage = () => {
   return (
     <>
       <Helmet title="Home" />
-
       <div className={s.opening__image}>
         <div className={s.opening__image__big__logo}>
           <BigLogo />

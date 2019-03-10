@@ -7,20 +7,28 @@ import XMenu from 'assets/svg/x.svg';
 
 import s from './Header.scss';
 import { Link as HeaderLink } from 'components/header/Link';
+import { TweenLite } from 'gsap';
+import 'gsap/ScrollToPlugin';
 
 interface IHeaderProps {
   children?: React.ReactNode;
-  theme: 'dark' | 'light';
+  theme?: 'dark' | 'light';
 }
 
 export const Header = (props: IHeaderProps) => {
-  const { children, theme } = props;
+  const { theme } = props;
   const [isOpen, setIsOpen] = React.useState(false);
   const header__light = theme === 'light'; // tslint:disable-line
   const header__navigation__open = isOpen; // tslint:disable-line
 
   const handleClick = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handlePartnerClick = (e: any) => {
+    e.preventDefault();
+    TweenLite.to(window, 1, { scrollTo: '#footer' });
+    return false;
   };
 
   return (
@@ -49,8 +57,12 @@ export const Header = (props: IHeaderProps) => {
               <HeaderLink name="Meet the Team" to="/meet-the-team" />
               <HeaderLink name="News" to="/news" />
             </div>
-            <div className={s.header__right} onClick={handleClick}>
-              <HeaderLink name="Partner with Us" to="/#partner" />
+            <div className={s.header__right}>
+              <HeaderLink
+                name="Partner with Us"
+                to="/#partner"
+                onClick={handlePartnerClick}
+              />
               <HeaderLink name="Donate" to="/donate" />
             </div>
           </div>

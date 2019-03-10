@@ -1,33 +1,29 @@
-import React from 'react';
-import { get } from 'lodash';
-import Helmet from 'react-helmet';
-import Logo from 'assets/svg/ueno-logo.svg';
-import Instagram from 'assets/svg/instagram.svg';
 import Facebook from 'assets/svg/facebook.svg';
-import { helmet } from 'utils/helmet';
-import { Header } from 'components/header/Header';
-import { Footer } from 'components/footer/Footer';
+import Instagram from 'assets/svg/instagram.svg';
+import Logo from 'assets/svg/ueno-logo.svg';
 import { Devtools } from 'components/devtools/Devtools';
+import { Footer } from 'components/footer/Footer';
+import { Header } from 'components/header/Header';
+import React from 'react';
+import Helmet from 'react-helmet';
+import { helmet } from 'utils/helmet';
 import s from './AppLayout.scss';
 
 interface IAppLayoutProps {
   children: React.ReactNode;
+  pageContext: {
+    theme?: string;
+  };
 }
 
 const isDev = process.env.NODE_ENV === 'development';
 
-export default ({ children }: IAppLayoutProps) => {
-  const theme = get(
-    children,
-    'props.pageResources.component.navigationTheme',
-    'dark'
-  );
-
+export default ({ children, pageContext }: IAppLayoutProps) => {
   return (
     <div className={s.layout}>
       <Helmet {...helmet} />
 
-      <Header theme={theme} />
+      <Header theme={pageContext.theme} />
 
       {children}
 

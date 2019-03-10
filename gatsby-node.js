@@ -8,6 +8,14 @@
 
 const path = require('path');
 
+exports.onCreatePage = ({ page, actions }) => {
+  const { createPage } = actions;
+  if (page.path === '/') {
+    page.context.theme = 'light';
+    createPage(page);
+  }
+};
+
 exports.createPages = ({ graphql, actions }) => {
   return new Promise(resolve => {
     graphql(`
