@@ -1,35 +1,61 @@
 @import '~styles/config';
 
-
-/* Cruves */
-$easeOutMild: .215,.61,.355,1;
-$easeSMild: .59,.08,0,.92;
-
 /* Spacing */
-$info-padding: 5.5%;
+// $info-padding: 0;
+// body {
+//     --info-padding: 0;
+
+//     @media (min-width: $min-1024) {
+    
+//         $info-padding: 5.5%;
+//     }
+
+// }
+
+
+
+
 
 .Member {
 
+    --info-padding: 0;
+
     position: relative;
-    width: 37.3%;
+    width: 100%;
     overflow: hidden;
+
+
+    @media (min-width: $min-640) {
+        
+        width: 50%;
+    }
+
+    @media (min-width: $min-1024) {
+        
+        --info-padding: 5.5%;
+        width: 37.3%;
+    }
 
 
     &__Photo {
 
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        display: block;
+
         margin: 0 0 30px;
+        padding-top: 70%;
 
         width: 100%;
-        height: auto;
-
     }
 
     &__Name {
 
-        padding: 0 $info-padding;
+        // padding: 0 $info-padding;
+        padding: 0 var(--info-padding);
         margin: 0 0 10px;
 
-        // font-family: 'Montserrat';
         font-family: $font-family;
         font-weight: 600;
         @include responsive-font(30px, 40px);
@@ -43,10 +69,10 @@ $info-padding: 5.5%;
 
     &__Position {
 
-        padding: 0 $info-padding;
-        margin: 0 0 50px;
+        // padding: 0 $info-padding;
+        padding: 0 var(--info-padding);
+        margin: 0 0 20px;
 
-        // font-family: 'Space Mono';
         font-family: $font-mono;
         font-weight: regular;
         @include responsive-font(18px, 22px);
@@ -57,15 +83,19 @@ $info-padding: 5.5%;
 
         // background: red;
 
+        @media (min-width: $min-1024) {
+
+            margin: 0 0 50px;
+        }
     }
 
     &__Quote {
 
-        padding: 0 $info-padding;
+        // padding: 0 $info-padding;
+        padding: 0 var(--info-padding);
 
-        height: 240px;
+        min-height: 160px;
 
-        // font-family: 'Montserrat';
         font-family: $font-family;
         font-weight: 300;
         @include responsive-font(14px, 18px);
@@ -73,11 +103,13 @@ $info-padding: 5.5%;
         line-height: 1.77em;
 
         color: #757575;
-
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
         
+
+
+        @media (min-width: $min-640) {
+
+            min-height: 240px;
+        }
     }
 
 
@@ -94,14 +126,13 @@ $info-padding: 5.5%;
 
             top: 0; left: 0; right: 0; bottom: 0;
 
-            padding: $info-padding;
+            // padding: $info-padding;
+            padding: var(--info-padding);
 
             background: #CFD4D8;
 
             transition:
-                transform 660ms cubic-bezier($easeOutMild);
-                
-
+                transform 560ms cubic-bezier($easeOutMild);
         }
 
         &__hide {
@@ -114,7 +145,6 @@ $info-padding: 5.5%;
 
     &__Desc {
 
-        // font-family: 'Montserrat';
         font-family: $font-family;
         font-weight: 300;
         @include responsive-font(14px, 18px);
@@ -135,7 +165,8 @@ $info-padding: 5.5%;
         left: 0;
         bottom: 0;
 
-        padding: 0 0 $info-padding $info-padding;
+        // padding: 0 0 $info-padding $info-padding;
+        padding: 0 0 var(--info-padding) var(--info-padding);
 
         @include responsive-font(14px, 18px);
 
@@ -144,6 +175,7 @@ $info-padding: 5.5%;
         background: none;
 
         transition: opacity 330ms cubic-bezier($easeOutMild);
+
 
         &:hover {
 

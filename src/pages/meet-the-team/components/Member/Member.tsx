@@ -1,7 +1,7 @@
 import React from 'react';
 
 import s from './Member.scss';
-import { ProjectButton } from 'components/button/ProjectButton';
+// import { ProjectButton } from 'components/button/ProjectButton';
 
 export default (props: any) => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -12,8 +12,11 @@ export default (props: any) => {
 
   return (
     <div className={s.Member}>
-      <div className={s.Member__Photo}>
-        <img src={props.imgUrl} />
+      <div
+        className={s.Member__Photo}
+        style={{ backgroundImage: `url(${props.imgUrl})` }}
+      >
+        {/* &nbsp; */}
       </div>
 
       <h1 className={s.Member__Name}>
