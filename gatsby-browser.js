@@ -5,3 +5,8 @@
  */
 
 // You can delete this file if you're not using it
+
+exports.onClientEntry = () => {
+  require('gsap');
+  require('gsap/src/uncompressed/plugins/ScrollToPlugin');
+};
