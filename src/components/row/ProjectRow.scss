@@ -25,12 +25,22 @@
 }
 
 .project_name {
-  @include responsive-font(20px, 35px);
+  font-family: $font-family;
+  font-weight: 600;
+  @include responsive-font(40px, 52px);
+  line-height: 66px;
 }
 
 .project_des {
+  font-family: $font-family;
+  font-weight: 400;
   @include responsive-font(15px, 18px);
-  line-height: 25px;
+  line-height: 32px;
   margin: 20px 0;
   margin-bottom: 50px;
+}
+
+.project_year {
+  font-family: $font-mono;
+  font-size: 18px;
 }

@@ -12,7 +12,7 @@ export const ProjectButton = (props: IButtonProps) => {
   return (
     <>
       <a href={props.url} className={s.project_link}>
-        {props.name} {props.icon}
+        {props.name} <span className={s.project_link_icon}>{props.icon}</span>
       </a>
     </>
   );
