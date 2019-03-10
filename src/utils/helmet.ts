@@ -1,12 +1,13 @@
 import favicon from 'assets/images/favicon.png';
 import share from 'assets/images/share.jpg';
+import share from 'assets/images/look.png';
 
-const title = 'Create Ueno App';
-const description = 'The easiest and fastest way to create new projects.';
+const title = 'Grounded';
+const description = 'Inspiring a city to walk together';
 
 export const helmet = {
   title,
-  titleTemplate: '%s - Ueno',
+  titleTemplate: '%s - Grounded',
   htmlAttributes: { lang: 'en' },
   meta: [
     { name: 'description', content: description },
@@ -28,8 +29,8 @@ export const helmet = {
     { name: 'twitter:title', content: title },
     { name: 'twitter:card', content: 'summary_large_image' },
     { name: 'twitter:image', content: share },
-    { name: 'twitter:site', content: '@uenodotco' },
-    { name: 'twitter:creator', content: '@uenodotco' },
+    { name: 'twitter:site', content: '@groundedinmemphis' },
+    { name: 'twitter:creator', content: '@groundedinmemphis' },
     { name: 'twitter:description', content: description },
   ],
   link: [{ rel: 'icon', type: 'image/x-icon', href: favicon }],

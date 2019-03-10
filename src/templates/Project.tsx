@@ -22,6 +22,9 @@ export const query = graphql`
           embed_url
         }
         year
+        contributors {
+          text
+        }
       }
     }
   }
@@ -32,6 +35,7 @@ export default ({ data }: any) => {
     title,
     categories,
     description,
+    contributors,
     year,
     youtube_link,
   } = data.prismicProject.data;
@@ -39,7 +43,7 @@ export default ({ data }: any) => {
 
   return (
     <>
-      <Helmet title={`Project - ${title.text} `} />
+      <Helmet title={title.text} />
       <div className={s.project_video}>
         <div className={s.project_video_top} />
         <iframe
@@ -63,7 +67,7 @@ export default ({ data }: any) => {
             <div className={s.project_timestamp}>
               <span className={s.project_year}>Contributors</span>
               <span className={s.project_year} style={{ color: '#757575' }}>
-                {year}
+                {contributors.text}
               </span>
             </div>
           </div>

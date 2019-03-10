@@ -1,12 +1,18 @@
 @import '~styles/config';
 
 .section_title {
-  min-width: 300px;
 
-  // padding: 50px 0;
+  position: relative;
+  z-index: 100;
 
-  padding: 0 10% 0 25.4%;
+  padding: 0;
   margin: 100px 0 80px 0;
+
+  @media (min-width: $min-640) {
+
+    padding: 0 10%;
+    margin: 100px 0 80px 0;
+  }
 
   @media (min-width: $min-1024) {
     padding: 0 10% 0 25.32%;
