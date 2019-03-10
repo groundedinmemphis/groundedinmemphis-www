@@ -7,16 +7,20 @@ interface IHeaderProps {
   children: React.ReactNode;
 }
 
-export const Header = ({ children }: IHeaderProps) => (
-  <header className={s.header}>
-    <div className={s.header__container}>
-      <div className={s.header__content}>
-        <Link to="/" className={s.header__logo}>
-          <GroundedLogo className={s.header__logoSvg} />
-        </Link>
+export const Header = (props: IHeaderProps) => {
+  const { children, theme } = props;
 
-        <div className={s.header__navigation}>{children}</div>
+  return (
+    <header className={s.header}>
+      <div className={s.header__container}>
+        <div className={s.header__content}>
+          <Link to="/" className={s.header__logo}>
+            <GroundedLogo className={s.header__logoSvg} />
+          </Link>
+
+          <div className={s.header__navigation}>{children}</div>
+        </div>
       </div>
-    </div>
-  </header>
-);
+    </header>
+  );
+};
