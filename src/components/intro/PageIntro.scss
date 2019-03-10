@@ -9,7 +9,12 @@
   margin: 100px 0 80px 0;
 
   @media (min-width: $min-1024) {
+<<<<<<< HEAD
     padding: 0 10% 0 25.4%;
+=======
+      
+    padding: 0 10% 0 25.32%;
+>>>>>>> 48e408586d55a418060c8b485dbc08c6067109d1
     margin: 140px 0 110px 0;
   }
 }
@@ -19,10 +24,10 @@
 
   font-family: $font-heading;
   font-weight: normal;
-  @include responsive-font(60px, 70px);
+  @include responsive-font(70px, 84px);
 
   letter-spacing: -0.02em;
-  line-height: 1.2em;
+  line-height: 1em;
 
   text-transform: uppercase;
 
@@ -35,7 +40,7 @@
 
 .des {
   font-family: $font-family;
-  font-weight: 300;
+  font-weight: 400;
   @include responsive-font(22px, 30px);
 
   line-height: 1.6em;
