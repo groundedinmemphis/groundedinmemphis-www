@@ -82,6 +82,9 @@
     justify-content: space-between;
     padding-top: 30px;
     width: 100%;
+    .closing_mobile_menu {
+      display: none;
+    }
 
     .header__left {
       display:flex;
@@ -102,27 +105,88 @@
       }
     }
     @media screen and (max-width: 1400px) {
-      display:none;
+      transform: translate(100%,0%);
+      position: absolute;
+      width:100vw;
+      height:100vh;
+      top:0px;
+      left:0px;
+      transition: transform .25s;
+      position: absolute;
+      width:100vw;
+      height:100vh;
+      top:0px;
+      left:0px;
+      transition: transform .25s;
+      background:#2D9CDB;
+      display:block;
+      display:flex;
+      flex-direction:column;
+      justify-content: space-between;
+      .closing_mobile_menu {
+        display: block;
+        background: none;
+        cursor:pointer;
+      }
+      .header__logo {
+        display:none;
+      }
+      .header__left {
+        display:flex;
+        color:#000;
+        display:flex;
+        flex-direction:column;
+        a {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 48px;
+          font-size: 24px;
+          text-align: center;
+          margin:0 auto;
+          color:#000;
+        }
+      }
+      .header__right {
+        display:flex;
+        color:#000;
+        display:flex;
+        flex-direction:column;
+        margin: 0 auto;
+        width:100%;
+        a {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 48px;
+          font-size: 24px;
+          text-align: center;
+          margin:0 auto;
+          color:#000;
+          &:first-of-type {
+            border-top: 1px solid #000;
+            width:100%;
+            color:black;
+            text-align:center;
+            display: flex;
+            justify-content: center;
+          }
+          &:last-of-type {
+            background: black;
+            width:100%;
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: normal;
+            line-height: 22px;
+            font-size: 18px;
+            text-align: center;
+            color: #2D9CDB;
+          }
+        }
+      }
     }
   }
   .header__navigation__open {
-    position: absolute;
-    width:100vw;
-    height:100vh;
-    top:0px;
-    left:0px;
-    background:#2D9CDB;
-    display:block;
-    .header__logo {
-      display:none;
-    }
-    .header__left {
-      display:flex;
-      color:#fff;
-    }
-    .header__right {
-      display:flex;
-      color:#fff;
-    }
+    transform: translate(0px,0px);
   }
 }
