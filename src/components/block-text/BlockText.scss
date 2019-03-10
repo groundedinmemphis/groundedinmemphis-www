@@ -10,9 +10,24 @@
   // background: green;
 
   &__col {
-
-    width: 50%;
+    
+    width: 100%;
+    padding: 0;
     // background: red;
+
+    @media (min-width: $min-640) {
+
+      padding: 0 10%;
+      width: 100%;
+    }
+
+    @media (min-width: $min-1024) {
+
+      padding: 0;
+      width: 50%;
+    }
+
+    
   }
 
   &__heading {
