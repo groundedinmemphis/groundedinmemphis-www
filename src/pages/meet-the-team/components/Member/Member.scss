@@ -12,6 +12,7 @@
 
     @media (min-width: $min-640) {
         
+        --info-padding: 5.5%;
         width: 50%;
     }
 
@@ -37,7 +38,6 @@
 
     &__Name {
 
-        // padding: 0 $info-padding;
         padding: 0 var(--info-padding);
         margin: 0 0 10px;
 
@@ -54,7 +54,6 @@
 
     &__Position {
 
-        // padding: 0 $info-padding;
         padding: 0 var(--info-padding);
         margin: 0 0 20px;
 
@@ -76,7 +75,6 @@
 
     &__Quote {
 
-        // padding: 0 $info-padding;
         padding: 0 var(--info-padding);
 
         min-height: 160px;
@@ -111,7 +109,6 @@
 
             top: 0; left: 0; right: 0; bottom: 0;
 
-            // padding: $info-padding;
             padding: var(--info-padding);
 
             background: #CFD4D8;
@@ -150,12 +147,11 @@
         left: 0;
         bottom: 0;
 
-        // padding: 0 0 $info-padding $info-padding;
-        padding: 0 0 var(--info-padding) var(--info-padding);
+        padding: 0 0 25px var(--info-padding);
 
         @include responsive-font(14px, 18px);
 
-        color: rgba(0,0,0,0.6);
+        color: $grounded-blue;
 
         background: none;
 
