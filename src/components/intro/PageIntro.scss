@@ -1,0 +1,17 @@
+@import '~styles/config';
+
+.section_title {
+  width: 70%;
+  min-width: 300px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+.title {
+  @include responsive-font(30px, 50px);
+}
+
+.des {
+  @include responsive-font(15px, 20px);
+  line-height: 30px;
+}

@@ -1,23 +1,18 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { Container } from 'components/container/Container';
+import { PageIntro } from 'components/intro/PageIntro';
 import { ProjectButton } from 'components/button/ProjectButton';
-import s from './initiatives.scss';
+
+import s from './projects.scss';
 
 export default () => (
   <>
-    <Helmet title="Initiatives" />
-    <Container>
-      <div className={s.section_title}>
-        <h1 className={s.title}>Initiatives</h1>
-        <p className={s.des}>
-          Grounded makes space in communities for expression in service of
-          mindfulness. We are a collaboration between activists, artists,
-          community leaders, and anyone looking for their voice and communities
-          to express themselves.
-        </p>
-      </div>
-    </Container>
+    <Helmet title="Projects" />
+    <PageIntro
+      title="Projects"
+      des="Grounded makes space in communities for expression in service of mindfulness. We are a collaboration between activists, artists, community leaders, and anyone looking for their voice and communities to express themselves."
+    />
     <section
       className={s.hero_image}
       style={{
