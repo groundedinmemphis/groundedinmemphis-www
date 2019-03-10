@@ -8,6 +8,8 @@ import { Container } from 'components/container/Container';
 import React from 'react';
 import Helmet from 'react-helmet';
 import s from './homepage.scss';
+import SprayImageFoot from 'assets/images/spray-foot.png';
+
 import { TimelineLite } from 'gsap';
 
 const Homepage = () => {
@@ -38,50 +40,61 @@ const Homepage = () => {
           <img src={SprayImageTop} alt="spray" />
         </div>
       </div>
-      <Container>
+      <div className={s.content}>
+        <Container>
+          <div className={s.body__content}>
+            <div className={s.two__column__text__wrapper}>
+              <p>Our Story</p>
+              <div className={s.two__column__text}>
+                <p>
+                  From the streets of Memphis, we are a collective of artists,
+                  musicians, dancers, filmmakers, and students inspiring our
+                  community though collaborative expression.
+                </p>
+                <p>
+                  Grounded works in neighborhoods, with juvenile detention
+                  facilities and schools, and builds teams of student
+                  collaborators to creatively address youth violence in Memphis.
+                </p>
+              </div>
+            </div>
+            <div className={s.button__row}>
+              <a href="">Meet the Team</a>
+            </div>
+          </div>
+        </Container>
+        <div className={s.image__grid}>
+          <img src={RainImage} alt="" />
+          <img src={JumpImage} alt="" />
+          <img src={LookImage} alt="" />
+        </div>
         <div className={s.body__content}>
-          <div className={s.two__column__text}>
-            <p>
-              From the streets of Memphis, we are a collective of artists,
-              musicians, dancers, filmmakers, and students inspiring our
-              community though collaborative expression.
-            </p>
-            <p>
-              Grounded works in neighborhoods, with juvenile detention
-              facilities and schools, and builds teams of student collaborators
-              to creatively address youth violence in Memphis.
-            </p>
+          <div className={s.two__column__text__wrapper}>
+            <p>Our Mission</p>
+            <div className={s.two__column__text}>
+              <p>
+                From the streets of Memphis, we are a collective of artists,
+                musicians, dancers, filmmakers, and students inspiring our
+                community though collaborative expression.
+              </p>
+              <p>
+                Grounded works in neighborhoods, with juvenile detention
+                facilities and schools, and builds teams of student
+                collaborators to creatively address youth violence in Memphis.
+              </p>
+            </div>
           </div>
           <div className={s.button__row}>
             <a href="">Meet the Team</a>
           </div>
         </div>
-      </Container>
-      <div className={s.image__grid}>
-        <img src={RainImage} alt="" />
-        <img src={JumpImage} alt="" />
-        <img src={LookImage} alt="" />
+        <div className={s.spray__foot}>
+          <img src={SprayImageFoot} alt="spray" />
+        </div>
+        <div className={s.spray__top}>
+          <img src={SprayImageFoot} alt="spray" />
+        </div>
       </div>
-
-      <Container>
-        <div className={s.body__content}>
-          <div className={s.two__column__text}>
-            <p>
-              From the streets of Memphis, we are a collective of artists,
-              musicians, dancers, filmmakers, and students inspiring our
-              community though collaborative expression.
-            </p>
-            <p>
-              Grounded works in neighborhoods, with juvenile detention
-              facilities and schools, and builds teams of student collaborators
-              to creatively address youth violence in Memphis.
-            </p>
-          </div>
-          <div className={s.button__row}>
-            <a href="">Meet the Team</a>
-          </div>
-        </div>
-      </Container>
     </>
   );
 };
