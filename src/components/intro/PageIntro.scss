@@ -1,8 +1,6 @@
 @import '~styles/config';
 
-
 .section_title {
-
   // width: 49%;
   // width: 100%;
   min-width: 300px;
@@ -16,7 +14,6 @@
 }
 
 .title {
-
   margin: 0 0 60px;
 
   font-family: $font-heading;
@@ -29,12 +26,9 @@
   text-transform: uppercase;
 
   color: #000;
-
-
 }
 
 .des {
-
   font-family: $font-family;
   font-weight: 300;
   @include responsive-font(22px, 30px);
@@ -42,5 +36,4 @@
   line-height: 1.6em;
 
   color: #000;
-  
 }
