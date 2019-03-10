@@ -27,6 +27,7 @@
 .content {
   position:relative;
   overflow: hidden;
+  padding-top: 100px;
 }
 
 .spray__top{
@@ -57,17 +58,13 @@
 .body__content {
   @include container;
   position:relative;
-  overflow: hidden;
+  overflow: visible;
   z-index:100;
 
   .two__column__text__wrapper{
+    margin: 0 auto;
     p {
-      font-family: Space Mono;
-      font-style: normal;
-      font-weight: normal;
-      line-height: 30px;
-      font-size: 18px;
-      color: #232323;
+
     }
   }
 
@@ -75,29 +72,59 @@
     display:flex;
     position:relative;
     z-index:100;
-    p {
-      font-family: Montserrat;
-      font-style: normal;
-      font-weight: normal;
-      line-height: 32px;
-      font-size: 18px;
-      color: #000000;
-      opacity: 0.8;
-      max-width:450px;
-      &:first-of-type{
+    justify-content: center;
+    max-width: 950px;
+    margin: 0 auto;
+    &__big {
+      max-width:600px;
+      margin-right:50px;
+      overflow: visible;
+      p {
         font-family: Montserrat;
         font-style: normal;
         font-weight: 600;
         line-height: 48px;
         font-size: 32px;
         color: #000000;
+        &:first-of-type{
+          font-family: Space Mono;
+          font-style: normal;
+          font-weight: normal;
+          line-height: 30px;
+          font-size: 18px;
+          color: #232323;
+          position: absolute;
+          transform: translate(0,calc(-100% - 10px))
+        }
       }
+    }
+    &__small {
+      max-width:350px;
+      p {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 32px;
+        font-size: 18px;
+        color: #000000;
+        opacity: 0.8;
+      }
+
     }
     @media screen and (max-width: $min-desktop) {
       flex-wrap: wrap;
+      .two__column__text__big {
+        max-width: 100%;
+        margin: 0 auto;
+      }
+      .two__column__text__small {
+        max-width: 100%;
+        margin: 0 auto;
+      }
       p {
         width: 100%;
         min-width:100%;
+        margin: 0 auto;
         &:first-of-type{
           margin-bottom: 20px;
         }
@@ -108,6 +135,7 @@
   }
   .button__row {
     margin: 50px auto;
+    max-width: 950px;
     a {
       background: #2D9CDB;
       display: block;
