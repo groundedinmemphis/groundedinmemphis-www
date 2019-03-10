@@ -1,4 +1,5 @@
 import React from 'react';
+import { get } from 'lodash';
 import Helmet from 'react-helmet';
 import Logo from 'assets/svg/ueno-logo.svg';
 import Instagram from 'assets/svg/instagram.svg';
@@ -17,7 +18,11 @@ interface IAppLayoutProps {
 const isDev = process.env.NODE_ENV === 'development';
 
 export default ({ children }: IAppLayoutProps) => {
-  const theme = (children as any).props.pageResources.component.navigationTheme;
+  const theme = get(
+    children,
+    'props.pageResources.component.navigationTheme',
+    'dark'
+  );
 
   return (
     <div className={s.layout}>
