@@ -10,7 +10,7 @@ interface IHeaderProps {
 }
 
 export const Header = (props: IHeaderProps) => {
-  const { children, theme } = props;
+  const { theme } = props;
   const header__light = theme === 'light'; // tslint:disable-line
 
   return (
