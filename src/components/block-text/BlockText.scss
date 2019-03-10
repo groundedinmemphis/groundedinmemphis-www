@@ -1,44 +1,66 @@
 @import '~styles/config';
 
 .block {
-  padding: 60px 0;
 
-  @media (min-width: $min-768) {
-    padding: 180px 0;
-  }
+  display: flex;
+  flex-flow: row nowrap;
+  
+  justify-content: center;
+
+  // background: green;
 
   &__col {
-    @include grid-col;
 
-    @media (min-width: $min-768) {
-      @include grid-col(5);
-    }
+    width: 50%;
+    // background: red;
   }
 
   &__heading {
-    @include rf(16, 18);
 
-    margin-bottom: 10px;
+    margin-bottom: 2em;
 
-    font-family: $font-heading;
+    @include responsive-font(12, 18);
+    font-family: $font-mono;
+    font-weight: normal;
+
+    line-height: 1.67em;
+
+    color: #000;
   }
 
   &__description {
-    @include rf(16, 18);
 
-    font-weight: 300;
-    line-height: (26 / 16);
+    margin: 0 0 140px;
 
-    a { // stylelint-disable-line
-      text-decoration: none;
-      font-weight: 400;
+    font-family: $font-family;
+    font-weight: 400;
+    @include responsive-font(22px, 30px);
+    
+    line-height: 1.6em;
 
-      color: #000;
+    color: #232323;
 
-      transition: 200ms opacity ease-in-out;
+    p {
 
-      &:hover { // stylelint-disable-line
-        opacity: 0.5;
+      margin: 0 0 2em;
+
+      // &:last-child {
+
+      //   margin: 0;
+      // }
+
+      a { // stylelint-disable-line
+        text-decoration: none;
+        font-weight: 400;
+
+        color: $grounded-blue;
+
+        transition: 200ms opacity ease-in-out;
+
+        &:hover { // stylelint-disable-line
+
+          opacity: 0.5;
+        }
       }
     }
   }
