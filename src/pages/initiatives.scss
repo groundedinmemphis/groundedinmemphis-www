@@ -1,0 +1,41 @@
+@import '~styles/config';
+
+.section_title,
+.section_featured {
+  width: 70%;
+  min-width: 300px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+.title {
+  @include responsive-font(30px, 50px);
+}
+
+.des {
+  @include responsive-font(15px, 20px);
+  line-height: 30px;
+}
+
+.hero_image {
+  width: 100%;
+  height: 600px;
+  background-size: cover;
+  background-color: #e5e5e5;
+}
+
+.section_featured {
+  width: 50%;
+  min-width: 200px;
+  text-align: center;
+}
+
+.project_name {
+  @include responsive-font(20px, 35px);
+}
+
+.project_des {
+  @include responsive-font(10px, 15px);
+  line-height: 20px;
+  margin-top: 20px;
+}
