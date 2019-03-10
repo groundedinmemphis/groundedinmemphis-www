@@ -88,7 +88,6 @@
         color: #757575;
         
 
-
         @media (min-width: $min-640) {
 
             min-height: 240px;
@@ -109,12 +108,18 @@
 
             top: 0; left: 0; right: 0; bottom: 0;
 
-            padding: var(--info-padding);
+            padding: 30px;
 
             background: #CFD4D8;
 
             transition:
                 transform 560ms cubic-bezier($easeOutMild);
+
+
+            @media (min-width: $min-640) {
+
+                padding: var(--info-padding);
+            }
         }
 
         &__hide {
@@ -147,7 +152,7 @@
         left: 0;
         bottom: 0;
 
-        padding: 0 0 25px var(--info-padding);
+        padding: 0 0 25px 25px;
 
         @include responsive-font(14px, 18px);
 
@@ -156,6 +161,11 @@
         background: none;
 
         transition: opacity 330ms cubic-bezier($easeOutMild);
+
+        @media (min-width: $min-640) {
+
+            padding: 0 0 var(--info-padding) var(--info-padding);
+        }
 
 
         &:hover {
