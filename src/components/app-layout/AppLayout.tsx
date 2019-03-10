@@ -25,13 +25,13 @@ export default ({ children }: IAppLayoutProps) => (
     <Helmet {...helmet} />
 
     <Header>
-      <HeaderLink name="about" to="/about" />
-
-      <HeaderLink
-        name="github"
-        to="https://github.com/ueno-llc"
-        icon={<Github />}
-      />
+      <HeaderLink name="About" to="/about" />
+      <HeaderLink name="Projects" to="/projects" />
+      <HeaderLink name="Methodology" to="/methodology" />
+      <HeaderLink name="Purpose" to="/purpose" />
+      <HeaderLink name="Meet the Team" to="/meet-the-team" />
+      <HeaderLink name="Partner with Us" to="/partner" />
+      <HeaderLink name="Donate" to="/donate" />
     </Header>
 
     {children}
