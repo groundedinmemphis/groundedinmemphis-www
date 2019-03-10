@@ -61,17 +61,22 @@ export default ({ data }: any) => {
           <h2 className={s.project_name}>{featured.title.text}</h2>
           <span className={s.project_year}>{featured.year_long.text}</span>
           <p className={s.project_des}>{featured.description.text}</p>
-          <ProjectButton url="#" name="See Project" icon="&#10230;" />
+          <ProjectButton
+            url={projects[0].node.uid}
+            name="See Project"
+            icon="&#10230;"
+          />
         </div>
       </Container>
 
       {projects.slice(1).map((arr, index) => {
-        let project = arr.node.data;
+        const project = arr.node.data;
 
         return (
           <ProjectRow
             key={project.uid}
             img_url={project.project_cover.url}
+            url={arr.node.uid}
             title={project.title.text}
             year={project.year_long.text}
             des={project.description.text}

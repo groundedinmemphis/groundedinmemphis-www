@@ -7,6 +7,7 @@ interface IProjectRowProps {
   title: string;
   year: string;
   des: string;
+  url?: string;
   flip?: boolean;
 }
 
@@ -26,7 +27,7 @@ export const ProjectRow = (props: IProjectRowProps) => (
         <h2 className={s.project_name}>{props.title}</h2>
         <span className={s.project_year}>{props.year}</span>
         <p className={s.project_des}>{props.des}</p>
-        <ProjectButton url="#" name="See Project" icon="&#10230;" />
+        <ProjectButton url={props.url} name="See Project" icon="&#10230;" />
       </div>
     </div>
   </div>
