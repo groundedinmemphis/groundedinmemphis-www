@@ -7,7 +7,6 @@ import { ProjectRow } from 'components/row/ProjectRow';
 import { graphql } from 'gatsby';
 
 import s from './projects.scss';
-import { node, array } from 'prop-types';
 
 export const query = graphql`
   query {
@@ -69,7 +68,7 @@ export default ({ data }: any) => {
         </div>
       </Container>
 
-      {projects.slice(1).map((arr, index) => {
+      {projects.slice(1).map((arr: any, index: number) => {
         const project = arr.node.data;
 
         return (
