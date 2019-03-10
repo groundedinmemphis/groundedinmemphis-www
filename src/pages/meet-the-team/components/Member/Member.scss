@@ -1,20 +1,5 @@
 @import '~styles/config';
 
-/* Spacing */
-// $info-padding: 0;
-// body {
-//     --info-padding: 0;
-
-//     @media (min-width: $min-1024) {
-    
-//         $info-padding: 5.5%;
-//     }
-
-// }
-
-
-
-
 
 .Member {
 
@@ -33,7 +18,7 @@
     @media (min-width: $min-1024) {
         
         --info-padding: 5.5%;
-        width: 37.3%;
+        width: 37.34%;
     }
 
 
@@ -74,7 +59,7 @@
         margin: 0 0 20px;
 
         font-family: $font-mono;
-        font-weight: regular;
+        font-weight: normal;
         @include responsive-font(18px, 22px);
 
         line-height: 1.2em;
