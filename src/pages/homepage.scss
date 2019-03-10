@@ -155,7 +155,6 @@
 
 
 .opening__image {
-  background-image:url('assets/images/main.png');
   width: 100%;
   max-height: 680px;
   height: 100vh;
@@ -169,8 +168,19 @@
     margin-bottom: 100px;
   }
 
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
 
-
+  &__content {
+    position: relative;
+    z-index: 10;
+  }
 
   &__spray {
     position: absolute;

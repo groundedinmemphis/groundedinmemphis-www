@@ -9,6 +9,13 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-typescript',
     'gatsby-plugin-sharp',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: path.join(__dirname, 'src', 'assets', 'images'),
+      },
+    },
     'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-source-prismic',
@@ -22,8 +29,8 @@ module.exports = {
         name: 'ueno-gatsby-starter',
         short_name: 'starter',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#3782BF',
+        theme_color: '#3782BF',
         display: 'minimal-ui',
         icon: 'src/assets/images/favicon.png',
       },

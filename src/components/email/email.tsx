@@ -11,7 +11,7 @@ export const Email = () => (
         name="mc-embedded-subscribe-form"
         className="validate"
         target="_blank"
-        novalidate
+        noValidate
       >
         <div id="mc_embed_signup_scroll">
           <p className={s.email__label}>Subscribe to our mailing list</p>
@@ -42,8 +42,7 @@ export const Email = () => (
               <input
                 type="text"
                 name="b_8dd7fa03ad7489cb285a063e1_33ad5892a4"
-                tabindex="-1"
-                value=""
+                tabIndex={-1}
               />
             </div>
             <div className="clear">
