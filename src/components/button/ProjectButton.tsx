@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'gatsby';
+
 import s from './ProjectButton.scss';
 
 interface IButtonProps {
@@ -11,9 +13,9 @@ interface IButtonProps {
 export const ProjectButton = (props: IButtonProps) => {
   return (
     <>
-      <a href={props.url} className={s.project_link}>
+      <Link to={`/project/${props.url}/`} className={s.project_link}>
         {props.name} <span className={s.project_link_icon}>{props.icon}</span>
-      </a>
+      </Link>
     </>
   );
 };

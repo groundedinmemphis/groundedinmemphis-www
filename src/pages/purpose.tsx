@@ -2,13 +2,9 @@ import React from 'react';
 import Helmet from 'react-helmet';
 
 import { Container } from 'components/container/Container';
-// import s from './purpose.scss';
 
 // import { graphql } from 'gatsby';
-// import Member from './components/Member/Member';
 
-// import { chunk } from 'lodash';
-// import { PageIntro } from 'components/intro/PageIntro';
 import { BlockText } from 'components/block-text/BlockText';
 import { ItemList } from 'components/item-list/ItemList';
 import { PageIntro } from 'components/intro/PageIntro';

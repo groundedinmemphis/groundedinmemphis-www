@@ -37,7 +37,9 @@ export const Header = (props: IHeaderProps) => {
       <div className={s.header__container}>
         <div className={s.header__content}>
           <div className={s.header__mobile}>
-            <GroundedLogoWithMark className={s.header__mobile__logo} />
+            <Link to="/">
+              <GroundedLogoWithMark className={s.header__mobile__logo} />
+            </Link>
             <button className={s.header__mobile__button} onClick={handleClick}>
               <IconMenu className={s.header__mobile__icon} />
             </button>

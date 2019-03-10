@@ -8,7 +8,6 @@ export const query = graphql`
   query Projecta($id: String) {
     prismicProject(prismicId: { eq: $id }) {
       id
-
       data {
         title {
           text
