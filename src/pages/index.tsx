@@ -82,7 +82,7 @@ const Homepage = ({ data }) => {
               </div>
             </div>
             <div className={s.button__row}>
-              <a href="">Meet the Team</a>
+              <a href="">See Our Work</a>
             </div>
           </div>
         </Container>
@@ -102,7 +102,7 @@ const Homepage = ({ data }) => {
             </div>
           </div>
           <div className={s.button__row}>
-            <a href="">Meet the Team</a>
+            <a href="">Our Purpose</a>
           </div>
         </div>
         <div className={s.spray__foot}>

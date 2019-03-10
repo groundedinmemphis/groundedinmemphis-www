@@ -18,12 +18,12 @@ interface IAppLayoutProps {
 
 const isDev = process.env.NODE_ENV === 'development';
 
-export default ({ children, pageContext }: IAppLayoutProps) => {
+export default ({ children, pageContext, location }: IAppLayoutProps) => {
   return (
     <div className={s.layout}>
       <Helmet {...helmet} />
 
-      <Header theme={pageContext.theme} />
+      <Header theme={pageContext.theme} location={location} />
 
       {children}
 
