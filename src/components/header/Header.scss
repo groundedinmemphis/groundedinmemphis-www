@@ -9,6 +9,15 @@
   position:relative;
   z-index:1000;
   font-family: 'Montserrat';
+
+  &__light &__navigation a {
+    color: white;
+
+    &:last-of-type {
+      border-color: currentColor;
+    }
+  }
+
   &__container {
     @include container;
   }

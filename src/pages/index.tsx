@@ -8,7 +8,7 @@ import s from './homepage.scss';
 import BigLogo from 'assets/svg/logo-big.svg';
 import OpeningText from 'assets/svg/opening-text.svg';
 
-export default () => (
+const Homepage = () => (
   <>
     <Helmet title="Home" />
 
@@ -39,3 +39,7 @@ export default () => (
     />
   </>
 );
+
+Homepage.navigationTheme = 'light';
+
+export default Homepage;
