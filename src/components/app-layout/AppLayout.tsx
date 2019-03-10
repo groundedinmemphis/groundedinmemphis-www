@@ -1,12 +1,8 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import Logo from 'assets/svg/ueno-logo.svg';
-import Dribbble from 'assets/svg/dribbble.svg';
-import Twitter from 'assets/svg/twitter.svg';
-import Github from 'assets/svg/github.svg';
 import Instagram from 'assets/svg/instagram.svg';
 import Facebook from 'assets/svg/facebook.svg';
-import Linkedin from 'assets/svg/linkedin.svg';
 import { helmet } from 'utils/helmet';
 import { Header } from 'components/header/Header';
 import { Link as HeaderLink } from 'components/header/Link';
@@ -20,34 +16,38 @@ interface IAppLayoutProps {
 
 const isDev = process.env.NODE_ENV === 'development';
 
-export default ({ children }: IAppLayoutProps) => (
-  <div className={s.layout}>
-    <Helmet {...helmet} />
+export default ({ children }: IAppLayoutProps) => {
+  const theme = (children as any).props.pageResources.component.navigationTheme;
 
-    <Header>
-      <HeaderLink name="About" to="/about" />
-      <HeaderLink name="Projects" to="/projects" />
-      <HeaderLink name="Methodology" to="/methodology" />
-      <HeaderLink name="Purpose" to="/purpose" />
-      <HeaderLink name="Meet the Team" to="/meet-the-team" />
-      <HeaderLink name="Partner with Us" to="/partner" />
-      <HeaderLink name="Donate" to="/donate" />
-    </Header>
+  return (
+    <div className={s.layout}>
+      <Helmet {...helmet} />
 
-    {children}
+      <Header theme={theme}>
+        <HeaderLink name="About" to="/about" />
+        <HeaderLink name="Projects" to="/projects" />
+        <HeaderLink name="Methodology" to="/methodology" />
+        <HeaderLink name="Purpose" to="/purpose" />
+        <HeaderLink name="Meet the Team" to="/meet-the-team" />
+        <HeaderLink name="Partner with Us" to="/partner" />
+        <HeaderLink name="Donate" to="/donate" />
+      </Header>
 
-    <Footer
-      logo={<Logo />}
-      social={[
-        // { icon: <Dribbble />, to: 'https://dribbble.com/ueno' },
-        // { icon: <Twitter />, to: 'https://twitter.com/uenodotco' },
-        // { icon: <Github />, to: 'https://github.com/ueno-llc' },
-        { icon: <Instagram />, to: 'https://www.instagram.com/' },
-        { icon: <Facebook />, to: 'https://www.facebook.com/' },
-        // { icon: <Linkedin />, to: 'https://www.linkedin.com/company/ueno' },
-      ]}
-    />
+      {children}
 
-    {isDev && <Devtools />}
-  </div>
-);
+      <Footer
+        logo={<Logo />}
+        social={[
+          // { icon: <Dribbble />, to: 'https://dribbble.com/ueno' },
+          // { icon: <Twitter />, to: 'https://twitter.com/uenodotco' },
+          // { icon: <Github />, to: 'https://github.com/ueno-llc' },
+          { icon: <Instagram />, to: 'https://www.instagram.com/' },
+          { icon: <Facebook />, to: 'https://www.facebook.com/' },
+          // { icon: <Linkedin />, to: 'https://www.linkedin.com/company/ueno' },
+        ]}
+      />
+
+      {isDev && <Devtools />}
+    </div>
+  );
+};

@@ -4,19 +4,23 @@ import { Intro } from 'components/intro/Intro';
 import { Highlight } from 'components/intro/Highlight';
 import { BlockText } from 'components/block-text/BlockText';
 import { Email } from 'components/email/email';
+import s from './homepage.scss';
+import BigLogo from 'assets/svg/logo-big.svg';
+import OpeningText from 'assets/svg/opening-text.svg';
 
-export default () => (
+const Homepage = () => (
   <>
     <Helmet title="Home" />
 
-    <Intro>
-      Opinionated starter by Ueno, using opinionated dependencies 🤪,{' '}
-      <Highlight>TypeScript</Highlight>,&nbsp;
-      <Highlight>SCSS</Highlight>, <Highlight>CSS Modules</Highlight>,{' '}
-      <Highlight>React Hooks</Highlight>,&nbsp;
-      <Highlight>root resolver</Highlight>,{' '}
-      <Highlight>code splitting</Highlight> and a lot of love.
-    </Intro>
+    <div className={s.opening__image}>
+      <div className={s.opening__image__big__logo}>
+        <BigLogo />
+      </div>
+
+      <div className={s.opening__image__text}>
+        <OpeningText />
+      </div>
+    </div>
 
     <Email />
 
@@ -35,3 +39,7 @@ export default () => (
     />
   </>
 );
+
+Homepage.navigationTheme = 'light';
+
+export default Homepage;

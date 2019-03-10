@@ -1,10 +1,23 @@
 @import '~styles/config';
 
+.header__light{
+  display:block;
+}
+
 .header {
   display: block;
-  // font-family: 'Montserrat';
+  position:relative;
+  z-index:1000;
   font-family: $font-family;
-  
+
+  &__light &__navigation a {
+    color: white;
+
+    &:last-of-type {
+      border-color: currentColor;
+    }
+  }
+
   &__container {
     @include container;
   }
@@ -20,7 +33,7 @@
 
     &Svg {
       display: block;
-      margin-right: 30px;
+      margin-right: 50px;
       height: 16px;
       width: 240px;
       margin-top:-18px;
