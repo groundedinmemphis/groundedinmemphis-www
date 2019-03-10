@@ -4,6 +4,7 @@ import { Container } from 'components/container/Container';
 import { PageIntro } from 'components/intro/PageIntro';
 import { ProjectButton } from 'components/button/ProjectButton';
 import { ProjectRow } from 'components/row/ProjectRow';
+import { Email } from 'components/email/Email';
 
 import s from './projects.scss';
 
