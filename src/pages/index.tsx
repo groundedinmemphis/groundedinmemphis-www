@@ -43,14 +43,16 @@ const Homepage = () => {
       <div className={s.content}>
         <Container>
           <div className={s.body__content}>
-            <div className={s.two__column__text__wrapper}>
-              <p>Our Story</p>
-              <div className={s.two__column__text}>
+            <div className={s.two__column__text}>
+              <div className={s.two__column__text__big}>
+                <p>Our Story</p>
                 <p>
                   From the streets of Memphis, we are a collective of artists,
                   musicians, dancers, filmmakers, and students inspiring our
                   community though collaborative expression.
                 </p>
+              </div>
+              <div className={s.two__column__text__small}>
                 <p>
                   Grounded works in neighborhoods, with juvenile detention
                   facilities and schools, and builds teams of student
@@ -69,14 +71,16 @@ const Homepage = () => {
           <img src={LookImage} alt="" />
         </div>
         <div className={s.body__content}>
-          <div className={s.two__column__text__wrapper}>
-            <p>Our Mission</p>
-            <div className={s.two__column__text}>
+          <div className={s.two__column__text}>
+            <div className={s.two__column__text__big}>
+              <p>Our Mission</p>
               <p>
                 From the streets of Memphis, we are a collective of artists,
                 musicians, dancers, filmmakers, and students inspiring our
                 community though collaborative expression.
               </p>
+            </div>
+            <div className={s.two__column__text__small}>
               <p>
                 Grounded works in neighborhoods, with juvenile detention
                 facilities and schools, and builds teams of student
