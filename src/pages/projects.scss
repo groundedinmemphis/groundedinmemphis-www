@@ -40,3 +40,14 @@
   font-family: $font-mono;
   font-size: 18px;
 }
+
+@media screen and (max-width: $min-tablet + 1px) {
+  .section_featured {
+    width: 80%;
+  }
+
+  .project_name {
+    @include responsive-font(36px, 48px);
+    line-height: 48px;
+  }
+}

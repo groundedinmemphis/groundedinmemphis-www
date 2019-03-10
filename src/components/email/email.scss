@@ -1,64 +1,87 @@
 @import '~styles/config';
 
-.input__wrapper{
-  display:flex;
+.input__wrapper {
+  display: flex;
   margin-top: 30px;
-  border-bottom: 2px solid #FFFFFF;
+  border-bottom: 2px solid #ffffff;
   justify-content: space-between;
   padding-bottom: 10px;
+  font-size: 18px;
+  line-height: 32px;
+
   .input__field {
-    background:none;
-    width:1px;
+    background: none;
+    width: 1px;
     flex-grow: 1;
     font-family: $font-family;
     font-style: normal;
     font-weight: normal;
-    line-height: 32px;
-    font-size: 18px;
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
-    line-height: 32px;
-    font-size: 18px;
     color: #ffffff;
-    &::placeholder{
-      color:black;
+    font-size: 18px;
+    line-height: 32px;
+
+    &::placeholder {
+      color: black;
       font-family: $font-family;
       font-style: normal;
       font-weight: normal;
-      line-height: 32px;
-      font-size: 18px;
       font-family: Montserrat;
+      font-size: 18px;
+      line-height: 32px;
       font-style: normal;
       font-weight: normal;
-      line-height: 32px;
-      font-size: 18px;
-      color: rgba(255,255,255,.5);
+      color: rgba(255, 255, 255, 0.5);
     }
   }
-
-
-
 }
 
 .submit {
   font-family: Montserrat;
   font-style: normal;
   font-weight: 600;
-  line-height: normal;
   font-size: 18px;
+  line-height: normal;
   text-align: center;
   letter-spacing: 0.02em;
-  color: #FFFFFF;
-  background:none;
+  color: #ffffff;
+  background: none;
   text-transform: capitalize;
-  cursor:pointer;
+  cursor: pointer;
 }
-.email__label{
+.email__label {
   font-family: Montserrat;
   font-style: normal;
   font-weight: normal;
-  line-height: 32px;
   font-size: 18px;
-  color: #FFFFFF;
+  line-height: 32px;
+  color: #ffffff;
+}
+
+@media screen and (max-width: $min-tablet + 1px) {
+  .input__wrapper {
+    font-size: 16px;
+    line-height: 24px;
+
+    .input__field {
+      font-size: 16px;
+      line-height: 24px;
+
+      &::placeholder {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  .submit {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .email__label {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

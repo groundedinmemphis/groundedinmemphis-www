@@ -58,4 +58,9 @@
     width: 100% !important;
     height: 100vw !important;
   }
+
+  .project_name {
+    @include responsive-font(36px, 48px);
+    line-height: 48px;
+  }
 }

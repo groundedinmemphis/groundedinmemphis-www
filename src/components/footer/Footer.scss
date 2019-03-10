@@ -2,12 +2,12 @@
 
 .footer__contact__wrapper {
   padding: 100px 0px;
-  background: #2D9CDB;
+  background: #2d9cdb;
 
   .footer__contact {
-    display:flex;
+    display: flex;
 
-    .contact__text{
+    .contact__text {
       margin-right: 100px;
 
       p {
@@ -15,8 +15,8 @@
         font-weight: 600;
         line-height: 66px;
         font-size: 52px;
-        color:#000000;
-        &:last-of-type{
+        color: #000000;
+        &:last-of-type {
           font-family: $font-family;
           font-style: normal;
           font-weight: normal;
@@ -27,14 +27,14 @@
       }
     }
 
-    .contact__form{
+    .contact__form {
       max-width: 786px;
       width: 100%;
 
       .input__field {
-        input{
+        input {
           background: none;
-          width:100%;
+          width: 100%;
           color: #000;
           border: 2px solid #000000;
           border-radius: 3px;
@@ -43,14 +43,14 @@
           padding-left: 15px;
           padding-top: 10px;
           padding-bottom: 10px;
-          color:black;
+          color: black;
           font-family: $font-family;
           font-style: normal;
           font-weight: normal;
           line-height: 32px;
           font-size: 18px;
-          &::placeholder{
-            color:black;
+          &::placeholder {
+            color: black;
             font-family: $font-family;
             font-style: normal;
             font-weight: normal;
@@ -58,23 +58,23 @@
             font-size: 18px;
           }
         }
-        textarea{
+        textarea {
           background: none;
-          width:100%;
+          width: 100%;
           color: #000;
           border: 2px solid #000000;
           border-radius: 3px;
           resize: none;
           margin-bottom: 15px;
           padding-left: 15px;
-          color:black;
+          color: black;
           font-family: $font-family;
           font-style: normal;
           font-weight: normal;
           line-height: 32px;
           font-size: 18px;
-          &::placeholder{
-            color:black;
+          &::placeholder {
+            color: black;
             font-family: $font-family;
             font-style: normal;
             font-weight: normal;
@@ -84,31 +84,29 @@
         }
       }
       .submit {
-        display:flex;
+        display: flex;
         justify-content: flex-end;
 
         button {
           font-family: Montserrat;
-          cursor:pointer;
+          cursor: pointer;
           font-style: normal;
           font-weight: bold;
           line-height: normal;
           font-size: 18px;
           text-align: center;
           letter-spacing: 0.02em;
-          color: #3B90D6;
+          color: #3b90d6;
           background: #000000;
           border-radius: 3px;
-          display:block;
+          display: block;
           width: 173px;
           height: 74px;
         }
-
       }
     }
   }
 }
-
 
 @media screen and (max-width: $min-tablet + 1px) {
   .footer__contact {
@@ -125,10 +123,12 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 40px 0;
+    padding: 80px 0;
     .footer__email {
-      display:block;
-      width: 540px;
+      display: block;
+      width: 80%;
+      max-width: 540px;
+      min-width: 300px;
     }
     &__wrapper {
       display: block;
@@ -156,15 +156,14 @@
 
   &__list {
     display: flex;
-    margin-top: 100px;
+    margin-top: 40px;
   }
   &__logo {
     &Svg {
       display: block;
 
-      height: 16px;
-      width: 300px;
-      margin-top: -15px;
+      height: 80px;
+      width: 40px;
       path {
         fill: #fff;
       }
@@ -179,7 +178,7 @@
     height: 20px;
     align-self: flex-end;
     transition: 200ms opacity ease-in-out;
-    &:first-of-type{
+    &:first-of-type {
       margin-left: 0px;
     }
     svg {
@@ -192,6 +191,19 @@
 
     &:hover {
       opacity: 0.5;
+    }
+  }
+}
+
+@media screen and (max-width: $min-tablet + 1px) {
+  .footer {
+    &__content {
+      flex-direction: column-reverse;
+      // padding: 80px 0;
+
+      .footer__content__wrapper {
+        margin-top: 100px;
+      }
     }
   }
 }
