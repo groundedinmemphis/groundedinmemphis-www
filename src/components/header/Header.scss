@@ -10,15 +10,26 @@
   z-index:1000;
 
   font-family: $font-family;
+
+  &__video {
+    a {
+      color: white;
+    }
+  }
+  &__video &__logo svg {
+    color: white;
+  }
+
   &__light {
     position: absolute;
     width:100%;
     a {
       color: white;
-
     }
   }
-  &__light &__navigation .header__right a {
+
+  &__light &__navigation .header__right a,
+  &__video &__navigation .header__right a {
      color: white;
      &:last-of-type {
        border-color: currentColor;
@@ -34,6 +45,7 @@
       margin-right: 20px;
       height: 100px;
       width: 240px;
+      color: #231F20;
       @media (min-width: $min-768) {
         height: auto;
       }
