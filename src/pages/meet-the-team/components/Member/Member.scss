@@ -3,27 +3,16 @@
 .Member {
 
     position: relative;
-
     width: 37.3%;
-
-    // background: yellow;
-
-    // height: 700px;
-
     overflow: hidden;
-    // background: green;
 
 
     &__Portrait {
-
-        // background: palegreen;
 
         &__Photo {
 
             width: 100%;
             height: auto;
-
-            // display: none;
         }
     }
 
@@ -32,7 +21,7 @@
         @include responsive-font(30px, 40px);
 
         color: rgba(0,0,0,1);
-        // font-weight: bold;
+        font-weight: 700;
     }
 
     &__Position {
@@ -63,6 +52,8 @@
         left: 0;
         bottom: 0;
 
+        padding: 0 0 20px 20px;
+
         @include responsive-font(16px, 20px);
 
         color: rgba(0,0,0,0.6);
@@ -83,19 +74,30 @@
 
     &__Detail {
 
-        z-index: 8000;
 
-        position: absolute;
 
-        top: 0; left: 0; right: 0; bottom: 0;
+        &, &__hide {
 
-        padding: 30px;
+            z-index: 8000;
 
-        background: #CFD4D8;
+            position: absolute;
 
-        transition: transform 600ms linear;
+            top: 0; left: 0; right: 0; bottom: 0;
 
-        transform: translate3d(0, 100%, 0);
+            padding: 30px;
+
+            background: #CFD4D8;
+
+            transition:
+                transform 330ms ease-in-out;
+
+        }
+
+        &__hide {
+
+            transform: translate3d(0, 100%, 0);
+        }
+
     }
 
 
@@ -112,6 +114,8 @@
 
         left: 0;
         bottom: 0;
+
+        padding: 0 0 20px 20px;
 
         @include responsive-font(16px, 20px);
 

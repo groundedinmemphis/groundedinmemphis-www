@@ -1,8 +1,5 @@
 @import '~styles/config';
 
-// $btn-height: 40px;
-// $btn-border-width: 2px;
-
 
 .OurTeam {
 
@@ -23,18 +20,13 @@
         line-height: 1.625em;
 
         color: rgba(0,0,0,1);
-        
     }
 }
 
 
 .Team {
 
-
-
     &__Row {
-
-
 
         &__left {
 
@@ -55,6 +47,5 @@
 
             justify-content: flex-end;
         }
-
     }
 }
