@@ -8,8 +8,6 @@
   display: block;
   position:relative;
   z-index:1000;
-  overflow-x: hidden;
-  overflow-y: visible;
   font-family: $font-family;
 
   &__video {
