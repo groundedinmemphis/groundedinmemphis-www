@@ -36,7 +36,16 @@ export const query = graphql`
 `;
 
 export default ({ data }: any) => {
-  const projects = data.allPrismicProject.edges;
+  let projects = data.allPrismicProject.edges;
+  projects[0] = projects.splice(1, 1, projects[0])[0];
+  projects[3] = projects.splice(2, 1, projects[3])[0];
+
+  // for (let i = 0; i < projects.length; i++) {
+  //   if (projects[i])
+  // }
+  // projects.sort((a: any, b: any) => {
+  //   return a.node.data.title.text - b.node.data.title.text;
+  // });
   const featured = projects[0].node.data;
   // const projectRows = projects.slice(1).map(({ node: any }, { index: any }) => {
   //   console.log(node.node.data);
