@@ -81,7 +81,7 @@ export default ({ data }: any) => {
         </div>
       </Container>
 
-      {projects.slice(1).map((arr: any, index: number) => {
+      {projects.filter(n => n.node.uid !== 'me-and-the-light').map((arr: any, index: number) => {
         const project = arr.node.data;
 
         return (
