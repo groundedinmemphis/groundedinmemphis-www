@@ -37,8 +37,8 @@ export const query = graphql`
 
 export default ({ data }: any) => {
   let projects = data.allPrismicProject.edges;
-  projects[0] = projects.splice(1, 1, projects[0])[0];
-  projects[3] = projects.splice(2, 1, projects[3])[0];
+  projects[1] = projects.splice(2, 1, projects[1])[0];
+  // projects[3] = projects.splice(2, 1, projects[3])[0];
 
   // for (let i = 0; i < projects.length; i++) {
   //   if (projects[i])
