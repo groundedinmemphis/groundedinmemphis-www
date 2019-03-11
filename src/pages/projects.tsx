@@ -46,7 +46,10 @@ export default ({ data }: any) => {
   // projects.sort((a: any, b: any) => {
   //   return a.node.data.title.text - b.node.data.title.text;
   // });
-  const featured = projects[0].node.data;
+//   const featured = projects[0].node.data;
+  
+  const featured = projects.find(n => n.node.uid === 'me-and-the-light').node.data;
+  
   // const projectRows = projects.slice(1).map(({ node: any }, { index: any }) => {
   //   console.log(node.node.data);
   // });
