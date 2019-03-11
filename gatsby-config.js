@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   siteMetadata: {
-    title: 'Ueno Gatsby Starter',
+    title: 'Grounded',
   },
   plugins: [
     'gatsby-plugin-ueno',
@@ -26,8 +26,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'ueno-gatsby-starter',
-        short_name: 'starter',
+        name: 'grounded',
+        short_name: 'Grounded',
         start_url: '/',
         background_color: '#3782BF',
         theme_color: '#3782BF',
