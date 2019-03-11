@@ -13,6 +13,9 @@ import SprayImageFoot from 'assets/images/spray-foot.png';
 import { graphql, Link } from 'gatsby';
 import { TimelineLite } from 'gsap';
 
+const words = ['ART', 'MUSIC', 'CREATIVITY', 'MEDITATION', 'HEALING'];
+const randomWord = words[Math.floor(Math.random() * words.length)];
+
 export const query = graphql`
   query {
     mainImage: file(relativePath: { eq: "main.png" }) {
@@ -73,7 +76,43 @@ const Homepage = ({ data }: any) => {
           </div>
 
           <div className={s.opening__image__text} id="big_g">
-            <OpeningText />
+            <svg width="600" height="210" viewBox="0 0 600 210" fill="none">
+              <text
+                stroke="white"
+                strokeWidth="2"
+                style={{ whiteSpace: 'pre' }}
+                fontFamily="Anton"
+                fontSize="120"
+                letterSpacing="0.05em"
+              >
+                <tspan x="-0.000976562" y="95.56">
+                  GROUNDED
+                </tspan>
+              </text>
+              <text
+                stroke="white"
+                strokeWidth="2"
+                style={{ whiteSpace: 'pre' }}
+                fontFamily="Anton"
+                fontSize="120"
+                letterSpacing="0.05em"
+              >
+                <tspan x="-0.000976562" y="200.56">
+                  BY
+                </tspan>
+              </text>
+              <text
+                fill="white"
+                style={{ whiteSpace: 'pre' }}
+                fontFamily="Anton"
+                fontSize="120"
+                letterSpacing="0.02em"
+              >
+                <tspan x="98.999" y="200.56">
+                  {randomWord}
+                </tspan>
+              </text>
+            </svg>
           </div>
           <div className={s.opening__image__spray}>
             <img src={SprayImageTop} alt="spray" />
