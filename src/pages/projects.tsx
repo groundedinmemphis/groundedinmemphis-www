@@ -54,17 +54,18 @@ export default ({ data }: any) => {
   return (
     <>
       <Helmet title="Projects" />
-      <PageIntro
-        title="Projects"
-        des="Grounded makes space in communities for expression in service of mindfulness. We are a collaboration between activists, artists, community leaders, and anyone looking for their voice and communities to express themselves."
-      />
-      <section
-        className={s.hero_image}
-        style={{
-          backgroundImage: `url(${featured.project_cover.url})`,
-        }}
-      />
+
       <Container>
+        <PageIntro
+          title="Projects"
+          des="Grounded makes space in communities for expression in service of mindfulness. We are a collaboration between activists, artists, community leaders, and anyone looking for their voice and communities to express themselves."
+        />
+        <section
+          className={s.hero_image}
+          style={{
+            backgroundImage: `url(${featured.project_cover.url})`,
+          }}
+        />
         <div className={s.section_featured}>
           <h2 className={s.project_name}>{featured.title.text}</h2>
           <span className={s.project_year}>{featured.year_long.text}</span>

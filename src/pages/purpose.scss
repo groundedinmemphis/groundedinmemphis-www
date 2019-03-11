@@ -36,5 +36,9 @@
         transform: translate3d(60%, -90%, 0);
 
         pointer-events: none;
+
+        @media screen and (max-width: $min-mobile) {
+          display: none;
+        }
     }
 }
