@@ -12,6 +12,7 @@
   width: 100%;
   height: 600px;
   background-size: cover;
+  background-position: center center;
   background-color: #e5e5e5;
 }
 
@@ -44,6 +45,11 @@
 @media screen and (max-width: $min-tablet + 1px) {
   .section_featured {
     width: 80%;
+  }
+
+  .hero_image {
+    width: 100%;
+    height: 300px;
   }
 
   .project_name {
