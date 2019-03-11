@@ -152,7 +152,7 @@ const Homepage = ({ data }: any) => {
             </div>
           </div>
           <div className={s.button__row}>
-            <Link to="/meet-the-team">Meet the Team</Link>
+            <Link to="/meet-the-team">Our Purpose</Link>
           </div>
         </div>
         <div className={s.spray__foot}>
