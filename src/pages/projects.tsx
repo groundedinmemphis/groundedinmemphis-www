@@ -49,6 +49,7 @@ export default ({ data }: any) => {
 //   const featured = projects[0].node.data;
   
   const featured = projects.find(n => n.node.uid === 'me-and-the-light').node.data;
+  const featuredId = projects.find(n => n.node.uid === 'me-and-the-light').node.uid;
   
   // const projectRows = projects.slice(1).map(({ node: any }, { index: any }) => {
   //   console.log(node.node.data);
@@ -74,7 +75,7 @@ export default ({ data }: any) => {
           <span className={s.project_year}>{featured.year_long.text}</span>
           <p className={s.project_des}>{featured.description.text}</p>
           <ProjectButton
-            url={projects[0].node.uid}
+            url={featuredId}
             name="See Project"
             icon="&#10230;"
           />
