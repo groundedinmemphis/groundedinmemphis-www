@@ -21,6 +21,9 @@ export const query = graphql`
         youtube_link {
           embed_url
         }
+        video_preview_image {
+          url
+        }
         year
         contributors {
           text
@@ -38,18 +41,25 @@ export default ({ data }: any) => {
     contributors,
     year,
     youtube_link,
+    video_preview_image
   } = data.prismicProject.data;
-  const [, youtubeId] = youtube_link.embed_url.match(/v\=(.*)$/);
+  const [, youtubeId] = youtube_link && youtube_link.embed_url ? youtube_link.embed_url.match(/v\=(.*)$/) : [null, null];
 
   return (
     <>
       <Helmet title={title.text} />
       <div className={s.project_video}>
         <div className={s.project_video_top} />
+    {youtubeId ? (
         <iframe
           src={`//www.youtube.com/embed/${youtubeId}?rel=0&amp;controls=0&amp;showinfo=0&amp;modestbranding=1&amp;autoplay=1&amp;widgetid=1`}
           className={s.iframe}
         />
+     ) : (
+       <div className={s.iframe} style={{ overflow: 'hidden' }}>
+         <img src={video_preview_image && video_preview_image.url} alt="video preview" style={{ width: '100%' }} />
+       </div>
+     )}
       </div>
       <div className={s.project_info_wrapper}>
         <div className={s.project_name}>{title.text}</div>
