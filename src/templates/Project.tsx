@@ -57,7 +57,7 @@ export default ({ data }: any) => {
         />
      ) : (
        <div className={s.iframe} style={{ overflow: 'hidden' }}>
-         <img src={video_preview_image && video_preview_image.url} alt="video preview" style={{ width: '100%' }} />
+         <img src={video_preview_image && video_preview_image.url} alt="video preview" style={{ height: '100%', maxWidth: '200%' }} />
        </div>
      )}
       </div>
