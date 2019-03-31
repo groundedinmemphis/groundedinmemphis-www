@@ -134,6 +134,8 @@
 
   }
   .button__row {
+    display: flex;
+    flex-direction: row;
     margin: 50px auto;
     max-width: 950px;
     a {
@@ -149,6 +151,7 @@
       font-weight:600;
       padding: 25px 20px;
       border-radius: 3px;
+      margin-right: 16px;
     }
   }
 }

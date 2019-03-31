@@ -12,6 +12,7 @@ import s from './homepage.scss';
 import SprayImageFoot from 'assets/images/spray-foot.png';
 import { graphql, Link } from 'gatsby';
 import { TimelineLite } from 'gsap';
+import RichText from 'components/rich-text/RichText';
 
 const words = ['ART', 'MUSIC', 'CREATIVITY', 'MEDITATION', 'HEALING'];
 const randomWord = words[Math.floor(Math.random() * words.length)];
@@ -31,6 +32,10 @@ export const query = graphql`
         mission_long {
           html
           text
+          raw {
+            type
+            text
+          }
         }
         mission_short {
           html
@@ -132,6 +137,7 @@ const Homepage = ({ data }: any) => {
               </div>
             </div>
             <div className={s.button__row}>
+              <Link to="/projects">See our Work</Link>
               <Link to="/meet-the-team">Meet the Team</Link>
             </div>
           </div>
@@ -147,9 +153,10 @@ const Homepage = ({ data }: any) => {
               <p>Our Mission</p>
               <p>{bodyText.mission_short.text}</p>
             </div>
-            <div className={s.two__column__text__small}>
-              <p>{bodyText.mission_long.text}</p>
-            </div>
+            <div
+              className={s.two__column__text__small}
+              dangerouslySetInnerHTML={{ __html: bodyText.mission_long.html }}
+            />
           </div>
           <div className={s.button__row}>
             <Link to="/meet-the-team">Our Purpose</Link>

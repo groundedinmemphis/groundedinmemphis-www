@@ -52,8 +52,11 @@ export const Footer = ({ social }: IFooterProps) => {
         <Container>
           <div className={s.footer__contact}>
             <div className={s.contact__text}>
-              <p>Interested in partnering with us?</p>
-              <p>Contact us, let us know lorem.</p>
+              <p>Collaborate with us</p>
+              <p>
+                Learn more about Grounded, become a partner, join our team, or
+                share your story.
+              </p>
             </div>
             <div className={s.contact__form}>
               {sent ? (
@@ -104,7 +107,7 @@ export const Footer = ({ social }: IFooterProps) => {
                     <label>
                       <textarea
                         name="message"
-                        placeholder="Message"
+                        placeholder="Tell us about yourself or your project"
                         rows={10}
                         onChange={handleTextChange}
                       />

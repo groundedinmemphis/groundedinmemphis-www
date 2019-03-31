@@ -64,8 +64,8 @@ export default ({ data }: any) => {
 
       <Container>
         <PageIntro
-          title="Our Team"
-          des="Grounded makes space in communities for expression in service of mindfulness. We are a collaboration between activists, artists, community leaders, and anyone looking for their voice and communities to express themselves."
+          title="Meet the Team"
+          des="Our founders and team of creative collaborators are on a mission to bring positive changes, to Memphis and the world, through art, dance, music, film, mindfulness, and educational programs focused on Adverse Childhood Experiences (ACE) awareness."
         />
         <div className={s.Team}>
           {chunk(data.prismicOurStory.data.team_members, 2).map(

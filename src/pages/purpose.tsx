@@ -75,30 +75,26 @@ export default () => {
         />
 
         <BlockText
-          heading="Our Partners"
+          heading="Our collaborators"
           description={
             <>
-              <p>
-                We work with the best lorem ipsum dolor sit amet del donde
-                seninkininde.
-              </p>
+              <p>We work in association with an open network, including:</p>
             </>
           }
         />
 
         <Container>
           <ItemList>
-            <li>Educators &amp; school districts</li>
-            <li>Scientists</li>
+            <li>Students and young artists</li>
+            <li>Local communities</li>
+            <li>Educators and school districts</li>
             <li>Juvenile detention facilities</li>
+            <li>Producers and creative production houses</li>
+            <li>Judges and the criminal justice system</li>
+            <li>Philanthropists and nonprofit groups</li>
+            <li>Scientists and educators</li>
             <li>Mental health professionals</li>
-            <li>Producers</li>
-            <li>City leaders</li>
-            <li>Judges</li>
-            <li>Law enforcement </li>
-            <li>Philanthropists</li>
-            <li>Our communities</li>
-            <li>Scientists</li>
+            <li>City leaders and law enforcement </li>
           </ItemList>
         </Container>
       </div>

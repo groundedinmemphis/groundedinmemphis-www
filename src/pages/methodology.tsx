@@ -33,9 +33,9 @@ export default () => {
         description={
           <>
             <p>
-              Grounded is focused on using art to advance non-violence education
-              and as a tool for change, growth, and transformation in Memphis.
-              We are creating mindful and healing content to spark mindfulness
+              Grounded is focused on using art to advocate for non-violence and
+              advance education as a tool for change, growth, and transformation
+              in Memphis. We are creating healing content to spark mindfulness
               and self-activation around the most pressing issues faced by
               children, families, underserved communities, and those affected by{' '}
               <a href="https://centerforyouthwellness.org/" target="_blank">
@@ -46,8 +46,8 @@ export default () => {
 
             <p>
               We use our city’s history and culture to create programming and
-              resources for youth violence reduction and to help frame the
-              challenges our communities have and continue to face.
+              resources to help frame the challenges our communities have faced
+              in the past and continue to face now.
             </p>
           </>
         }
@@ -62,10 +62,10 @@ export default () => {
           description={
             <>
               <p>
-                The impact of poverty and crime creates long lasting wounds
-                through adverse childhood experiences. ACEs refers to abuse,
-                neglect, and household dysfunction such as parental mental
-                illness or substance abuse experienced in childhood
+                The impact of poverty and crime creates long-lasting wounds
+                visible through adverse childhood experiences. ACEs refer to
+                abuse, neglect, and household dysfunction such as parental
+                mental illness or substance abuse experienced in childhood.
               </p>
             </>
           }
@@ -97,10 +97,13 @@ export default () => {
             <>
               <p>
                 According to the{' '}
-                <a href="https://centerforyouthwellness.org/" target="_blank">
+                <a
+                  href="https://centerforyouthwellness.org/ace-toxic-stress/"
+                  target="_blank"
+                >
                   Center for Youth Wellness
                 </a>
-                , the effects of ACEs include increased chances of developing:{' '}
+                the effects of ACEs include increased chances of developing:{' '}
               </p>
             </>
           }
@@ -109,14 +112,13 @@ export default () => {
         <Container>
           <ItemList>
             <li>Obesity</li>
-            <li>Cancer</li>
             <li>Diabetes</li>
-            <li>Stroke</li>
             <li>Depression</li>
-            <li>COPD</li>
             <li>STDs</li>
-            <li>Broken bones</li>
             <li>Heart disease</li>
+            <li>Cancer</li>
+            <li>Stroke</li>
+            <li>COPD and broken bones</li>
             <li>Suicidal behavior</li>
           </ItemList>
         </Container>
@@ -126,14 +128,14 @@ export default () => {
             <>
               <p>
                 ACEs are also associated with risky behaviors such as smoking,
-                alcoholism and drug abuse a well as reduced graduation rates and
+                alcoholism and drug abuse, as well as lower graduation rates and
                 academic achievement.
               </p>
 
               <p>
                 Grounded is focusing on helping people acknowledge the effects
-                of ACEs and take steps as a community to overcome them through
-                art and mindfulness.
+                of ACEs and take steps as a community to overcome the effects
+                through art and mindfulness.
               </p>
             </>
           }
@@ -141,14 +143,14 @@ export default () => {
       </div>
 
       <div className={s.Theory}>
-        <h1 className={s.Theory__Title}>Our Theory of Change</h1>
+        <h1 className={s.Theory__Title}>Our theory of change</h1>
 
         <BlockText
           description={
             <>
               <p>
                 We use consciousness, community building, and culture to
-                transform cities through art.
+                transform cities through mindful art.
               </p>
             </>
           }
@@ -161,14 +163,15 @@ export default () => {
           </div>
           <div className={s.Theory__Entry__Desc}>
             <p>
-              Helping students acknowledge their inner voice and emotions is the
-              first step to changing actions and perspective.
+              Helping students and young people acknowledge their inner voice
+              and emotions is the first step to changing actions and
+              perspective.
             </p>
 
             <p>
               By listening to their interests and passions, we help students
               affected by ACEs to develop a new awareness in themselves, their
-              decisions, and communities.
+              decisions, their futures and communities.
             </p>
           </div>
         </div>
@@ -188,7 +191,7 @@ export default () => {
             <p>
               We create a feeling of community and use it to develop unity,
               trust, and emotional openness that breeds a culture of
-              self-expression.
+              self-expression and healing.
             </p>
           </div>
         </div>
