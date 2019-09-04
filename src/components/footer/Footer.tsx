@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { Link } from 'gatsby';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
+
 import { Container } from 'components/container/Container';
 import { Email } from 'components/email/email';
 import GroundedLogoMark from 'assets/svg/grounded-logo-mark.svg';
-import { Link } from 'gatsby';
 
 import s from './Footer.scss';
 
@@ -132,9 +134,13 @@ export const Footer = ({ social }: IFooterProps) => {
               <ul className={s.footer__list}>
                 {social.map(item => (
                   <li key={item.to} className={s.footer__item}>
-                    <a href={item.to} target="_blank" rel="noopener noreferrer">
+                    <OutboundLink
+                      href={item.to}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       {item.icon}
-                    </a>
+                    </OutboundLink>
                   </li>
                 ))}
               </ul>

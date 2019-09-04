@@ -1,5 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import { Link } from 'gatsby';
 
 import { Container } from 'components/container/Container';
 
@@ -8,7 +9,6 @@ import { Container } from 'components/container/Container';
 import { BlockText } from 'components/block-text/BlockText';
 import { ItemList } from 'components/item-list/ItemList';
 import { PageIntro } from 'components/intro/PageIntro';
-import { Link } from 'gatsby';
 
 import SprayImageFoot from 'assets/images/spray-foot.png';
 import SprayImageSingleStroke from 'assets/images/spray-single.png';
@@ -64,11 +64,11 @@ export default () => {
               </p>
 
               <p>
-                We are guided by <a href="#">our methodology</a> of using art to
-                advance non-violence education and as a tool for change, growth,
-                and transformation. We know there is greater opportunity for art
-                and mindfulness paired with a network of collaborators to create
-                safer cities and a healthier community.
+                We are guided by <Link to="/methodology">our methodology</Link>{' '}
+                of using art to advance non-violence education and as a tool for
+                change, growth, and transformation. We know there is greater
+                opportunity for art and mindfulness paired with a network of
+                collaborators to create safer cities and a healthier community.
               </p>
             </>
           }

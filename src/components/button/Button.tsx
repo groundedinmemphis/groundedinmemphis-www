@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import s from './Button.scss';
 
 interface IButtonProps {
@@ -25,9 +26,14 @@ export const Button = ({
 
   if (isExternal) {
     return (
-      <a target="_blank" rel="noopener noreferrer" href={to} {...passProps}>
+      <OutboundLink
+        target="_blank"
+        rel="noopener noreferrer"
+        href={to}
+        {...passProps}
+      >
         {children}
-      </a>
+      </OutboundLink>
     );
   }
 

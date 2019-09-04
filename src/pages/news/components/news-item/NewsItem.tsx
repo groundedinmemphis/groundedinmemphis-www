@@ -1,7 +1,9 @@
 import React from 'react';
-import RichText from 'components/rich-text/RichText';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import { format } from 'date-fns';
 import { isEmpty } from 'lodash';
+
+import RichText from 'components/rich-text/RichText';
 import s from './NewsItem.scss';
 
 interface INewsItemProps {
@@ -27,9 +29,9 @@ export default (props: INewsItemProps) => (
     )}
     {props.summary && RichText.render(props.summary)}
     {props.url && (
-      <a href={props.url.url} className={s.link} target="_blank">
+      <OutboundLink href={props.url.url} className={s.link} target="_blank">
         Read More +
-      </a>
+      </OutboundLink>
     )}
   </div>
 );

@@ -68,7 +68,7 @@ export const Header = (props: IHeaderProps) => {
             </div>
             <div className={s.header__right}>
               <HeaderLink
-                name="Partner with Us"
+                name="Contact us"
                 to="/#partner"
                 onClick={handlePartnerClick}
               />
