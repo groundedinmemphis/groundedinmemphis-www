@@ -58,15 +58,12 @@ const Homepage = ({ data }: any) => {
   const bodyText = data.prismicHomepage.data;
   const svg = React.useRef(null);
   React.useEffect(() => {
-    // const svg = document.getElementById('big_g');
     if (svg && svg.current) {
       const texts = Array.from(svg.current.querySelectorAll('text'));
       const timeline = new TimelineLite();
-      // timeline.set(texts[0], { strokeDashoffset: 0 });
-      // timeline.set(texts[1], { strokeDashoffset: 0 });
       timeline.set(texts[2], { alpha: 0 });
-      timeline.to(texts[0], 1, { strokeDashoffset: 0 }, 0.4);
-      timeline.to(texts[1], 1, { strokeDashoffset: 0 }, '-=0.2');
+      timeline.to(texts[0], 1, { strokeDashoffset: '0px' }, 0.4);
+      timeline.to(texts[1], 1, { strokeDashoffset: '0px' }, '-=0.2');
       timeline.to(texts[2], 1, { alpha: 1 }, '-=0.3');
     }
   }, [svg]);
@@ -88,8 +85,8 @@ const Homepage = ({ data }: any) => {
               <text
                 stroke="white"
                 strokeWidth="2"
-                strokeDasharray={400}
-                strokeDashoffset={400}
+                strokeDasharray="400px"
+                strokeDashoffset="400px"
                 style={{ whiteSpace: 'pre' }}
                 fontFamily="Anton"
                 fontSize="120"
@@ -102,8 +99,8 @@ const Homepage = ({ data }: any) => {
               <text
                 stroke="white"
                 strokeWidth="2"
-                strokeDasharray={400}
-                strokeDashoffset={400}
+                strokeDasharray="400px"
+                strokeDashoffset="400px"
                 style={{ whiteSpace: 'pre' }}
                 fontFamily="Anton"
                 fontSize="120"
