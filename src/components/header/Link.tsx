@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link as InternalLink } from 'gatsby';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
+
 import s from './Link.scss';
 
 interface ILinkProps {
@@ -22,9 +24,14 @@ export const Link = ({ name, to, icon, onClick }: ILinkProps) => {
 
   if (isExternal) {
     return (
-      <a className={s.link} target="_blank" rel="noopener noreferrer" href={to}>
+      <OutboundLink
+        className={s.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        href={to}
+      >
         {content()}
-      </a>
+      </OutboundLink>
     );
   }
 

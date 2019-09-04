@@ -6,9 +6,9 @@ import { BlockText } from 'components/block-text/BlockText';
 export default () => {
   return (
     <>
-      <Helmet title="Partner with us" />
+      <Helmet title="Contact us" />
       <Segment>
-        <BlockText heading="Partner with us" description="Yes" />
+        <BlockText heading="Contact us" description="Yes" />
       </Segment>
     </>
   );

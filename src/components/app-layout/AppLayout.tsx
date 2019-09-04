@@ -30,8 +30,11 @@ export default ({ children, pageContext, location }: IAppLayoutProps) => {
       <Footer
         logo={<Logo />}
         social={[
-          { icon: <Facebook />, to: 'https://www.facebook.com/' },
-          { icon: <Instagram />, to: 'https://www.instagram.com/' },
+          { icon: <Facebook />, to: 'http://facebook.com/groundedinmemphis' },
+          {
+            icon: <Instagram />,
+            to: 'https://www.instagram.com/groundedinmemphis/',
+          },
         ]}
       />
 

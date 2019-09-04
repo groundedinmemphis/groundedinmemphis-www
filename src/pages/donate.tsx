@@ -53,7 +53,7 @@ export default () => {
         }}
         seamless="seamless"
         name="donorbox"
-        frameborder="0"
+        frameBorder="0"
         scrolling="no"
         allowpaymentrequest
       />

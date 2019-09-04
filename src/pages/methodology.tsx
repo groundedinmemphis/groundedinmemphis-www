@@ -1,5 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
 import { Container } from 'components/container/Container';
 import { PageIntro } from 'components/intro/PageIntro';
@@ -38,9 +39,12 @@ export default () => {
               in Memphis. We are creating healing content to spark mindfulness
               and self-activation around the most pressing issues faced by
               children, families, underserved communities, and those affected by{' '}
-              <a href="https://centerforyouthwellness.org/" target="_blank">
+              <OutboundLink
+                href="https://centerforyouthwellness.org/"
+                target="_blank"
+              >
                 Adverse Childhood Experiences
-              </a>
+              </OutboundLink>
               .
             </p>
 
@@ -97,12 +101,12 @@ export default () => {
             <>
               <p>
                 According to the{' '}
-                <a
+                <OutboundLink
                   href="https://centerforyouthwellness.org/ace-toxic-stress/"
                   target="_blank"
                 >
                   Center for Youth Wellness
-                </a>
+                </OutboundLink>
                 the effects of ACEs include increased chances of developing:{' '}
               </p>
             </>

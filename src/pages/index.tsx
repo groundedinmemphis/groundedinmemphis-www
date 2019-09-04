@@ -56,17 +56,17 @@ export const query = graphql`
 
 const Homepage = ({ data }: any) => {
   const bodyText = data.prismicHomepage.data;
+  const svg = React.useRef(null);
   React.useEffect(() => {
-    const svg = document.getElementById('big_g');
-    if (svg) {
-      const texts = Array.from(svg.querySelectorAll('text'));
+    if (svg && svg.current) {
+      const texts = Array.from(svg.current.querySelectorAll('text'));
       const timeline = new TimelineLite();
       timeline.set(texts[2], { alpha: 0 });
-      timeline.to(texts[0], 0.75, { strokeDashoffset: '500px' });
-      timeline.to(texts[1], 0.75, { strokeDashoffset: '500px' }, '-=0.2');
+      timeline.to(texts[0], 1, { strokeDashoffset: 0 }, 0.4);
+      timeline.to(texts[1], 1, { strokeDashoffset: 0 }, '-=0.2');
       timeline.to(texts[2], 1, { alpha: 1 }, '-=0.3');
     }
-  }, []);
+  }, [svg]);
 
   return (
     <>
@@ -80,11 +80,13 @@ const Homepage = ({ data }: any) => {
             <BigLogo />
           </div>
 
-          <div className={s.opening__image__text} id="big_g">
+          <div className={s.opening__image__text} id="big_g" ref={svg}>
             <svg width="600" height="210" viewBox="0 0 600 210" fill="none">
               <text
                 stroke="white"
                 strokeWidth="2"
+                strokeDasharray={880}
+                strokeDashoffset={880}
                 style={{ whiteSpace: 'pre' }}
                 fontFamily="Anton"
                 fontSize="120"
@@ -97,6 +99,8 @@ const Homepage = ({ data }: any) => {
               <text
                 stroke="white"
                 strokeWidth="2"
+                strokeDasharray={880}
+                strokeDashoffset={880}
                 style={{ whiteSpace: 'pre' }}
                 fontFamily="Anton"
                 fontSize="120"
