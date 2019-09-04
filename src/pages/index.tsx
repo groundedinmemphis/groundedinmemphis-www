@@ -62,8 +62,8 @@ const Homepage = ({ data }: any) => {
       const texts = Array.from(svg.current.querySelectorAll('text'));
       const timeline = new TimelineLite();
       timeline.set(texts[2], { alpha: 0 });
-      timeline.to(texts[0], 1, { strokeDashoffset: '0px' }, 0.4);
-      timeline.to(texts[1], 1, { strokeDashoffset: '0px' }, '-=0.2');
+      timeline.to(texts[0], 1, { strokeDashoffset: 0 }, 0.4);
+      timeline.to(texts[1], 1, { strokeDashoffset: 0 }, '-=0.2');
       timeline.to(texts[2], 1, { alpha: 1 }, '-=0.3');
     }
   }, [svg]);
@@ -85,8 +85,8 @@ const Homepage = ({ data }: any) => {
               <text
                 stroke="white"
                 strokeWidth="2"
-                strokeDasharray="400px"
-                strokeDashoffset="400px"
+                strokeDasharray={880}
+                strokeDashoffset={880}
                 style={{ whiteSpace: 'pre' }}
                 fontFamily="Anton"
                 fontSize="120"
@@ -99,8 +99,8 @@ const Homepage = ({ data }: any) => {
               <text
                 stroke="white"
                 strokeWidth="2"
-                strokeDasharray="400px"
-                strokeDashoffset="400px"
+                strokeDasharray={880}
+                strokeDashoffset={880}
                 style={{ whiteSpace: 'pre' }}
                 fontFamily="Anton"
                 fontSize="120"

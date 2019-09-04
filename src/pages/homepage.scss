@@ -235,8 +235,8 @@
       max-width: 700px;
       text {
         font-size: 90px;
-        // stroke-dasharray: 880px;
-        // stroke-dashoffset: 880px;
+        stroke-dasharray: 880px;
+        stroke-dashoffset: 880px;
         // transition: stroke-dashoffset 0.75s ease;
 
         &:last-child {
