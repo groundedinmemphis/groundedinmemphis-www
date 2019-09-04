@@ -65,8 +65,8 @@ const Homepage = ({ data }: any) => {
       // timeline.set(texts[0], { strokeDashoffset: 0 });
       // timeline.set(texts[1], { strokeDashoffset: 0 });
       timeline.set(texts[2], { alpha: 0 });
-      timeline.to(texts[0], 0.75, { strokeDashoffset: 0 });
-      timeline.to(texts[1], 0.75, { strokeDashoffset: 0 }, '-=0.2');
+      timeline.to(texts[0], 1, { strokeDashoffset: 0 }, 0.4);
+      timeline.to(texts[1], 1, { strokeDashoffset: 0 }, '-=0.2');
       timeline.to(texts[2], 1, { alpha: 1 }, '-=0.3');
     }
   }, [svg]);
@@ -88,8 +88,8 @@ const Homepage = ({ data }: any) => {
               <text
                 stroke="white"
                 strokeWidth="2"
-                strokeDasharray={20}
-                strokeDashoffset={20}
+                strokeDasharray={400}
+                strokeDashoffset={400}
                 style={{ whiteSpace: 'pre' }}
                 fontFamily="Anton"
                 fontSize="120"
@@ -102,8 +102,8 @@ const Homepage = ({ data }: any) => {
               <text
                 stroke="white"
                 strokeWidth="2"
-                strokeDasharray={20}
-                strokeDashoffset={20}
+                strokeDasharray={400}
+                strokeDashoffset={400}
                 style={{ whiteSpace: 'pre' }}
                 fontFamily="Anton"
                 fontSize="120"
