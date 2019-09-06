@@ -55,8 +55,9 @@
 
 
     &__Categories {
+        align-items: center;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         width: 100%;
 
         &__Wrapper {
@@ -81,7 +82,7 @@
             @media (min-width: $min-1024) {
     
                 padding: 0;
-                width: 30%;
+                width: 50%;
             }
         }
 
@@ -104,7 +105,7 @@
     
             @media (min-width: $min-1024) {
                 padding: 0;
-                width: 30%;
+                width: 50%;
             }
         }
 
