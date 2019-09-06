@@ -54,7 +54,7 @@ export const Footer = ({ social }: IFooterProps) => {
         <Container>
           <div className={s.footer__contact}>
             <div className={s.contact__text}>
-              <p>Collaborate with us</p>
+              <p>Questions? Want to Collaborate?</p>
               <p>
                 Learn more about Grounded, become a partner, join our team, or
                 share your story.
@@ -109,7 +109,7 @@ export const Footer = ({ social }: IFooterProps) => {
                     <label>
                       <textarea
                         name="message"
-                        placeholder="Tell us about yourself or your project"
+                        placeholder="Ask us questions, tell us about yourself or your project"
                         rows={10}
                         onChange={handleTextChange}
                       />

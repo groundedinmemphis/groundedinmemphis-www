@@ -38,18 +38,12 @@ export default () => {
               advance education as a tool for change, growth, and transformation
               in Memphis. We are creating healing content to spark mindfulness
               and self-activation around the most pressing issues faced by
-              children, families, underserved communities, and those affected by{' '}
-              <OutboundLink
-                href="https://centerforyouthwellness.org/"
-                target="_blank"
-              >
-                Adverse Childhood Experiences
-              </OutboundLink>
-              .
+              children, families, underserved communities, and those affected by
+              Adverse Childhood Experiences .
             </p>
 
             <p>
-              We use our city’s history and culture to create programming and
+              We honor our city’s history and culture to create programming and
               resources to help frame the challenges our communities have faced
               in the past and continue to face now.
             </p>
@@ -57,7 +51,7 @@ export default () => {
         }
       />
 
-      <div className={s.Aces}>
+      <div className={s.Aces} id="aces">
         <h2 className={s.Aces__Title}>
           Addressing Adverse Childhood Experiences (ACEs)
         </h2>
@@ -67,9 +61,10 @@ export default () => {
             <>
               <p>
                 The impact of poverty and crime creates long-lasting wounds
-                visible through adverse childhood experiences. ACEs refer to
-                abuse, neglect, and household dysfunction such as parental
-                mental illness or substance abuse experienced in childhood.
+                visible through adverse childhood experiences and adverse
+                community experiences. ACEs refer to abuse, neglect, and
+                household dysfunction such as parental mental illness or
+                substance abuse experienced in childhood.
               </p>
             </>
           }
@@ -77,41 +72,33 @@ export default () => {
 
         <Container>
           <div className={s.Aces__Categories}>
-            <div className={s.Aces__Categories__Entry}>
-              <IconAbuse />
-              <p className={s.Aces__Categories__Entry__Title}>Abuse</p>
+            <div className={s.Aces__Categories__Wrapper}>
+              <div className={s.Aces__Categories__Entry}>
+                <IconAbuse />
+                <p className={s.Aces__Categories__Entry__Title}>Abuse</p>
+              </div>
+
+              <div className={s.Aces__Categories__Entry}>
+                <IconNeglect />
+                <p className={s.Aces__Categories__Entry__Title}>Neglect</p>
+              </div>
+
+              <div className={s.Aces__Categories__Entry}>
+                <IconHd />
+                <p className={s.Aces__Categories__Entry__Title}>
+                  Household Dysfunction
+                </p>
+              </div>
             </div>
 
-            <div className={s.Aces__Categories__Entry}>
-              <IconNeglect />
-              <p className={s.Aces__Categories__Entry__Title}>Neglect</p>
-            </div>
-
-            <div className={s.Aces__Categories__Entry}>
-              <IconHd />
-              <p className={s.Aces__Categories__Entry__Title}>
-                Household Dysfunction
+            <div className={s.Aces__Categories__Text}>
+              <p>
+                According to the Center for Youth Wellness the effects of ACEs
+                include increased chances of developing:
               </p>
             </div>
           </div>
         </Container>
-
-        <BlockText
-          description={
-            <>
-              <p>
-                According to the{' '}
-                <OutboundLink
-                  href="https://centerforyouthwellness.org/ace-toxic-stress/"
-                  target="_blank"
-                >
-                  Center for Youth Wellness
-                </OutboundLink>
-                the effects of ACEs include increased chances of developing:{' '}
-              </p>
-            </>
-          }
-        />
 
         <Container>
           <ItemList>
@@ -131,7 +118,7 @@ export default () => {
           description={
             <>
               <p>
-                ACEs are also associated with risky behaviors such as smoking,
+                ACEs are also associated with behaviors such as smoking,
                 alcoholism and drug abuse, as well as lower graduation rates and
                 academic achievement.
               </p>
@@ -147,7 +134,7 @@ export default () => {
       </div>
 
       <div className={s.Theory}>
-        <h1 className={s.Theory__Title}>Our theory of change</h1>
+        <h1 className={s.Theory__Title}>Our Theory of Change Pillars</h1>
 
         <BlockText
           description={

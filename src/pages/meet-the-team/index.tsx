@@ -2,6 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 
 import { Container } from 'components/container/Container';
+import { BlockText } from 'components/block-text/BlockText';
 import s from './OurTeam.scss';
 
 import { graphql } from 'gatsby';
@@ -65,7 +66,7 @@ export default ({ data }: any) => {
       <Container>
         <PageIntro
           title="Meet the Team"
-          des="Our founders and team of creative collaborators are on a mission to bring positive changes, to Memphis and the world, through art, dance, music, film, mindfulness, and educational programs focused on Adverse Childhood Experiences (ACE) awareness."
+          des="Our team of professional artists collaborate with youth and social justice innovators to create healing content, curriculum and commentary around the most pressing issues faced by families and communities affected by Adverse Childhood Experiences and Adverse Community Experiences."
         />
         <div className={s.Team}>
           {chunk(data.prismicOurStory.data.team_members, 2).map(
@@ -95,6 +96,41 @@ export default ({ data }: any) => {
           )}
         </div>
       </Container>
+
+      <div className={s.Practice}>
+        <h1 className={s.Practice__Title}>Our Practice</h1>
+
+        <BlockText
+          heading=""
+          description={
+            <>
+              <p>
+                Our emphasis on mindfulness extends directly from the
+                relationship between Thich Nhat Hanh and Dr. Martin Luther King,
+                Jr.
+              </p>
+
+              <p>
+                Deploying a strategic combination of art and mindfulness
+                activations across Memphis can release trauma, recalibrate value
+                alignment and reduce violence by elevating consciousness,
+                building community and shifting culture towards abundance.
+              </p>
+
+              <p>
+                By honoring the challenges we’ve faced in life as our strengths
+                and not our weaknesses, we’re able to harness the power of
+                resilience. This is where creativity and opportunity flourishes.
+              </p>
+
+              <p>
+                The diversity of our backgrounds, art genres, and platforms,
+                enable us to reach, empower and inspire a broad audience.
+              </p>
+            </>
+          }
+        />
+      </div>
     </>
   );
 };

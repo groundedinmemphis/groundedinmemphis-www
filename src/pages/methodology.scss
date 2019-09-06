@@ -5,11 +5,10 @@
 
 
 .Aces {
-
+    align-items: center;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column;
 
-    justify-content: center;
 
     background: #fff;
 
@@ -56,29 +55,57 @@
 
 
     &__Categories {
-
+        display: flex;
+        justify-content: center;
         width: 100%;
 
-        margin: 0 auto 80px;
-
-        display: flex;
-        flex-flow: row wrap;
-
-        // background: red;
-
-
-
-        @media (min-width: $min-640) {
-
-            padding: 0 10%;
+        &__Wrapper {
             width: 100%;
+    
+            margin: 0 5% 80px;
+    
+            display: flex;
+            flex-flow: row wrap;
+    
+            // background: red;
+    
+    
+    
+            @media (min-width: $min-640) {
+    
+                padding: 0 10%;
+                width: 100%;
+            }
+    
+    
+            @media (min-width: $min-1024) {
+    
+                padding: 0;
+                width: 30%;
+            }
         }
 
-
-        @media (min-width: $min-1024) {
-
-            padding: 0;
-            width: 50%;
+        &__Text {
+            margin: 0 0 120px;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 500;
+            font-size: 18px;
+            font-size: calc((0.00253 * 100vw + (16.93671px)) * var(--scale-font));
+            line-height: 1.72em;
+            margin: 0 5% 80px;
+            color: #232323;
+            width: 100%;
+    
+            @media (min-width: $min-640) {
+                padding: 0 10%;
+                width: 100%;
+            }
+    
+    
+            @media (min-width: $min-1024) {
+                padding: 0;
+                width: 30%;
+            }
         }
 
 
