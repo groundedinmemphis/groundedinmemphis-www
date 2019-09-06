@@ -12,8 +12,8 @@ export const query = graphql`
         title {
           text
         }
-        description {
-          text
+        description_long {
+          html
         }
         categories {
           text
@@ -24,7 +24,9 @@ export const query = graphql`
         video_preview_image {
           url
         }
-        year
+        year_long {
+          text
+        }
         contributors {
           text
         }
@@ -37,44 +39,57 @@ export default ({ data }: any) => {
   const {
     title,
     categories,
-    description,
+    description_long,
     contributors,
-    year,
+    year_long,
     youtube_link,
-    video_preview_image
+    video_preview_image,
   } = data.prismicProject.data;
-  const [, youtubeId] = youtube_link && youtube_link.embed_url ? youtube_link.embed_url.match(/v\=(.*)$/) : [null, null];
+  const [, youtubeId] =
+    youtube_link && youtube_link.embed_url
+      ? youtube_link.embed_url.match(/v\=(.*)$/)
+      : [null, null];
 
   return (
     <>
       <Helmet title={title.text} />
       <div className={s.project_video}>
         <div className={s.project_video_top} />
-    {youtubeId ? (
-        <iframe
-          src={`//www.youtube.com/embed/${youtubeId}?rel=0&amp;controls=0&amp;showinfo=0&amp;modestbranding=1&amp;autoplay=1&amp;widgetid=1`}
-          className={s.iframe}
-        />
-     ) : (
-       <div className={s.iframe} style={{ overflow: 'hidden' }}>
-         <img src={video_preview_image && video_preview_image.url} alt="video preview" style={{ height: '100%', maxWidth: '200%' }} />
-       </div>
-     )}
+        {youtubeId ? (
+          <iframe
+            src={`//www.youtube.com/embed/${youtubeId}?rel=0&amp;controls=0&amp;showinfo=0&amp;modestbranding=1&amp;autoplay=1&amp;widgetid=1`}
+            className={s.iframe}
+          />
+        ) : (
+          <div className={s.iframe} style={{ overflow: 'hidden' }}>
+            <img
+              src={video_preview_image && video_preview_image.url}
+              alt="video preview"
+              style={{ height: '100%', maxWidth: '200%' }}
+            />
+          </div>
+        )}
       </div>
       <div className={s.project_info_wrapper}>
         <div className={s.project_name}>{title.text}</div>
         <div className={s.project_info}>
           <span className={s.project_tags}>{categories.text}</span>
-          <p className={s.project_des}>{description.text}</p>
+          <div
+            className={s.project_des}
+            dangerouslySetInnerHTML={{ __html: description_long.html }}
+          />
 
           <div className={s.project_details}>
             <div className={s.project_timestamp}>
               <span className={s.project_year}>Year</span>
               <span className={s.project_year} style={{ color: '#757575' }}>
-                {year}
+                {year_long.text}
               </span>
             </div>
-            <div className={s.project_timestamp}>
+            <div
+              className={s.project_timestamp}
+              style={{ visibility: contributors.text ? 'visible' : 'hidden' }}
+            >
               <span className={s.project_year}>Contributors</span>
               <span className={s.project_year} style={{ color: '#757575' }}>
                 {contributors.text}
