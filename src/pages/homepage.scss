@@ -68,13 +68,14 @@
     }
   }
 
-  .two__column__text{
+  .two__column__text {
     display:flex;
     position:relative;
     z-index:100;
     justify-content: center;
     max-width: 950px;
     margin: 0 auto;
+
     &__big {
       max-width:600px;
       margin-right:50px;
@@ -98,8 +99,10 @@
         }
       }
     }
+
     &__small {
       max-width:350px;
+
       p {
         font-family: Montserrat;
         font-style: normal;
@@ -108,6 +111,10 @@
         font-size: 18px;
         color: #000000;
         opacity: 0.8;
+
+        + p {
+          margin-top: 0.5rem;
+        }
       }
 
     }
