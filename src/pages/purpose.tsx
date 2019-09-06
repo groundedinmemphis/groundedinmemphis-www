@@ -37,16 +37,34 @@ export default () => {
           description={
             <>
               <p>
-                Founded in 2012, Grounded is a nonprofit artistic collective
-                rooted in the Memphis community. We believe artists have the
-                power to inspire students, communities, and cities to unite,
-                pursue their passions, and end cycles of violence.
+                Founded in 2019 and in action since 2012, Grounded is an
+                organization of artists and storytellers who know Memphis inside
+                and out. We believe artists have the power to inspire students,
+                communities, and cities to unite, pursue their passions, and end
+                cycles of violence.
               </p>
 
               <p>
-                Our core team and expansive network of collaborators bring an
-                exceptional level of talent, professionalism and authenticity to
-                all of our projects.
+                Statistically, Memphis is a traumatized city. It is ranked as
+                one of the worst cities in the nation for violent crime. It’s
+                homicide rate is the third highest among the country’s largest
+                cities. One in every 30 black males in Tennessee are
+                incarcerated. Memphis also sits at the top of the list for
+                overall poverty and childhood poverty.
+              </p>
+
+              <p>
+                Memphis is also the place where Dr. Martin Luther King, Jr. was
+                assassinated more than 50 years ago. The lasting wounds from the
+                city’s trauma are amplified by increasing violence, racial
+                discrimination and the criminialization of poverty.
+              </p>
+              <p>
+                While Memphis has many challenges, it is also full of
+                possibility, profound authenticity, powerful thinking, creative
+                solutions, and limitless inspiration. These forms of resilience,
+                when combined with art and mindfulness, generate opportunities
+                for healing.
               </p>
             </>
           }
@@ -57,18 +75,52 @@ export default () => {
           description={
             <>
               <p>
-                Our shared purpose is to create content that is meaningful and
-                inspiring while serving the larger mission of using creativity
-                as a means of connecting and activating communities around
-                important social issues.
+                Our shared purpose is to create conscious content that is
+                impactful, meaningful and inspiring, while serving the larger
+                mission of using creativity as a means of connecting and
+                galvanizing communities around important social issues.
               </p>
 
               <p>
                 We are guided by <Link to="/methodology">our methodology</Link>{' '}
-                of using art to advance non-violence education and as a tool for
-                change, growth, and transformation. We know there is greater
-                opportunity for art and mindfulness paired with a network of
-                collaborators to create safer cities and a healthier community.
+                of using art as a vehicle for growth, trauma release, and
+                transformation.
+              </p>
+
+              <p>
+                We know there is greater opportunity for art and mindfulness,
+                when paired with a network of collaborators, to create emotional
+                outcomes such as empathy, compassion, healing, happiness and
+                confidence.
+              </p>
+
+              <p>
+                Research shows that engagement with the creative arts --
+                specifically music engagement, visual arts therapy,
+                movement-based creative expression, and creative writing can
+                help to heal trauma and improve health and behavioral outcomes.
+              </p>
+
+              <p>
+                We have already seen positive outcomes. Last year during our
+                four month pilot program in a Memphis juvenile detention center,
+                there was a 54% reduction in violence. And during a recent
+                public art installation at the site of a homicide, family
+                members who had lost a loved one to gun violence were able to
+                find new meaning and healing in a place that was difficult to
+                confront. In the fall of 2019, educational curriculum that
+                accompanies our film Me and the Light, will be implemented in
+                Memphis schools to teach the difficult history of our city and
+                to prompt conversations about conscious choices and resilience.
+              </p>
+
+              <p>
+                By using the arts as a strategic vehicle for targeting larger
+                issues, our work also aligns with national caused-based
+                organizations and initiatives. By sharing with other communities
+                and cities what we're learning, Grounded can assist in
+                coordinating effective artist-driven solutions for social
+                change.
               </p>
             </>
           }
@@ -92,7 +144,7 @@ export default () => {
             <li>Producers and creative production houses</li>
             <li>Judges and the criminal justice system</li>
             <li>Philanthropists and nonprofit groups</li>
-            <li>Scientists and educators</li>
+            <li>Scientists</li>
             <li>Mental health professionals</li>
             <li>City leaders and law enforcement </li>
           </ItemList>
