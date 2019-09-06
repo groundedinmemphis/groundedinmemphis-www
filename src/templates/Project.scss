@@ -73,6 +73,18 @@ $video-offset: 400px;
   @include responsive-font(25px, 30px);
   line-height: 48px;
   margin-top: 20px;
+  
+  
+  p {
+    + p {
+      margin-top: 0.6em; 
+    }
+  }
+
+  img {
+    margin-top: 1em;
+  }
+  
 }
 
 .project_details {

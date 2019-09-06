@@ -1,10 +1,12 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import { graphql } from 'gatsby';
+import { t as typy } from 'typy';
+
 import { Container } from 'components/container/Container';
 import { PageIntro } from 'components/intro/PageIntro';
 import { ProjectButton } from 'components/button/ProjectButton';
 import { ProjectRow } from 'components/row/ProjectRow';
-import { graphql } from 'gatsby';
 
 import s from './projects.scss';
 
@@ -33,6 +35,8 @@ export const query = graphql`
                   year_long {
                     text
                   }
+                  order
+                  hidden
                 }
               }
             }
@@ -44,10 +48,24 @@ export const query = graphql`
 `;
 
 export default ({ data }: any) => {
-  const projects = data.prismicProjects.data.projects.map((p: any) => {
-    return p.projects.document[0];
+  const projectsClearing = data.prismicProjects.data.projects
+    .filter(pr => {
+      const [d] = pr.projects.document;
+      console.log({ d });
+      return d.data.hidden.toLowerCase() === 'no';
+    })
+    .sort((a, b) => {
+      const [aData] = a.projects.document;
+      const [bData] = b.projects.document;
+      return typy(aData, 'data.order').safeNumber >=
+        typy(bData, 'data.order').safeNumber
+        ? -1
+        : 1;
+    });
+  const projects = projectsClearing.map((p: any) => {
+    const [d] = p.projects.document;
+    return d;
   });
-
   const featured = projects.slice(0, 1).shift();
 
   return (
@@ -62,15 +80,23 @@ export default ({ data }: any) => {
         <section
           className={s.hero_image}
           style={{
-            backgroundImage: `url(${featured.data.project_cover.url})`,
+            backgroundImage: `url(${
+              typy(featured, 'data.project_cover.url').safeString
+            })`,
           }}
         />
         <div className={s.section_featured}>
-          <h2 className={s.project_name}>{featured.data.title.text}</h2>
-          <span className={s.project_year}>{featured.data.year_long.text}</span>
-          <p className={s.project_des}>{featured.data.description.text}</p>
+          <h2 className={s.project_name}>
+            {typy(featured, 'data.title.text').safeString}
+          </h2>
+          <span className={s.project_year}>
+            {typy(featured, 'data.year_long.text').safeString}
+          </span>
+          <p className={s.project_des}>
+            {typy(featured, 'data.description.text').safeString}
+          </p>
           <ProjectButton
-            url={featured.prismicId}
+            url={typy(featured, 'uid').safeString}
             name="See Project"
             icon="&#10230;"
           />
@@ -80,12 +106,12 @@ export default ({ data }: any) => {
       {projects.slice(1).map((project: any, index: number) => {
         return (
           <ProjectRow
-            key={project.uid}
-            img_url={project.data.project_cover.url}
-            url={project.uid}
-            title={project.data.title.text}
-            year={project.data.year_long.text}
-            des={project.data.description.text}
+            key={typy(project, 'uid').safeString}
+            img_url={typy(project, 'data.project_cover.url').safeString}
+            url={typy(project, 'uid').safeString}
+            title={typy(project, 'data.title.text').safeString}
+            year={typy(project, 'data.year_long.text').safeString}
+            des={typy(project, 'data.description.text').safeString}
             flip={index % 2 === 1}
           />
         );
