@@ -66,6 +66,10 @@ export default () => {
                 when combined with art and mindfulness, generate opportunities
                 for healing.
               </p>
+
+              <div className={s.Spray__Top}>
+                <img src={SprayImageFoot} alt="spray" />
+              </div>
             </>
           }
         />
@@ -149,10 +153,6 @@ export default () => {
             <li>City leaders and law enforcement </li>
           </ItemList>
         </Container>
-      </div>
-
-      <div className={s.Spray__Top}>
-        <img src={SprayImageFoot} alt="spray" />
       </div>
 
       <div className={s.Spray__Bottom}>
