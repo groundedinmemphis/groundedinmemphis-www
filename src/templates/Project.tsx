@@ -1,6 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
+import { t as typy } from 'typy';
 
 import s from './Project.scss';
 
@@ -45,30 +46,61 @@ export default ({ data }: any) => {
     youtube_link,
     video_preview_image,
   } = data.prismicProject.data;
-  const [, youtubeId] =
-    youtube_link && youtube_link.embed_url
-      ? youtube_link.embed_url.match(/v\=(.*)$/)
-      : [null, null];
+
+  console.log({ youtube_link });
+
+  var provider =
+    youtube_link && typy(youtube_link, 'embed_url').isString
+      ? typy(youtube_link, 'embed_url').safeString.match(
+          /https:\/\/(?:www.)?(?:(vimeo).com\/(.*)|(youtube).com\/watch\?v=(.*?))/
+        )
+      : '';
+  let videoContent = null;
+
+  if (provider && provider.includes('youtube')) {
+    const [, youtubeId] =
+      youtube_link && youtube_link.embed_url
+        ? youtube_link.embed_url.match(/v\=(.*)$/)
+        : [null, null];
+    videoContent = youtubeId ? (
+      <iframe
+        src={`//www.youtube.com/embed/${youtubeId}?rel=0&amp;controls=0&amp;showinfo=0&amp;modestbranding=1&amp;autoplay=1&amp;widgetid=1`}
+        className={s.iframe}
+      />
+    ) : null;
+  } else if (provider && provider.includes('vimeo')) {
+    const vimeoID = youtube_link.embed_url.substring(
+      youtube_link.embed_url.lastIndexOf('/') + 1
+    );
+    videoContent = (
+      <iframe
+        src={`https://player.vimeo.com/video/${vimeoID}?color=ffffff&title=0&byline=0&portrait=0`}
+        frameBorder="0"
+        allow="autoplay; fullscreen"
+        allowFullScreen
+        className={s.iframe}
+      />
+    );
+  }
+
+  if (!videoContent && video_preview_image && video_preview_image.url) {
+    videoContent = (
+      <div className={s.iframe} style={{ overflow: 'hidden' }}>
+        <img
+          src={video_preview_image && video_preview_image.url}
+          alt="video preview"
+          style={{ height: '100%', maxWidth: '200%' }}
+        />
+      </div>
+    );
+  }
 
   return (
     <>
       <Helmet title={title.text} />
       <div className={s.project_video}>
         <div className={s.project_video_top} />
-        {youtubeId ? (
-          <iframe
-            src={`//www.youtube.com/embed/${youtubeId}?rel=0&amp;controls=0&amp;showinfo=0&amp;modestbranding=1&amp;autoplay=1&amp;widgetid=1`}
-            className={s.iframe}
-          />
-        ) : (
-          <div className={s.iframe} style={{ overflow: 'hidden' }}>
-            <img
-              src={video_preview_image && video_preview_image.url}
-              alt="video preview"
-              style={{ height: '100%', maxWidth: '200%' }}
-            />
-          </div>
-        )}
+        {videoContent}
       </div>
       <div className={s.project_info_wrapper}>
         <div className={s.project_name}>{title.text}</div>
