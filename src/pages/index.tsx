@@ -73,7 +73,10 @@ const Homepage = ({ data }: any) => {
       <Helmet title="Inspiring a city to walk together" />
       <div className={s.opening__image}>
         <div className={s.opening__image__background}>
-          <Img {...data.mainImage.childImageSharp} />
+          <Img
+            {...data.mainImage.childImageSharp}
+            imgStyle={{ objectPosition: '70% 100%' }}
+          />
         </div>
         <div className={s.opening__image__content}>
           <div className={s.opening__image__big__logo}>
