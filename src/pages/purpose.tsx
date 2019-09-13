@@ -66,6 +66,10 @@ export default () => {
                 when combined with art and mindfulness, generate opportunities
                 for healing.
               </p>
+
+              <div className={s.Spray__Top}>
+                <img src={SprayImageFoot} alt="spray" />
+              </div>
             </>
           }
         />
@@ -116,7 +120,7 @@ export default () => {
 
               <p>
                 By using the arts as a strategic vehicle for targeting larger
-                issues, our work also aligns with national caused-based
+                issues, our work also aligns with national cause-based
                 organizations and initiatives. By sharing with other communities
                 and cities what we're learning, Grounded can assist in
                 coordinating effective artist-driven solutions for social
@@ -149,10 +153,6 @@ export default () => {
             <li>City leaders and law enforcement </li>
           </ItemList>
         </Container>
-      </div>
-
-      <div className={s.Spray__Top}>
-        <img src={SprayImageFoot} alt="spray" />
       </div>
 
       <div className={s.Spray__Bottom}>
