@@ -12,6 +12,7 @@ import { ItemList } from 'components/item-list/ItemList';
 import IconAbuse from 'assets/svg/icon-abuse.svg';
 import IconNeglect from 'assets/svg/icon-neglect.svg';
 import IconHd from 'assets/svg/icon-hd.svg';
+import EmpowerImg from 'assets/images/empower-create-strengthen.jpg';
 
 export default () => {
   return (
@@ -50,6 +51,8 @@ export default () => {
           </>
         }
       />
+
+      <img src={EmpowerImg} alt="Empower, Create, Strengthen" />
 
       <div className={s.Aces} id="aces">
         <h2 className={s.Aces__Title}>
