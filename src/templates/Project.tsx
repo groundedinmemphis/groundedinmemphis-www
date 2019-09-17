@@ -85,11 +85,11 @@ export default ({ data }: any) => {
 
   if (!videoContent && video_preview_image && video_preview_image.url) {
     videoContent = (
-      <div className={s.iframe} style={{ overflow: 'hidden' }}>
+      <div style={{ overflow: 'hidden' }}>
         <img
           src={video_preview_image && video_preview_image.url}
           alt="video preview"
-          style={{ height: '100%', maxWidth: '200%' }}
+          style={{ height: 'auto', maxWidth: '100%' }}
         />
       </div>
     );
