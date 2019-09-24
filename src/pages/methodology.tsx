@@ -128,7 +128,7 @@ export default () => {
 
               <p>
                 Grounded is focusing on helping people acknowledge the effects
-                of ACEs and take steps as a community to overcome the effects
+                of ACEs and take steps as a community to overcome the impact
                 through art and mindfulness.
               </p>
             </>
