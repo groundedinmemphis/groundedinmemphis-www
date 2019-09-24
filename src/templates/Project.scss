@@ -45,6 +45,7 @@ $video-offset: 400px;
 .project_name {
   width: 30%;
 }
+
 .project_info {
   width: 45%;
 }
@@ -83,6 +84,8 @@ $video-offset: 400px;
 
   img {
     margin-top: 1em;
+    max-width: 200%;
+    margin-left: -100%;
   }
   
 }
@@ -112,6 +115,11 @@ $video-offset: 400px;
   .project_des {
     @include responsive-font(16px, 24px);
     line-height: 28px;
+
+    img {
+      max-width: 100%;
+      margin-left: 0;
+    }
   }
 
   .project_name {
