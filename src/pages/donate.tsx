@@ -32,8 +32,17 @@ export default () => {
             <>
               <p>
                 When you donate to Grounded, you'll be helping to support our
-                collaborators, our projects and programs, and communities in
-                Memphis.
+                projects, programs, collaborators and communities in Memphis.
+              </p>
+              <p>
+                Contributions to Grounded are tax-deductible to the extent
+                permitted by law.
+              </p>
+              <p>
+                Donations will be made to MLB Uptown, LLC which a registered
+                501(c)(3) tax-exempt nonprofit organization. MLB Uptown, LLC is
+                the fiscal sponsor of Grounded and 100% of your donation will go
+                to Grounded.
               </p>
             </>
           }
