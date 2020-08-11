@@ -193,6 +193,13 @@
     > div {
       height: 99%;
     }
+
+    &__video {
+      min-height: 100%;
+      min-width: 100%;
+      position: absolute;
+      z-index: 1;
+    }
   }
 
   &__content {
