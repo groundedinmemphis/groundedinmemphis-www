@@ -1,7 +1,7 @@
 {
   "name": "ueno-gatsby-starter",
   "description": "Opinionated Gatsby starter by Ueno",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "MIT",
   "keywords": [
     "gatsby",
@@ -9,11 +9,13 @@
     "react",
     "typescript",
     "gatsby-starter",
-    "ueno"
+    "ueno",
+    "nuu"
   ],
   "contributors": [
     "Birkir Gudjonsson <birkir.gudjonsson@gmail.com>",
-    "Jérémy Barbet <jeremgraph@gmail.com>"
+    "Jérémy Barbet <jeremgraph@gmail.com>",
+    "Daniel Ortiz <daniel.ortiz@nuu.co>"
   ],
   "repository": {
     "type": "git",

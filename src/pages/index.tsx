@@ -2,7 +2,9 @@ import SprayImageTop from 'assets/images/draw-4.png';
 import JumpImage from 'assets/images/jump.png';
 import LookImage from 'assets/images/look.png';
 import RainImage from 'assets/images/rain.png';
+import CloseIcon from 'assets/svg/close.svg';
 import BigLogo from 'assets/svg/logo-big.svg';
+import LogoWhite from 'assets/svg/grounded-workmark-white.svg';
 import OpeningText from 'assets/svg/opening-text.svg';
 import { Container } from 'components/container/Container';
 import Img from 'gatsby-image';
@@ -12,6 +14,7 @@ import s from './homepage.scss';
 import SprayImageFoot from 'assets/images/spray-foot.png';
 import { graphql, Link } from 'gatsby';
 import { TimelineLite } from 'gsap';
+import { t as typy } from 'typy';
 import RichText from 'components/rich-text/RichText';
 
 const words = ['ART', 'MUSIC', 'CREATIVITY', 'MEDITATION', 'HEALING'];
@@ -56,81 +59,100 @@ export const query = graphql`
 
 const Homepage = ({ data }: any) => {
   const bodyText = data.prismicHomepage.data;
-  const svg = React.useRef(null);
-  React.useEffect(() => {
-    if (svg && svg.current) {
-      const texts = Array.from(svg.current.querySelectorAll('text'));
-      const timeline = new TimelineLite();
-      timeline.set(texts[2], { alpha: 0 });
-      timeline.to(texts[0], 1, { strokeDashoffset: 0 }, 0.4);
-      timeline.to(texts[1], 1, { strokeDashoffset: 0 }, '-=0.2');
-      timeline.to(texts[2], 1, { alpha: 1 }, '-=0.3');
-    }
-  }, [svg]);
+  console.log(bodyText);
+  // const svg = React.useRef(null);
+  // React.useEffect(() => {
+  //   if (svg && svg.current) {
+  //     const texts = Array.from(svg.current.querySelectorAll('text'));
+  //     const timeline = new TimelineLite();
+  //     timeline.set(texts[2], { alpha: 0 });
+  //     timeline.to(texts[0], 1, { strokeDashoffset: 0 }, 0.4);
+  //     timeline.to(texts[1], 1, { strokeDashoffset: 0 }, '-=0.2');
+  //     timeline.to(texts[2], 1, { alpha: 1 }, '-=0.3');
+  //   }
+  // }, [svg]);
+
+  const [openModal, setOpenModal] = React.useState(false);
+
+  const videoURL =
+    'https://nuu-group.sfo2.digitaloceanspaces.com/clients/we-are-grounded/preview.mp4';
+  // const videoURL;
 
   return (
     <>
       <Helmet title="Inspiring a city to walk together" />
-      <div className={s.opening__image}>
-        <div className={s.opening__image__background}>
-          <Img
-            {...data.mainImage.childImageSharp}
-            imgStyle={{ objectPosition: '70% 100%' }}
+      {openModal ? (
+        <div className={s.modal__wrap}>
+          <div
+            className={s.modal__overlay}
+            onClick={() => setOpenModal(false)}
           />
+          <div className={s.modal__close} onClick={() => setOpenModal(false)}>
+            <CloseIcon />
+          </div>
+          <div className={s.modal__content}>
+            <video controls className={s.opening__image__background__video}>
+              <source src={videoURL} type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      ) : null}
+      <div className={s.opening__image}>
+        <div
+          className={
+            videoURL ? s.opening__image__videoBG : s.opening__image__background
+          }
+        >
+          {videoURL ? (
+            <>
+              <div className={s.opening__image__videoBG__over} />
+              <video
+                loop
+                muted
+                autoPlay
+                className={s.opening__image__videoBG__video}
+              >
+                <source src={videoURL} type="video/mp4" />
+              </video>
+            </>
+          ) : (
+            <Img
+              {...data.mainImage.childImageSharp}
+              imgStyle={{ objectPosition: '70% 100%' }}
+            />
+          )}
         </div>
         <div className={s.opening__image__content}>
-          <div className={s.opening__image__big__logo}>
-            <BigLogo />
-          </div>
+          {!videoURL ? (
+            <div className={s.opening__image__big__logo}>
+              <BigLogo />
+            </div>
+          ) : (
+            <div className={s.opening__image__contwrapped}>
+              <button
+                onClick={() => setOpenModal(true)}
+                className={s.opening__image__contwrapped__link}
+              >
+                <div className={s.opening__image__contwrapped__link__icon} />
+                Play Video
+              </button>
+              <LogoWhite className={s.opening__image__contwrapped__svg} />
+              <p className={s.opening__image__contwrapped__legend}>
+                Grounded is an organization created by Memphis artists to
+                harness the power of art to inspire healing
+              </p>
+            </div>
+          )}
 
-          <div className={s.opening__image__text} id="big_g" ref={svg}>
-            <svg width="600" height="210" viewBox="0 0 600 210" fill="none">
-              <text
-                stroke="white"
-                strokeWidth="2"
-                strokeDasharray={880}
-                strokeDashoffset={880}
-                style={{ whiteSpace: 'pre' }}
-                fontFamily="Anton"
-                fontSize="120"
-                letterSpacing="0.05em"
-              >
-                <tspan x="-0.000976562" y="95.56">
-                  GROUNDED
-                </tspan>
-              </text>
-              <text
-                stroke="white"
-                strokeWidth="2"
-                strokeDasharray={880}
-                strokeDashoffset={880}
-                style={{ whiteSpace: 'pre' }}
-                fontFamily="Anton"
-                fontSize="120"
-                letterSpacing="0.05em"
-              >
-                <tspan x="-0.000976562" y="200.56">
-                  BY
-                </tspan>
-              </text>
-              <text
-                fill="white"
-                style={{ whiteSpace: 'pre' }}
-                fontFamily="Anton"
-                fontSize="120"
-                letterSpacing="0.02em"
-              >
-                <tspan x="98.999" y="200.56">
-                  {randomWord}
-                </tspan>
-              </text>
-            </svg>
-          </div>
-          <div className={s.opening__image__spray}>
+          {/* <div className={s.opening__image__text} id="big_g">
+            <svg className="" width="41" height="80" viewBox="0 0 41 80" fill="none"><path d="M0 40.0615V55.1486H14.697L0 69.742V80.0005H11.1431L24.9865 66.2402V80.0005H40.1647V55.1486V40.0615H24.9865H0Z" fill="white"></path><path d="M0 0V15.087H24.9865V25.0988H40.1647V15.087V4.85932V1.32667V0H0Z" fill="white"></path></svg>
+          </div> */}
+          {/* <div className={s.opening__image__spray}>
             <img src={SprayImageTop} alt="spray" />
-          </div>
+          </div> */}
         </div>
       </div>
+
       <div className={s.content}>
         <Container>
           <div className={s.body__content}>

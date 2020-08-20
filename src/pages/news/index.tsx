@@ -28,7 +28,7 @@ interface INewsProps {
 
 export const query = graphql`
   query {
-    allPrismicNews {
+    allPrismicNews(sort: { fields: [first_publication_date], order: DESC }) {
       edges {
         node {
           id

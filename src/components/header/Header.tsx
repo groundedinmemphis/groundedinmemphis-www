@@ -19,12 +19,14 @@ interface IHeaderProps {
 export const Header = (props: IHeaderProps) => {
   const { theme, location } = props;
   const [isOpen, setIsOpen] = React.useState(false);
+  const [inHome, setInHome] = React.useState(false);
   const header__light = theme === 'light'; // tslint:disable-line
   const header__video = theme === 'video'; // tslint:disable-line
   const header__navigation__open = isOpen; // tslint:disable-line
 
   React.useEffect(() => {
     setIsOpen(false);
+    setInHome(location.pathname === '/');
   }, [location.pathname]);
 
   const handleClick = () => {
@@ -58,7 +60,10 @@ export const Header = (props: IHeaderProps) => {
             </button>
             <div className={s.header__left}>
               <Link to="/" className={s.header__logo}>
-                <GroundedLogo className={s.header__logoSvg} />
+                <GroundedLogo
+                  className={s.header__logoSvg}
+                  style={{ color: inHome ? '#ffffff' : '#231F20' }}
+                />
               </Link>
               <HeaderLink name="Projects" to="/projects" />
               <HeaderLink name="Purpose" to="/purpose" />
